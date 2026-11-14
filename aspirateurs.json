@@ -25,9 +25,9 @@
           "note": "2,3 kg annoncés pour la machine ; pas de pesée complète avec brosse vérifiée"
         },
         "hand": {
-          "value": "2,3 kg",
-          "kind": "annoncé",
-          "note": "Machine seule selon fabricant"
+          "value": "Non vérifié",
+          "kind": "inconnu",
+          "note": "2,3 kg annoncés par Dreame pour la machine ; configuration exacte à préciser"
         }
       },
       "suction": {
