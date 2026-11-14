@@ -54,3 +54,12 @@ Mise à jour : 14 novembre 2026. Comparatif personnel de neuf aspirateurs balais
 4. Tester la recherche, le tri, la sélection, les liens, le tableau et l'affichage mobile après publication.
 
 Aucun score numérique global n'est établi, en raison des différents protocoles de test et des données manquantes.
+
+## Relevé de prix multi-enseignes du 14 novembre 2026
+
+- L’accueil et les neuf fiches affichent cinq canaux : fabricant, Amazon, Boulanger, Fnac, Darty, soit 45 positions.
+- 27 offres ont un prix directement constaté sur une page marchande ; deux prix Amazon proviennent de comparateurs tiers datés et **ne sont pas des offres vérifiées chez Amazon** ; 16 autres positions sont « Non vérifié ».
+- Chaque offre comprend un prix TTC relevé, éventuellement un prix barré de la **même enseigne**, la remise calculée, la disponibilité indiquée et un lien vers la source. Une recherche Amazon sans prix confirmé renvoie vers les résultats de recherche et est étiquetée comme telle.
+- Un prix barré n’est pas nécessairement un prix récemment pratiqué : ne pas interpréter les réductions comme une économie garantie. Les codes promotionnels et frais de livraison ne sont pas inclus.
+- Le prix principal de la carte est celui d’une offre directement constatée hors rupture lorsqu’il en existe ; exception : Tineco A90S, dont le prix fabricant en rupture est affiché avec un avertissement explicite.
+- Le site n’effectue pas de suivi en temps réel des tarifs. Réactualiser les données et les pages détaillées avant l’achat.
