@@ -181,7 +181,7 @@ function renderCards(){
     const detail='<a class="product-title-link" href="'+escapeText(url)+'">'+escapeText(p.model)+'</a>';
     const stats='<div class="quick-specs" aria-label="Quatre données essentielles">'
       +quickSpec(p.id==="tineco-a90s"?"Prix affiché (rupture)":"Meilleur prix direct",euro(p.price.amount),p.price.merchant+" · "+p.price.status)
-      +quickSpec("Poids avec brosse",p.weight.floor.value,p.weight.floor.kind+" · "+p.weight.floor.note)
+      +quickSpec("Poids",p.homeWeight?.value||p.weight.floor.value,"")
       +quickSpec("Aspiration",p.suction.max+" AW max.",p.suction.modes+" · "+p.suction.performance)
       +quickSpec("Autonomie "+p.autonomy.mode,p.autonomy.display,p.autonomy.kind+" · "+p.autonomy.note)
       +'</div>';
