@@ -10,6 +10,36 @@
     const payload=await res.json();
     const p=payload.models.find(model=>model.id===id);
     if(!p)throw new Error("Modèle absent du référentiel");
+    // Photo authentique du modèle, dans le bloc auparavant illustré par un SVG.
+    if(p.image?.src){
+      const headline=document.querySelector(".headline");
+      if(headline){
+        let frame=headline.querySelector(".device");
+        if(!frame){
+          frame=document.createElement("div");
+          frame.className="device";
+          headline.appendChild(frame);
+        }
+        frame.classList.add("product-photo-device");
+        frame.removeAttribute("role");
+        frame.removeAttribute("aria-label");
+        frame.replaceChildren();
+        const img=document.createElement("img");
+        img.src=p.image.src;
+        img.alt="Photo du "+p.brand+" "+p.model;
+        img.loading="eager";
+        img.decoding="async";
+        img.addEventListener("error",()=>{frame.style.display="none";});
+        frame.appendChild(img);
+        if(!document.getElementById("real-product-photo-style")){
+          const styles=document.createElement("style");
+          styles.id="real-product-photo-style";
+          styles.textContent='.device.product-photo-device{background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:7px;flex:0 0 176px;width:176px;height:210px}.product-photo-device img{display:block;width:100%;height:100%;object-fit:contain}@media(max-width:620px){.headline{flex-direction:column-reverse;align-items:stretch}.device.product-photo-device{display:flex;width:100%;height:210px;flex:none;padding:8px;margin-bottom:10px}}';
+          document.head.appendChild(styles);
+        }
+      }
+    }
+
     const euro=new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",minimumFractionDigits:0,maximumFractionDigits:2}).format(p.price.amount);
     const facts=[
       {label:"Prix et disponibilité",value:euro,note:p.price.merchant+" · "+p.price.status+" · relevé du "+p.price.date.split("-").reverse().join("/")},
