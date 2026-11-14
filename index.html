@@ -261,7 +261,7 @@ function offerPrice(offer){
   const label=offer.source==="third_party"?"Relevé tiers "+offer.date.split("-").reverse().join("/"):offer.status;
   const state='<span class="offer-status">'+escapeText(label)+'</span>';
   const note=offer.note?'<span class="offer-note">'+escapeText(offer.note)+'</span>':'';
-  const link=offer.url?'<a class="offer-link" href="'+escapeText(offer.url)+'" target="_blank" rel="noopener noreferrer">'+(offer.source==="third_party"?"Voir le relevé tiers ↗":"Voir chez le vendeur ↗")+'</a>':'';
+  const link=offer.url?'<a class="offer-link" href="'+escapeText(offer.url)+'" target="_blank" rel="noopener noreferrer">'+(offer.source==="third_party"?"Voir le relevé tiers ↗":offer.store==="amazon"&&offer.source==="unverified"?"Rechercher sur Amazon ↗":"Voir chez le vendeur ↗")+'</a>':'';
   return '<div class="offer-cell">'+price+discount+state+note+link+'</div>';
 }
 function renderPrices(){
