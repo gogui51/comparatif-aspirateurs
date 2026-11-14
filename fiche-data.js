@@ -40,9 +40,10 @@
       }
     }
 
+    const readableStatus=status=>/^(Disponible au relevé|En stock au relevé)$/i.test(String(status||"").trim())?"":String(status||"").trim();
     const euro=new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",minimumFractionDigits:0,maximumFractionDigits:2}).format(p.price.amount);
     const facts=[
-      {label:"Prix et disponibilité",value:euro,note:p.price.merchant+" · "+p.price.status+" · relevé du "+p.price.date.split("-").reverse().join("/")},
+      {label:"Prix et disponibilité",value:euro,note:p.price.merchant+(readableStatus(p.price.status)?" · "+readableStatus(p.price.status):"")+" · relevé du "+p.price.date.split("-").reverse().join("/")},
       {label:"Poids prêt à aspirer",value:p.weight.floor.value,note:p.weight.floor.kind+" · "+p.weight.floor.note},
       {label:"Aspiration maximale",value:p.suction.max+" AW",note:p.suction.note+" · "+p.suction.modes},
       {label:"Autonomie · "+p.autonomy.mode,value:p.autonomy.display,note:p.autonomy.kind+" · "+p.autonomy.note}
@@ -66,7 +67,7 @@
         const percent=o.price!==null&&o.was!==null&&o.was>o.price?Math.round(100*(1-o.price/o.was)):null;
         const priced=o.price!==null?'<strong class="merchant-value">'+esc(money(o.price))+'</strong>':'<strong class="merchant-unknown">Non vérifié</strong>';
         const discount=percent===null?"":'<span class="merchant-discount"><s>'+esc(money(o.was))+'</s> −'+percent+' % · économie '+esc(money(o.was-o.price))+'</span>';
-        const state=o.source==="third_party"?"Relevé indirect du "+o.date.split("-").reverse().join("/"):o.status;
+        const state=o.source==="third_party"?"Relevé indirect du "+o.date.split("-").reverse().join("/"):readableStatus(o.status);
         const href=o.url?'<a href="'+esc(o.url)+'" target="_blank" rel="noopener noreferrer">'+(o.source==="third_party"?"Voir le relevé tiers ↗":o.store==="amazon"&&o.source==="unverified"?"Rechercher sur Amazon ↗":"Voir l'offre ↗")+'</a>':"";
         return '<article class="merchant-card"><h3>'+esc(labels[o.store])+'</h3>'+priced+discount
           +'<span class="merchant-state">'+esc(state)+'</span>'
@@ -107,7 +108,7 @@
       const intro=document.createElement("strong");
       intro.textContent="Relevé de prix commun au comparatif : ";
       note.appendChild(intro);
-      note.appendChild(document.createTextNode(euro+" · "+p.price.merchant+" · "+p.price.status+" (au "+p.price.date.split("-").reverse().join("/")+") · "));
+      note.appendChild(document.createTextNode(euro+" · "+p.price.merchant+(readableStatus(p.price.status)?" · "+readableStatus(p.price.status):"")+" (au "+p.price.date.split("-").reverse().join("/")+") · "));
       const source=document.createElement("a");
       source.href=p.price.url;
       source.target="_blank";
