@@ -74,6 +74,45 @@
     .proscons li+li{margin-top:5px}
     .proscons p{font-size:11px;color:#7c8c8d;margin:0;line-height:1.4}
     @media(max-width:570px){.proscons{grid-template-columns:1fr;gap:6px}.proscons>div{padding:9px}.proscons .hlabel{font-size:11px;margin-bottom:4px}}
+
+/* Audit UX : lisibilité, mobile et comparaison accessible */
+.variant{color:#52696d;font-size:12px;min-height:21px}
+.status{color:#52696d}
+.quick-specs small{font-size:12px;color:#496165}
+.quick-specs strong{font-size:16px;line-height:1.27;overflow-wrap:anywhere}
+.quick-specs span{font-size:12px;color:#435f62;line-height:1.45}
+.quick-specs>div{min-width:0}
+.card-note{color:#496165;font-size:12px;line-height:1.5}
+.proscons ul{font-size:12px;color:#365257;line-height:1.5}
+.proscons p{color:#52696d;font-size:12px}
+.proscons .hlabel{font-size:13px}
+footer{color:#4c6468}
+.table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;border:1px solid #e1e9e7;border-radius:12px}
+.table-scroll table{border-collapse:separate;border-spacing:0;width:100%;font-size:13px;table-layout:fixed}
+.table-scroll th,.table-scroll td{min-width:265px;overflow-wrap:anywhere;line-height:1.55;color:#304b50;border-right:1px solid #e6edeb}
+.table-scroll th:first-child{position:sticky;left:0;z-index:2;min-width:194px;width:194px;background:#f5f8f7;color:#234c50;box-shadow:2px 0 5px #173f4210}
+.table-scroll thead th{background:#f1f6f4;position:sticky;top:0;z-index:1;font-weight:750}
+.table-scroll thead th:first-child{z-index:3}
+.table-scroll tbody tr:nth-child(even) td{background:#fafcfb}
+.table-scroll tbody tr:hover td{background:#f1f8f5}
+.model-in-table{display:block;font-weight:550;color:#476168;margin-top:4px}
+.table-scroll:focus-visible{outline:3px solid #6eb2aa;outline-offset:3px}
+.sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media(max-width:570px){
+ .cards{grid-template-columns:1fr;gap:13px}
+ .product{padding:18px;min-height:0}
+ .product h3{font-size:20px;min-height:0}
+ .variant{min-height:0;margin:4px 0 2px}
+ .quick-specs{gap:9px}
+ .quick-specs>div{padding:11px}
+ .proscons{grid-template-columns:1fr 1fr;gap:8px}
+ .proscons>div{padding:10px}
+ .compare-panel{padding:14px}
+ .table-scroll th:first-child{min-width:152px;width:152px}
+ .table-scroll th:not(:first-child),.table-scroll td{min-width:235px}
+ .dock{padding:12px 14px}
+}
+@media(max-width:380px){.proscons{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -81,108 +120,141 @@
   <section class="hero" id="haut"><div class="wrap"><div class="eyebrow">Notre sélection · 2026</div><h1>9 aspirateurs.<br><em>Un seul bon choix.</em></h1><p class="lede">Une sélection de modèles haut de gamme pour trouver le meilleur rapport qualité-prix. On compare ensemble, sans se précipiter.</p><div class="metrics"><span class="metric"><strong>9</strong> aspirateurs</span><span class="metric"><strong>6</strong> marques</span><span class="metric">Aspiration à sec</span><span class="metric">9 fiches sourcées disponibles</span></div></div></section>
   <main class="wrap">
     <div class="section-head"><div><h2>Les modèles retenus</h2><p class="sub">Sélectionne jusqu’à quatre appareils pour les mettre côte à côte.</p></div><button id="reset" class="toplink" type="button">Effacer ma sélection</button></div>
-    <div class="searchbar"><div class="search-wrap"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16.3 16.3 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une marque ou un modèle…" aria-label="Rechercher un aspirateur"></div><select id="sort" aria-label="Trier les aspirateurs"><option value="selection">Ordre de notre sélection</option><option value="brand">Trier par marque</option><option value="model">Trier par modèle</option></select></div>
+    <div class="searchbar"><div class="search-wrap"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16.3 16.3 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une marque ou un modèle…" aria-label="Rechercher un aspirateur"></div><select id="sort" aria-label="Trier les aspirateurs"><option value="selection">Ordre de notre sélection</option><option value="brand">Trier par marque</option><option value="model">Trier par modèle</option><option value="price">Prix relevé croissant (indicatif)</option></select></div>
     <div id="filters" class="filters" aria-label="Filtrer par marque"></div>
     <div class="cards" id="cards" aria-live="polite"></div>
-    <section class="compare-panel" id="comparaison" aria-labelledby="comparison-title"><div class="panel-head"><div><h2 id="comparison-title">Comparer côte à côte</h2><p class="sub" id="comparison-sub">Choisis au moins deux modèles ci-dessus.</p></div></div><div id="comparison-content"><div class="notice">Le tableau technique sera enrichi lors de notre prochaine étape : prix relevés, autonomie réelle, tests indépendants, accessoires et réparabilité.</div></div></section>
-    <div class="guidance"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>Cette version sert à valider l’hébergement et l’ergonomie. Les neuf fiches sont publiées et sourcées. Les prix, conditions des tests et lacunes sont indiqués par modèle. Le tableau compare les données disponibles ; aucun classement qualité/prix définitif n'est encore attribué. Une sélection partagée par lien n’est pas une synchronisation en direct entre deux appareils.</span></div>
-    <footer>Notre comparatif d’aspirateurs · Version de démonstration · Novembre 2026</footer>
+    <section class="compare-panel" id="comparaison" aria-labelledby="comparison-title"><div class="panel-head"><div><h2 id="comparison-title">Comparer côte à côte</h2><p class="sub" id="comparison-sub">Choisis au moins deux modèles ci-dessus.</p></div></div><div id="comparison-content"><div class="notice">Sélectionne deux à quatre aspirateurs pour afficher leurs données comparables et le niveau de preuve de chaque information.</div></div></section>
+    <div class="guidance"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>Les neuf fiches sont sourcées. Prix relevés le 14 novembre 2026, non mis à jour automatiquement. Les autonomies peuvent être mesurées, estimées ou annoncées : leurs conditions sont indiquées. Aucun classement artificiel fondé sur des tests incompatibles. Le lien partagé conserve la sélection, sans synchronisation en direct.</span></div>
+    <footer>Notre comparatif d’aspirateurs · Sources et limites documentées · Novembre 2026</footer>
   </main>
   <div class="dock" id="dock" aria-live="polite"><div><strong id="count">0 / 4 modèle sélectionné</strong><p>À comparer ensemble</p></div><div class="actions"><button id="share" class="secondary" type="button">Partager</button><button id="compare" type="button" disabled>Comparer</button></div></div>
   <div role="status" id="toast"></div>
   <script>
-  "use strict";
-  const products = [
-    {id:'dreame-v30', brand:'Dreame',model:'V30',detail:''},
-    {id:'dyson-v15',brand:'Dyson',model:'V15 Detect Absolute',detail:''},
-    {id:'dyson-v16',brand:'Dyson',model:'V16 Piston Animal',detail:''},
-    {id:'samsung-lite',brand:'Samsung',model:'Bespoke AI Jet Lite Complete',detail:'Gris · VS80F28EFP'},
-    {id:'roborock-h60',brand:'Roborock',model:'H60 Ultra',detail:'Version sans station Hub'},
-    {id:'rowenta-1480',brand:'Rowenta',model:'X-Force Flex 14.80',detail:''},
-    {id:'rowenta-1660',brand:'Rowenta',model:'X-Force Flex 16.60',detail:''},
-    {id:'rowenta-2080',brand:'Rowenta',model:'X-Force Silence 20.80',detail:''},
-    {id:'tineco-a90s',brand:'Tineco',model:'A90S',detail:''}
-  ];
-  const $=(selector)=>document.querySelector(selector);
-  const validIds=new Set(products.map(p=>p.id));
-  function initialSelection(){
-    const ids=new URLSearchParams(location.hash.slice(1)).get('selection');
-    return ids?ids.split(',').filter(x=>validIds.has(x)).slice(0,4):[];
+
+"use strict";
+const $ = (selector) => document.querySelector(selector);
+let products = [];
+let selected = [];
+let filter = "Toutes";
+let search = "";
+let sort = "selection";
+const escapeText = (value) => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const euro = (amount) => new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",minimumFractionDigits:2,maximumFractionDigits:2}).format(amount);
+function initialSelection(){
+  const ids = new URLSearchParams(location.hash.slice(1)).get("selection");
+  const valid = new Set(products.map(p=>p.id));
+  return ids ? [...new Set(ids.split(",").filter(x=>valid.has(x)))].slice(0,4) : [];
+}
+function renderFilters(){
+  const brands=["Toutes",...new Set(products.map(p=>p.brand))];
+  $("#filters").innerHTML = brands.map(b=>'<button class="pill" type="button" data-brand="'+escapeText(b)+'" aria-pressed="'+(filter===b)+'">'+escapeText(b)+'</button>').join("");
+}
+function visibleProducts(){
+  const q=search.toLocaleLowerCase("fr").trim();
+  const list=products.filter(p=>(filter==="Toutes"||filter===p.brand)&&([p.brand,p.model,p.detail,p.reference].join(" ").toLocaleLowerCase("fr").includes(q)));
+  if(sort==="brand")list.sort((a,b)=>a.brand.localeCompare(b.brand,"fr")||a.model.localeCompare(b.model,"fr"));
+  if(sort==="model")list.sort((a,b)=>a.model.localeCompare(b.model,"fr"));
+  if(sort==="price")list.sort((a,b)=>a.price.amount-b.price.amount);
+  return list;
+}
+function quickSpec(label,value,note){
+  return '<div><small>'+escapeText(label)+'</small><strong>'+escapeText(value)+'</strong><span>'+escapeText(note)+'</span></div>';
+}
+function proscons(p){
+  const group=(label,items,css)=>'<div><span class="hlabel '+css+'">'+label+'</span><ul>'+items.map(s=>'<li>'+escapeText(s)+'</li>').join("")+'</ul></div>';
+  return '<div class="proscons" aria-label="Points forts et points faibles">'+group("+ Les +",p.pros,"plus")+group("− Les −",p.cons,"minus")+'</div>';
+}
+function renderCards(){
+  const list=visibleProducts();
+  $("#cards").innerHTML=list.map(p=>{
+    const checked=selected.includes(p.id);
+    const url=encodeURI(p.page)+(selected.length?"?selection="+encodeURIComponent(selected.join(",")):"");
+    const detail='<a class="product-title-link" href="'+escapeText(url)+'">'+escapeText(p.model)+'</a>';
+    const stats='<div class="quick-specs" aria-label="Quatre données essentielles">'
+      +quickSpec("Prix relevé",euro(p.price.amount),p.price.merchant+" · "+p.price.status)
+      +quickSpec("Poids avec brosse",p.weight.floor.value,p.weight.floor.kind+" · "+p.weight.floor.note)
+      +quickSpec("Aspiration",p.suction.max+" AW max.",p.suction.modes+" · "+p.suction.performance)
+      +quickSpec("Autonomie "+p.autonomy.mode,p.autonomy.display,p.autonomy.kind+" · "+p.autonomy.note)
+      +'</div>';
+    const note='<p class="card-note">Prix non actualisés automatiquement · <strong>'+escapeText(p.proof.level)+'</strong> niveau de preuve. <a href="'+escapeText(url)+'">Voir conditions et sources</a>.</p>';
+    return '<article class="product '+(checked?'selected':'')+'"><div class="cardtop"><span class="brand">'+escapeText(p.brand)+'</span>'+(checked?'<span class="badge">Sélectionné</span>':'')+'</div>'
+      +'<h3>'+detail+'</h3><p class="variant">'+escapeText(p.detail||p.reference)+'</p>'+stats+note+proscons(p)
+      +'<div class="foot"><a class="fichelink" href="'+escapeText(url)+'">Fiche détaillée →</a><button type="button" class="choose" data-id="'+escapeText(p.id)+'" aria-pressed="'+checked+'" '+(!checked&&selected.length>=4?'disabled':'')+'>'+(checked?'✓ Retirer':'+ Comparer')+'</button></div></article>';
+  }).join("");
+  if(!list.length)$("#cards").innerHTML='<p class="empty">Aucun modèle ne correspond à cette recherche.</p>';
+  $("#count").textContent=selected.length+" / 4 modèle"+(selected.length>1?"s":"")+" sélectionné"+(selected.length>1?"s":"");
+  $("#compare").disabled=selected.length<2;
+  renderComparison();
+}
+function formatModes(p){
+  return p.autonomy.modes.map(m=>m[0]+" : "+m[1]+" ("+m[2]+" ; "+m[3]+")").join(" · ");
+}
+const rows=[
+ {label:"Prix et disponibilité",get:p=>euro(p.price.amount)+" · "+p.price.merchant+" · "+p.price.status+" · relevé "+p.price.date},
+ {label:"Poids prêt à aspirer",get:p=>p.weight.floor.value+" ("+p.weight.floor.kind+" ; "+p.weight.floor.note+")"},
+ {label:"Poids du bloc à main",get:p=>p.weight.hand.value+" ("+p.weight.hand.kind+" ; "+p.weight.hand.note+")"},
+ {label:"Aspiration et conditions",get:p=>p.suction.max+" AW max. "+p.suction.note+". "+p.suction.modes},
+ {label:"Efficacité réelle",get:p=>p.efficacy},
+ {label:"Autonomie selon modes",get:formatModes},
+ {label:"Accessoires",get:p=>p.accessories},
+ {label:"Entretien / réparabilité",get:p=>p.repair},
+ {label:"Les +",get:p=>p.pros.join(" ; ")},
+ {label:"Les −",get:p=>p.cons.join(" ; ")},
+ {label:"Fiabilité des preuves",get:p=>p.proof.level+" : "+p.proof.note}
+];
+function renderComparison(){
+  const n=selected.length;
+  $("#comparison-sub").textContent=n<2?"Choisis au moins deux modèles ci-dessus.":n+" modèles sélectionnés · les chiffres gardent leurs conditions d'essai";
+  if(n<2){$("#comparison-content").innerHTML='<div class="notice">Sélectionne 2 à 4 aspirateurs pour comparer les prix, les poids complets, les autonomies et les preuves. Les valeurs constructeur, mesurées et extrapolées sont clairement distinguées.</div>';return;}
+  const chosen=selected.map(id=>products.find(p=>p.id===id)).filter(Boolean);
+  const head='<thead><tr><th scope="col">Critère</th>'+chosen.map(p=>'<th scope="col">'+escapeText(p.brand)+'<span class="model-in-table">'+escapeText(p.model)+'</span></th>').join("")+'</tr></thead>';
+  const body='<tbody>'+rows.map(row=>'<tr><th scope="row">'+escapeText(row.label)+'</th>'+chosen.map(p=>'<td>'+escapeText(row.get(p))+'</td>').join("")+'</tr>').join("")+'</tbody>';
+  const minWidth=194+chosen.length*265;
+  $("#comparison-content").innerHTML='<div class="notice">Défile horizontalement pour parcourir les modèles. Un poids à main ne remplace pas le poids complet ; les autonomies et prix ne sont pas tous mesurés dans les mêmes conditions.</div>'
+    +'<div class="table-scroll" role="region" aria-label="Tableau comparatif des aspirateurs, défilement horizontal" tabindex="0"><table style="min-width:'+minWidth+'px"><caption class="sr-only">Comparaison de '+chosen.length+' aspirateurs balais</caption>'+head+body+'</table></div>';
+}
+function toggle(id){
+  if(!products.some(p=>p.id===id))return;
+  if(selected.includes(id))selected=selected.filter(s=>s!==id);
+  else if(selected.length<4)selected.push(id);
+  renderCards();
+}
+function showToast(message){
+  const t=$("#toast");t.textContent=message;t.style.display="block";clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.style.display="none",3600);
+}
+function fallback(link){prompt("Copie ce lien pour le partager :",link)}
+function share(){
+  const u=new URL(location.href);u.hash=selected.length?"selection="+selected.join(","):"";
+  const link=u.toString();
+  if(navigator.clipboard?.writeText)navigator.clipboard.writeText(link).then(()=>showToast("Lien copié.")).catch(()=>fallback(link));
+  else fallback(link);
+}
+$("#cards").addEventListener("click",event=>{const button=event.target.closest("button[data-id]");if(button)toggle(button.dataset.id)});
+$("#filters").addEventListener("click",event=>{const button=event.target.closest("button[data-brand]");if(button){filter=button.dataset.brand;renderFilters();renderCards()}});
+$("#search").addEventListener("input",event=>{search=event.target.value;renderCards()});
+$("#sort").addEventListener("change",event=>{sort=event.target.value;renderCards()});
+$("#reset").addEventListener("click",()=>{selected=[];history.replaceState(null,"",location.pathname+location.search);renderCards()});
+$("#compare").addEventListener("click",()=>$("#comparaison").scrollIntoView({behavior:"smooth"}));
+$("#share").addEventListener("click",share);
+window.addEventListener("hashchange",()=>{selected=initialSelection();renderCards()});
+async function init(){
+  try{
+    const response=await fetch("./aspirateurs.json",{cache:"no-store"});
+    if(!response.ok)throw new Error("HTTP "+response.status);
+    const data=await response.json();
+    if(!Array.isArray(data.models)||data.models.length!==9)throw new Error("Données incomplètes");
+    products=data.models;
+    selected=initialSelection();
+    renderFilters();
+    renderCards();
+  }catch(error){
+    $("#cards").innerHTML='<p class="empty" role="alert">Impossible de charger les données du comparatif. Actualise la page ; si le problème persiste, vérifie la publication du fichier aspirateurs.json.</p>';
+    $("#comparison-content").innerHTML='<div class="notice">Données temporairement indisponibles.</div>';
+    console.error("Comparatif :",error);
   }
-  let selected=initialSelection();let filter='Toutes';let search='';let sort='selection';
-  const escapeText=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  function renderFilters(){
-    const brands=['Toutes',...new Set(products.map(p=>p.brand))];
-    $('#filters').innerHTML=brands.map(b=>`<button class="pill" type="button" data-brand="${escapeText(b)}" aria-pressed="${filter===b}">${escapeText(b)}</button>`).join('');
-  }
-  function visibleProducts(){
-    const q=search.toLocaleLowerCase('fr').trim();
-    const list=products.filter(p=>(filter==='Toutes'||filter===p.brand)&&(`${p.brand} ${p.model} ${p.detail}`).toLocaleLowerCase('fr').includes(q));
-    if(sort==='brand')list.sort((a,b)=>a.brand.localeCompare(b.brand,'fr')||a.model.localeCompare(b.model,'fr'));
-    if(sort==='model')list.sort((a,b)=>a.model.localeCompare(b.model,'fr'));
-    return list;
-  }
-  function renderCards(){
-    const list=visibleProducts();
-    $('#cards').innerHTML=list.map(p=>{
-      const checked=selected.includes(p.id);
-      const isDreame=p.id==='dreame-v30';
-      const isV15=p.id==='dyson-v15';
-      const isV16=p.id==='dyson-v16';
-      const isSamsung=p.id==='samsung-lite';
-      const isRoborock=p.id==='roborock-h60';
-      const isRowenta1480=p.id==='rowenta-1480';
-      const isRowenta1660=p.id==='rowenta-1660';
-      const isRowenta2080=p.id==='rowenta-2080';
-      const isTineco=p.id==='tineco-a90s';
-      const hasFiche=isDreame||isV15||isV16||isSamsung||isRoborock||isRowenta1480||isRowenta1660||isRowenta2080||isTineco;
-      const ficheUrl=(isTineco?'tineco-a90s.html':isRowenta2080?'rowenta-2080.html':isRowenta1660?'rowenta-1660.html':isRowenta1480?'rowenta-1480.html':isRoborock?'roborock-h60.html':isSamsung?'samsung-lite.html':isV16?'dyson-v16.html':isV15?'dyson-v15.html':'dreame-v30.html')+(selected.length?'?selection='+encodeURIComponent(selected.join(',')):'');
-      const highlights=isDreame
-        ? '<div class="proscons" aria-label="Points forts et faibles"><div><span class="hlabel plus">+ Les +</span><ul><li>Sols durs et plinthes : efficace</li><li>Bonne autonomie en Éco</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>Tapis : résultats mitigés</li><li>Poids sensible à l’usage</li></ul></div></div>'
-        : isV15 ? '<div class="proscons" aria-label="Points forts et faibles Dyson V15"><div><span class="hlabel plus">+ Les +</span><ul><li>Très bon sur sols durs et tapis</li><li>Efficace sur les poils</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>Gâchette à maintenir, 3,1 kg</li><li>Boost limité à 7–9 min</li></ul></div></div>'
-        : isV16 ? '<div class="proscons" aria-label="Points forts et faibles du Dyson V16"><div><span class="hlabel plus">+ Les +</span><ul><li>Autonomie et bac à compression</li><li>Anti-emmêlement efficace</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>Tapis épais : résultats mitigés</li><li>Poids de 3,4 kg, tête volumineuse</li></ul></div></div>'
-        : isSamsung ? '<div class="proscons" aria-label="Points forts et faibles Samsung"><div><span class="hlabel plus">+ Les +</span><ul><li>Station de vidage incluse</li><li>3 brosses, réparabilité 9,3/10</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>Autonomie moyenne/Jet courte</li><li>Sacs à remplacer, cheveux emmêlés</li></ul></div></div>'
-        : isRoborock ? '<div class="proscons" aria-label="Points forts et faibles Roborock H60 Ultra"><div><span class="hlabel plus">+ Les +</span><ul><li>Très bon tarif promotionnel</li><li>Tapis, tube pliable, anti-cheveux</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>Projections sur sols durs</li><li>Bloc lourd, bruit aigu, Max court</li></ul></div></div>'
-        : isRowenta1480 ? '<div class="proscons" aria-label="Points forts et faibles du Rowenta 14.80"><div><span class="hlabel plus">+ Les +</span><ul><li>52 min en mode normal</li><li>Tube Flex ; réparabilité 9,3/10</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>Débris projetés ; tapis épais difficiles</li><li>Filtre et clapet à surveiller</li></ul></div></div>'
-        : isRowenta1660 ? '<div class="proscons" aria-label="Points forts et faibles du Rowenta 16.60"><div><span class="hlabel plus">+ Les +</span><ul><li>Tube Flex, socle autonome</li><li>Réparabilité 9,4/10, batterie amovible</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>Efficacité réelle peu documentée</li><li>Charge 6 h ; chiffres Boost contradictoires</li></ul></div></div>'
-        : isRowenta2080 ? '<div class="proscons" aria-label="Points forts et faibles Rowenta 20.80"><div><span class="hlabel plus">+ Les +</span><ul><li>Silence et endurance confirmés</li><li>Réparabilité 9,6/10, bac 1 L</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>Prix 699,99 €, charge 6 h</li><li>Brosse/commande peu pratiques</li></ul></div></div>'
-        : isTineco ? '<div class="proscons" aria-label="Points forts et faibles Tineco A90S"><div><span class="hlabel plus">+ Les +</span><ul><li>Bon nettoyage, silence et LED</li><li>Tube pliable, recharge rapide</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>3,76 kg, fatigant dans les escaliers</li><li>Rainures peu aspirées ; stock limité</li></ul></div></div>'
-        : '<div class="proscons" aria-label="Points à documenter"><div><span class="hlabel plus">+ Les +</span><p>À documenter</p></div><div><span class="hlabel minus">− Les −</span><p>À documenter</p></div></div>';
-      const model=hasFiche?`<a class='product-title-link' href='${ficheUrl}'>${escapeText(p.model)}</a>`:escapeText(p.model);
-      const data=isDreame?`<div class='quick-specs' aria-label='Données essentielles Dreame V30'><div><small>Prix repéré</small><strong>429 €*</strong></div><div><small>Poids machine</small><strong>2,3 kg</strong></div><div><small>Aspiration</small><strong>330 AW max.</strong><span>Éco / Auto : AW non publiés<br>Sols durs : très bon · Tapis : mitigé</span></div><div><small>Autonomie avec brosse</small><strong>Éco : 77 min*</strong><span>Standard : 40 min**<br>Turbo : 11 min 40*</span></div></div><p class='card-note'>* Prix indicatif ; autonomie Éco/Turbo extrapolée par Lavelab. ** Standard : Frandroid. <a href='${ficheUrl}'>Voir les sources</a>.</p>`:isV15?`<div class='quick-specs' aria-label='Données essentielles Dyson V15'><div><small>Prix officiel</small><strong>549 €*</strong></div><div><small>Poids complet</small><strong>3,1 kg</strong></div><div><small>Aspiration</small><strong>240 AW max.</strong><span>Éco / Auto : AW non publiés<br>Très bon sur sols durs et tapis</span></div><div><small>Autonomie · Motorbar</small><strong>Auto : 30 min</strong><span>Éco : 55 min 45<br>Boost : 8 min 48</span></div></div><p class='card-note'>* Dyson France, pack avec 4 accessoires. Autonomie mesurée par Lavelab. <a href='${ficheUrl}'>Voir les sources</a>.</p>`:isV16?`<div class='quick-specs' aria-label='Données essentielles Dyson V16'><div><small>Prix officiel</small><strong>649 €*</strong></div><div><small>Poids complet</small><strong>3,4 kg</strong></div><div><small>Aspiration</small><strong>315 AW max.</strong><span>Éco / Auto : AW non publiés<br>Sols durs : très bon · Tapis : mitigé</span></div><div><small>Autonomie mesurée</small><strong>Auto : ≈ 45 min</strong><span>Éco : 76 min 30<br>Boost : 16 min</span></div></div><p class='card-note'>* Promotion Dyson France (relevé du 14/11/2026). Autonomie : Labo Maison ; configuration de brosse non précisée. <a href='${ficheUrl}'>Voir les sources</a>.</p>`:isSamsung?`<div class='quick-specs' aria-label='Données essentielles Samsung Bespoke AI Jet Lite'><div><small>Prix constaté</small><strong>499 €*</strong></div><div><small>Poids avec Slim LED+</small><strong>2,49 kg</strong></div><div><small>Aspiration par mode</small><strong>18 / 44 / 130 / 280 AW</strong><span>Min · Mid · Max · Jet<br>Sols durs : bon · Tapis : dépend de la brosse</span></div><div><small>Autonomie mesurée</small><strong>Mid : &lt; 23 min</strong><span>Jet : &lt; 9 min<br>Min : 44 min (CHIP)</span></div></div><p class='card-note'>* Boulanger, prix daté. AW constructeur ; autonomie : Les Numériques / CHIP. <a href='${ficheUrl}'>Voir les sources</a>.</p>`:isRoborock?`<div class='quick-specs' aria-label='Données essentielles Roborock H60 Ultra'><div><small>Prix promo relevé</small><strong>158 €*</strong></div><div><small>Poids sans accessoires</small><strong>≈ 1,7 kg</strong></div><div><small>Aspiration</small><strong>210 AW max.</strong><span>Éco/Médium : AW non publiés<br>Tapis : bon · Sols durs : projections</span></div><div><small>Autonomie · brosse</small><strong>Médium : 29–35 min</strong><span>Éco : 71 min estimées<br>Max : 7–10 min</span></div></div><p class='card-note'>* Prix promotionnel Roborock France, daté. Autonomie Lavelab extrapolée (5 % de charge), Frandroid en utilisation. <a href='${ficheUrl}'>Voir les sources</a>.</p>`:isRowenta1480?`<div class='quick-specs' aria-label='Données essentielles Rowenta X-Force Flex 14.80'><div><small>Prix Rowenta relevé</small><strong>399,99 €*</strong></div><div><small>Poids complet mesuré</small><strong>3,1 kg</strong></div><div><small>Aspiration</small><strong>240 AW max.</strong><span>Autres modes : AW non publiés<br>Sols durs : projections · Tapis épais : mitigés</span></div><div><small>Autonomie mesurée</small><strong>Normal : 52 min</strong><span>Boost : 21 min 30<br>Éco sans brosse : 90 min annoncées</span></div></div><p class='card-note'>* Prix fabricant relevé (14/11/2026). Autonomies Normal/Boost mesurées par Les Numériques ; <a href='${ficheUrl}'>voir les sources</a>.</p>`:isRowenta1660?`<div class='quick-specs' aria-label='Données essentielles Rowenta X-Force Flex 16.60'><div><small>Prix Fnac relevé</small><strong>469,99 €*</strong></div><div><small>Poids complet annoncé</small><strong>3,1 kg</strong></div><div><small>Aspiration</small><strong>315 AW max.</strong><span>Autres modes : AW non publiés<br>Efficacité : pas de mesures précises accessibles</span></div><div><small>Autonomie constructeur</small><strong>Éco + brosse : 55 min</strong><span>Max : 46 min<br>Boost : données incohérentes</span></div></div><p class='card-note'>* Relevé Fnac au 14/11/2026. Autonomies : notice Rowenta, <strong>non mesurées indépendamment</strong>. <a href='${ficheUrl}'>Sources et limites</a>.</p>`:isRowenta2080?`<div class='quick-specs' aria-label='Données essentielles Rowenta X-Force Silence 20.80'><div><small>Prix Rowenta relevé</small><strong>699,99 €*</strong></div><div><small>Poids du bloc seul</small><strong>2 kg annoncés</strong></div><div><small>Aspiration</small><strong>410 AW max.</strong><span>Autres modes : AW non publiés<br>Très bon en essai ; Dyson V16 légèrement devant</span></div><div><small>Autonomie par mode</small><strong>Éco à main : 120 min*</strong><span>Max : endurance saluée par Le Monde<br>Auto / Boost : chiffres non vérifiés</span></div></div><p class='card-note'>* Prix/Éco : Rowenta au 14/11/2026, sans brosse pour l'autonomie. Le Monde : essai indépendant, valeurs exactes non extraites. <a href='${ficheUrl}'>Voir les sources</a>.</p>`:isTineco?`<div class='quick-specs' aria-label='Données essentielles Tineco Pure One A90S'><div><small>Prix Tineco affiché</small><strong>439,99 €*</strong></div><div><small>Poids complet mesuré</small><strong>3,76 kg</strong></div><div><small>Aspiration</small><strong>270 AW max.</strong><span>Éco/Auto : AW non publiés<br>Sols durs : bon · Rainures : faible</span></div><div><small>Autonomie mesurée</small><strong>Auto : 32 min 50</strong><span>Max : 23 min 40 (Les Numériques)<br>Éco : ≈ 75 min (01net)</span></div></div><p class='card-note'>* Prix promotionnel Tineco au 14/11/2026, <strong>en rupture</strong>. Autonomie selon testeur et configuration. <a href='${ficheUrl}'>Voir les sources</a>.</p>`:'';
-      const status=hasFiche?`<a class='fichelink' href='${ficheUrl}'>Fiche détaillée →</a>`:'Fiche à compléter';
-      return `<article class='product ${checked?'selected':''}'><div class='cardtop'><span class='brand'>${escapeText(p.brand)}</span>${checked?'<span class="badge">Sélectionné</span>':''}</div><h3>${model}</h3><p class='variant'>${escapeText(p.detail)||'&nbsp;'}</p>${data}${highlights}<div class='foot'><span class='status'>${status}</span><button type='button' class='choose' data-id='${p.id}' aria-pressed='${checked}' ${!checked&&selected.length>=4?'disabled':''}>${checked?'✓ Retirer':'+ Comparer'}</button></div></article>`;
-    }).join('');
-    if(!list.length)$('#cards').innerHTML='<p class="empty">Aucun modèle ne correspond à cette recherche.</p>';
-    $('#count').textContent=`${selected.length} / 4 modèle${selected.length>1?'s':''} sélectionné${selected.length>1?'s':''}`;
-    $('#compare').disabled=selected.length<2;
-    renderComparison();
-  }
-  function renderComparison(){
-    $('#comparison-sub').textContent=selected.length<2?'Choisis au moins deux modèles ci-dessus.':`${selected.length} modèles sélectionnés · tableau provisoire`;
-    if(selected.length<2){$('#comparison-content').innerHTML='<div class="notice">Le tableau technique sera enrichi lors de notre prochaine étape : prix relevés, autonomie réelle, tests indépendants, accessoires et réparabilité.</div>';return;}
-    const records=selected.map(id=>products.find(p=>p.id===id));
-    const rows=['Prix vérifié','Aspiration / tests indépendants','Autonomie réelle','Poids et confort','Accessoires utiles','Entretien / réparabilité','Les +','Les −'];
-    $('#comparison-content').innerHTML='<div class="notice">Comparaison en cours de construction : ces critères seront renseignés à partir de sources vérifiées. Aucune note n’est attribuée pour l’instant.</div><div class="table-scroll"><table><thead><tr><th scope="col">Critère</th>'+records.map(p=>`<th scope="col">${escapeText(p.brand)}<br>${escapeText(p.model)}</th>`).join('')+'</tr></thead><tbody>'+rows.map(label=>`<tr><th scope="row">${escapeText(label)}</th>`+records.map(p=>{const values={'dreame-v30':{'Prix vérifié':'429 € indicatifs','Aspiration / tests indépendants':'330 AW max. fabricant ; bon sur sols durs, plus mitigé sur tapis','Autonomie réelle':'Éco 77 min* ; standard 40 min ; Turbo 11 min 40*','Poids et confort':'2,3 kg (machine annoncée)','Les +':'Sols durs et plinthes efficaces ; bonne autonomie Éco','Les −':'Tapis mitigés ; poids sensible à l’usage'},'dyson-v16':{'Prix vérifié':'649 € officiel en promotion','Aspiration / tests indépendants':'315 AW max. fabricant ; très bon sur sols durs, mitigé sur tapis épais','Autonomie réelle':'Éco 76 min 30 ; Auto ≈ 45 min ; Boost 16 min (Labo Maison)','Poids et confort':'3,4 kg complet ; bouton marche/arrêt','Accessoires utiles':'All Floor Cones, mini-brosse motorisée, suceurs','Entretien / réparabilité':'8,3/10 ; batterie officielle 135 €','Les +':'Bonne autonomie ; compactage ; anti-emmêlement','Les −':'Tapis épais et gros débris ; poids et encombrement'},'samsung-lite':{'Prix vérifié':'499 € constatés Boulanger','Aspiration / tests indépendants':'18 / 44 / 130 / 280 AW fabricant ; bon sur sols durs, brosse déterminante sur tapis','Autonomie réelle':'Mid < 23 min ; Jet < 9 min (Les Numériques) ; Min 44 min (CHIP)','Poids et confort':'2,49 kg avec Slim LED+ ; 2,70 kg avec Jet Dual+ (notice)','Accessoires utiles':'3 brosses dont Pet Tool+ ; Clean Station 2 L','Entretien / réparabilité':'9,3/10 ; sacs station à remplacer ; batterie amovible','Les +':'Vidage automatique ; 3 brosses ; bonne réparabilité','Les −':'Autonomie faible en puissance forte ; sacs ; cheveux emmêlés'},'roborock-h60':{'Prix vérifié':'158 € promotion Roborock France (relevé ponctuel)','Aspiration / tests indépendants':'210 AW max. fabricant ; bon sur tapis, projections de gros débris sur sols durs','Autonomie réelle':'Éco 71 min* ; Médium 29 min* / ≈ 35 min ; Max 7 min* / ≈ 10 min','Poids et confort':'≈ 1,7 kg sans accessoires ; poids complet non vérifié','Accessoires utiles':'Tube 90°, mini-brosse motorisée, suceur 2-en-1','Entretien / réparabilité':'Batterie officielle 149 € ; indice propre au modèle non vérifié','Les +':'Prix promo ; tapis ; anti-emmêlement ; tube pliable','Les −':'Projections de débris ; bruit aigu ; Max court ; bloc lourd'},'rowenta-1480':{'Prix vérifié':'399,99 € officiel (relevé 14/11/2026)','Aspiration / tests indépendants':'240 AW max. fabricant ; sols durs 87 % normal / 92 % Boost, tapis longs 67 % normal / 70 % Boost en trois passages (Les Numériques)','Autonomie réelle':'Normal 52 min ; Boost 21 min 30 mesurés (Les Numériques) ; Éco 90 min annoncées sans brosse','Poids et confort':'3,1 kg avec brosse ; 1,7 kg à main ; tube pliable Flex','Accessoires utiles':'Mini électrobrosse, suceur fente, brossettes, socle mural','Entretien / réparabilité':'9,3/10 ; batterie Rowenta ZR009709 à 139,99 € ; pièces annoncées 15 ans','Les +':'Endurance ; tube Flex ; réparabilité et batterie amovible','Les −':'Projections de débris ; tapis épais ; filtre qui s’encrasse ; clapet anti-retour'},'rowenta-1660':{'Prix vérifié':'469,99 € Fnac (relevé du 14/11/2026)','Aspiration / tests indépendants':'315 AW max. constructeur ; Labo Fnac 4/5 global, mesures individuelles indisponibles','Autonomie réelle':'Aucune mesure indépendante vérifiée ; constructeur Éco avec brosse 55 min, Max 46 min ; Boost contradictoire dans la notice','Poids et confort':'3,1 kg annoncé complet ; 1,8 kg annoncé à main ; tube Flex et socle','Accessoires utiles':'Mini-électrobrosse LED, suceurs, filtre supplémentaire, station autonome','Entretien / réparabilité':'9,4/10 ; batterie Rowenta ZR009709 à 139,99 € ; pièces annoncées 15 ans','Les +':'Tube Flex ; socle sans perçage ; réparabilité ; 315 AW annoncés','Les −':'Efficacité et autonomie réelle non documentées ; charge 6 h ; bac manuel'},'rowenta-2080':{'Prix vérifié':'699,99 € officiel (relevé 14/11/2026)','Aspiration / tests indépendants':'410 AW max. constructeur ; Le Monde : très bon, mais Dyson V16 légèrement plus performant','Autonomie réelle':'Le Monde confirme une forte endurance en Max, valeur exacte non reprise ; Éco à main 120 min annoncées sans électrobrosse ; Auto/Boost non chiffrés','Poids et confort':'2 kg à main annoncés ; poids complet non vérifié ; brosse et gâchette critiquées','Accessoires utiles':'Tube Flex, mini-électrobrosse LED, Vision Detect, mini Flex, station de charge','Entretien / réparabilité':'9,6/10 ; deux filtres dont un à laver chaque semaine ; prix de batterie non vérifié','Les +':'Silence confirmé ; endurance ; bac 1 L ; réparabilité ; fabrication française','Les −':'Prix élevé ; 6 h de charge ; gâchette mal placée ; brosse relevée'},'tineco-a90s':{'Prix vérifié':'439,99 € promotion Tineco, en rupture au relevé 14/11/2026','Aspiration / tests indépendants':'270 AW max. fabricant ; Les Numériques : 90 % sols durs en Auto / 92 % Max (1 passage), 7 % / 14 % en rainures (3 passages)','Autonomie réelle':'Éco ≈ 75 min avec brosse (01net, usage) ; Auto 32 min 50, Max 23 min 40 (Les Numériques)','Poids et confort':'3,76 kg complet, 2,22 kg à main (Les Numériques) ; tube pliable','Accessoires utiles':'3DSense LED, mini-brosse motorisée, FlexiSoft, socle sans vidage auto','Entretien / réparabilité':'Indice 8,8/10 ; pièces/batterie de rechange prix non vérifiés ; vidage ScrapeRing','Les +':'Aspiration sols durs, silence, recharge rapide, tube pliable','Les −':'Très lourd, rainures insuffisantes, station sans vidage auto, stock en rupture'},'dyson-v15':{'Prix vérifié':'549 € officiel · pack 4 accessoires','Aspiration / tests indépendants':'240 AW max. fabricant ; très bon sur sols durs et tapis','Autonomie réelle':'Éco 55 min 45 ; Auto 30 min ; Boost 8 min 48 (Lavelab Motorbar)','Poids et confort':'3,1 kg complet ; gâchette maintenue','Accessoires utiles':'Fluffy Optic, Digital Motorbar ; vérifier le pack','Entretien / réparabilité':'8/10 ; batterie officielle 80 €','Les +':'Aspiration multi-surfaces ; poils ; mode Auto','Les −':'Gâchette et poids ; Boost court'}};const v=values[p.id]?.[label]||null;return '<td>'+(v?escapeText(v):'À documenter')+'</td>'}).join('')+'</tr>').join('')+'</tbody></table></div>';
-  }
-  function toggle(id){if(selected.includes(id)){selected=selected.filter(s=>s!==id)}else if(selected.length<4){selected.push(id)}renderCards()}
-  function showToast(s){const t=$('#toast');t.textContent=s;t.style.display='block';clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.style.display='none',3600)}
-  function share(){
-    const u=new URL(location.href);u.hash=selected.length?'selection='+selected.join(','):'';
-    const link=u.toString();
-    if(navigator.clipboard?.writeText){navigator.clipboard.writeText(link).then(()=>showToast('Lien de sélection copié.')).catch(()=>fallback(link));}
-    else fallback(link);
-  }
-  function fallback(link){const text=prompt('Copie ce lien pour le partager :',link);if(text!==null)showToast('Le lien contient la sélection actuelle.')}
-  $('#cards').addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(b)toggle(b.dataset.id)});
-  $('#filters').addEventListener('click',e=>{const b=e.target.closest('button[data-brand]');if(b){filter=b.dataset.brand;renderFilters();renderCards()}});
-  $('#search').addEventListener('input',e=>{search=e.target.value;renderCards()});
-  $('#sort').addEventListener('change',e=>{sort=e.target.value;renderCards()});
-  $('#reset').addEventListener('click',()=>{selected=[];history.replaceState(null,'',location.pathname+location.search);renderCards()});
-  $('#compare').addEventListener('click',()=>$('#comparaison').scrollIntoView({behavior:'smooth'}));
-  $('#share').addEventListener('click',share);
-  window.addEventListener('hashchange',()=>{selected=initialSelection();renderCards()});
-  renderFilters();renderCards();
-  </script>
+}
+init();
+
+</script>
 </body>
 </html>
