@@ -57,18 +57,30 @@
     @media(max-width:850px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:52px 0 41px}}
     @media(max-width:570px){.wrap{width:min(100% - 28px,1120px)}header .wrap{min-height:62px}.stamp{display:none}.hero{padding:40px 0 35px}.lede{font-size:15px;margin:17px 0 24px}.searchbar{grid-template-columns:1fr}.section-head{display:block}.section-head .sub{margin-top:4px}.cards{gap:10px}.product{padding:12px;min-height:303px}.illustration{height:112px}.illustration svg{width:118px;height:118px}.product h3{font-size:15px;min-height:59px}.foot{align-items:stretch!important;flex-direction:column;gap:7px!important}.product .foot{padding-top:10px}.choose{width:100%}.compare-panel{padding:17px}.dock{bottom:9px;border-radius:15px;padding:12px}.dock strong{font-size:12px}.dock button{font-size:11px;padding:10px 11px}.dock .secondary{display:none}.status{font-size:11px}.top-status{font-size:11px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.product{transition:none}}
+
+    .illustration-link{display:grid;place-items:center;width:100%;height:100%}
+    .illustration-link:hover svg{transform:translateY(-3px)}.illustration-link svg{transition:transform .18s}
+    .product-title-link{text-decoration:none;color:inherit}.product-title-link:hover{text-decoration:underline;text-decoration-color:#4e968f}
+    .fichelink{color:#176e70;text-decoration:none;font-weight:750}.fichelink:hover{text-decoration:underline}
+    .quick-specs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0 0}
+    .quick-specs>div{background:#f4f8f6;border:1px solid #e6eeea;padding:10px;border-radius:10px}
+    .quick-specs small{display:block;font-size:10px;color:#6b7c80;margin-bottom:3px}
+    .quick-specs strong{display:block;font-size:13px;letter-spacing:-.015em;color:#204d50}
+    .quick-specs span{display:block;font-size:10px;line-height:1.45;margin-top:4px;color:#5f7377}
+    .card-note{font-size:10px;line-height:1.45;color:#6a8183;margin:8px 0 0}
+    .card-note a{color:#186d70}
   </style>
 </head>
 <body>
-  <header><div class="wrap"><a href="#haut" class="logo"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 20h14M9 20l2-15M15 20l-4-15M10 5h5"/></svg></span>bien choisir<span class="stamp">/ édition 2026</span></a><span class="top-status"><span class="dot"></span> Comparatif en préparation</span></div></header>
-  <section class="hero" id="haut"><div class="wrap"><div class="eyebrow">Notre sélection · 2026</div><h1>9 aspirateurs.<br><em>Un seul bon choix.</em></h1><p class="lede">Une sélection de modèles haut de gamme pour trouver le meilleur rapport qualité-prix. On compare ensemble, sans se précipiter.</p><div class="metrics"><span class="metric"><strong>9</strong> aspirateurs</span><span class="metric"><strong>6</strong> marques</span><span class="metric">Aspiration à sec</span><span class="metric">Tests indépendants à venir</span></div></div></section>
+  <header><div class="wrap"><a href="#haut" class="logo"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 20h14M9 20l2-15M15 20l-4-15M10 5h5"/></svg></span>bien choisir<span class="stamp">/ édition 2026</span></a><span class="top-status"><span class="dot"></span> 1 fiche documentée</span></div></header>
+  <section class="hero" id="haut"><div class="wrap"><div class="eyebrow">Notre sélection · 2026</div><h1>9 aspirateurs.<br><em>Un seul bon choix.</em></h1><p class="lede">Une sélection de modèles haut de gamme pour trouver le meilleur rapport qualité-prix. On compare ensemble, sans se précipiter.</p><div class="metrics"><span class="metric"><strong>9</strong> aspirateurs</span><span class="metric"><strong>6</strong> marques</span><span class="metric">Aspiration à sec</span><span class="metric">1 fiche sourcée disponible</span></div></div></section>
   <main class="wrap">
     <div class="section-head"><div><h2>Les modèles retenus</h2><p class="sub">Sélectionne jusqu’à quatre appareils pour les mettre côte à côte.</p></div><button id="reset" class="toplink" type="button">Effacer ma sélection</button></div>
     <div class="searchbar"><div class="search-wrap"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16.3 16.3 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une marque ou un modèle…" aria-label="Rechercher un aspirateur"></div><select id="sort" aria-label="Trier les aspirateurs"><option value="selection">Ordre de notre sélection</option><option value="brand">Trier par marque</option><option value="model">Trier par modèle</option></select></div>
     <div id="filters" class="filters" aria-label="Filtrer par marque"></div>
     <div class="cards" id="cards" aria-live="polite"></div>
     <section class="compare-panel" id="comparaison" aria-labelledby="comparison-title"><div class="panel-head"><div><h2 id="comparison-title">Comparer côte à côte</h2><p class="sub" id="comparison-sub">Choisis au moins deux modèles ci-dessus.</p></div></div><div id="comparison-content"><div class="notice">Le tableau technique sera enrichi lors de notre prochaine étape : prix relevés, autonomie réelle, tests indépendants, accessoires et réparabilité.</div></div></section>
-    <div class="guidance"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>Cette version sert à valider l’hébergement et l’ergonomie. Elle ne présente ni prix non vérifiés ni classement prématuré. Une sélection partagée par lien n’est pas une synchronisation en direct entre deux appareils.</span></div>
+    <div class="guidance"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>Cette version sert à valider l’hébergement et l’ergonomie. La fiche Dreame V30 contient un prix indicatif daté et des résultats de tests sourcés. Les autres modèles restent à documenter ; aucun classement prématuré. Une sélection partagée par lien n’est pas une synchronisation en direct entre deux appareils.</span></div>
     <footer>Notre comparatif d’aspirateurs · Version de démonstration · Novembre 2026</footer>
   </main>
   <div class="dock" id="dock" aria-live="polite"><div><strong id="count">0 / 4 modèle sélectionné</strong><p>À comparer ensemble</p></div><div class="actions"><button id="share" class="secondary" type="button">Partager</button><button id="compare" type="button" disabled>Comparer</button></div></div>
@@ -111,7 +123,14 @@
     const list=visibleProducts();
     $('#cards').innerHTML=list.map(p=>{
       const checked=selected.includes(p.id);
-      return `<article class="product ${checked?'selected':''}"><div class="cardtop"><span class="brand">${escapeText(p.brand)}</span>${checked?'<span class="badge">Sélectionné</span>':''}</div><div class="illustration">${vacuumSVG(palette[p.brand])}</div><h3>${escapeText(p.model)}</h3><p class="variant">${escapeText(p.detail)||'&nbsp;'}</p><div class="foot"><span class="status">Fiche à compléter</span><button type="button" class="choose" data-id="${p.id}" aria-pressed="${checked}" ${!checked&&selected.length>=4?'disabled':''}>${checked?'✓ Retirer':'+ Comparer'}</button></div></article>`;
+      const hasFiche=p.id==='dreame-v30';
+      const ficheUrl='dreame-v30.html'+(selected.length?'?selection='+encodeURIComponent(selected.join(',')):'');
+      const img=vacuumSVG(palette[p.brand]);
+      const visual=hasFiche?`<a class='illustration-link' href='${ficheUrl}' aria-label='Ouvrir la fiche détaillée du Dreame V30'>${img}</a>`:img;
+      const model=hasFiche?`<a class='product-title-link' href='${ficheUrl}'>${escapeText(p.model)}</a>`:escapeText(p.model);
+      const data=hasFiche?`<div class='quick-specs' aria-label='Données essentielles Dreame V30'><div><small>Prix repéré</small><strong>429 €*</strong></div><div><small>Poids machine</small><strong>2,3 kg</strong></div><div><small>Aspiration</small><strong>330 AW max.</strong><span>Éco / Auto : AW non publiés<br>Sols durs : très bon · Tapis : mitigé</span></div><div><small>Autonomie avec brosse</small><strong>Éco : 77 min*</strong><span>Standard : 40 min**<br>Turbo : 11 min 40*</span></div></div><p class='card-note'>* Prix indicatif ; autonomie Éco/Turbo extrapolée par Lavelab. ** Standard : Frandroid. <a href='${ficheUrl}'>Voir les sources</a>.</p>`:'';
+      const status=hasFiche?`<a class='fichelink' href='${ficheUrl}'>Fiche détaillée →</a>`:'Fiche à compléter';
+      return `<article class='product ${checked?'selected':''}'><div class='cardtop'><span class='brand'>${escapeText(p.brand)}</span>${checked?'<span class="badge">Sélectionné</span>':''}</div><div class='illustration'>${visual}</div><h3>${model}</h3><p class='variant'>${escapeText(p.detail)||'&nbsp;'}</p>${data}<div class='foot'><span class='status'>${status}</span><button type='button' class='choose' data-id='${p.id}' aria-pressed='${checked}' ${!checked&&selected.length>=4?'disabled':''}>${checked?'✓ Retirer':'+ Comparer'}</button></div></article>`;
     }).join('');
     if(!list.length)$('#cards').innerHTML='<p class="empty">Aucun modèle ne correspond à cette recherche.</p>';
     $('#count').textContent=`${selected.length} / 4 modèle${selected.length>1?'s':''} sélectionné${selected.length>1?'s':''}`;
