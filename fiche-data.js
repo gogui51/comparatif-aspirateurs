@@ -10,7 +10,7 @@
     const payload=await res.json();
     const p=payload.models.find(model=>model.id===id);
     if(!p)throw new Error("Modèle absent du référentiel");
-    const euro=new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",minimumFractionDigits:2,maximumFractionDigits:2}).format(p.price.amount);
+    const euro=new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",minimumFractionDigits:0,maximumFractionDigits:2}).format(p.price.amount);
     const facts=[
       {label:"Prix et disponibilité",value:euro,note:p.price.merchant+" · "+p.price.status+" · relevé du "+p.price.date.split("-").reverse().join("/")},
       {label:"Poids prêt à aspirer",value:p.weight.floor.value,note:p.weight.floor.kind+" · "+p.weight.floor.note},
