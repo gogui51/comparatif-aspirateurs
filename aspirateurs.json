@@ -137,6 +137,12 @@
       "image": {
         "src": "https://dreamestore.co.uk/cdn/shop/files/Left-Upright-V30_1024x1024_07004cf4-228c-488c-8c17-bb285206a94e.webp?v=1760298968&width=1024",
         "credit": "Dreame – boutique officielle"
+      },
+      "homeWeight": {
+        "value": "2,3 kg",
+        "kind": "fabricant",
+        "source": "https://fr.dreametech.com/products/aspirateur-sans-fil-v30",
+        "note": "Poids de la machine ; configuration avec tube et brosse non précisée"
       }
     },
     {
@@ -272,6 +278,12 @@
       "image": {
         "src": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/hero-locale/fr_FR/446986-01.png?cropPathE=mobile&fit=stretch%2C1&wid=640",
         "credit": "Dyson – site officiel"
+      },
+      "homeWeight": {
+        "value": "3,1 kg",
+        "kind": "fabricant",
+        "source": "https://www.dyson.fr/aspirateurs/sans-fil/v15/detect-absolute-jaune-nickel",
+        "note": "Poids de l'ensemble équipé"
       }
     },
     {
@@ -407,6 +419,12 @@
       "image": {
         "src": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/specifications/home/floorcare/cordless/Web-692B-PDP-Specification-Image-Module5.png?%24responsive%24=&fmt=png-alpha",
         "credit": "Dyson – site officiel"
+      },
+      "homeWeight": {
+        "value": "3,4 kg",
+        "kind": "fabricant",
+        "source": "https://www.dyson.fr/aspirateurs/sans-fil/v16-piston-animal/noir-mat-cuivre",
+        "note": "Poids de l'ensemble équipé"
       }
     },
     {
@@ -542,6 +560,12 @@
       "image": {
         "src": "https://cdn.lesnumeriques.com/optim/product/77/77556/4773cb89-bespoke-ai-jet-lite-complete-vs80f28efp__1200_900__overflow.jpg",
         "credit": "Les Numériques – Samsung VS80F28EFP"
+      },
+      "homeWeight": {
+        "value": "2,49 kg",
+        "kind": "notice",
+        "source": "https://www.samsung.com/fr/vacuum-cleaners/stick/bespoke-jet-ai-lite-complete-gray-vs80f28efp-wd/",
+        "note": "Poids avec brosse Slim Action LED+"
       }
     },
     {
@@ -683,6 +707,12 @@
       "image": {
         "src": "https://th.roborock.com/cdn/shop/files/h60_series_section9-Ultra.png?v=14849592930707285065",
         "credit": "Roborock – site officiel"
+      },
+      "homeWeight": {
+        "value": "≈ 3 kg",
+        "kind": "mesuré",
+        "source": "https://www.notebookcheck.net/Cordless-Vacuum-cleaner-with-automatic-suction-Roborock-H60-Hub-Ultra-review.1145590.0.html",
+        "note": "Poids avec tube, brosse et batterie ; source essayant le H60 Ultra avec station Hub"
       }
     },
     {
@@ -818,6 +848,12 @@
       "image": {
         "src": "https://www.dagimarket.com/2000583-home_default/rowenta-x-force-flex-1480-rh9b74wo-stick-vacuum-electric-broom-2-in-1-stick-vacuum-battery-dry-bagless-06-l-black-gold.jpg",
         "credit": "Dagimarket – Rowenta RH9B74WO"
+      },
+      "homeWeight": {
+        "value": "3,1 kg",
+        "kind": "mesuré",
+        "source": "https://www.lesnumeriques.com/aspirateur-balai.html",
+        "note": "Poids avec brosse"
       }
     },
     {
@@ -953,6 +989,12 @@
       "image": {
         "src": "https://cdn.laredoute.com/cdn-cgi/image/width%3D900%2Cheight%3D900%2Cfit%3Dpad%2Cdpr%3D1/products/d/8/a/d8a0ec6285657a37ea0f863a072bfe64.jpg",
         "credit": "La Redoute – Rowenta RH9C71E0"
+      },
+      "homeWeight": {
+        "value": "3,1 kg",
+        "kind": "fiche vendeur",
+        "source": "https://www.fnac.com/Aspirateur-balai-sans-fil-Rowenta-X-Force-Flex-16-60-RH9C71E0/a21940271/w-4",
+        "note": "Poids de l'appareil, hors emballage"
       }
     },
     {
@@ -1088,6 +1130,12 @@
       "image": {
         "src": "https://cdn.lesnumeriques.com/optim/news/26/262109/ad8d71fe-rowenta-x-force-silence-20-80__1200_678__0-0-1260-710.jpg",
         "credit": "Les Numériques / Rowenta – RH9E74E0"
+      },
+      "homeWeight": {
+        "value": "3,1 kg",
+        "kind": "constructeur / gamme",
+        "source": "https://www.mediaexpert.pl/agd-male/sprzatanie/odkurzacze-pionowe/odkurzacz-pionowy-tefal-ty9ed4e0-x-force-silence-20-80-animal-aqua",
+        "note": "Donnée modèle Tefal 20.80 de même famille, sans pesée exacte du RH9E74E0"
       }
     },
     {
@@ -1229,6 +1277,12 @@
       "image": {
         "src": "https://store.tineco.com/cdn/shop/files/tineco-pure-one-a90s-cordless-stick-vacuum-cleaner-3704818.jpg?v=1762832506&width=1214",
         "credit": "Tineco – boutique officielle"
+      },
+      "homeWeight": {
+        "value": "3,76 kg",
+        "kind": "mesuré",
+        "source": "https://www.lesnumeriques.com/aspirateur-balai.html",
+        "note": "Poids avec brosse"
       }
     }
   ]
