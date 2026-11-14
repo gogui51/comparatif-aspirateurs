@@ -45,8 +45,8 @@
       const section=document.createElement("section");
       section.id="prix-offres";
       section.setAttribute("aria-labelledby","prix-offres-title");
-      section.innerHTML='<div class="section-head"><h2 id="prix-offres-title">06 · Prix par enseigne</h2><span class="section-note">Relevé du 14 novembre 2026</span></div>'
-        +'<p class="offres-explain">Neuf références vérifiées dans cinq canaux de vente : les remises sont calculées par rapport au prix barré du même vendeur. Les relevés tiers Amazon sont anciens et les offres sans prix ne sont pas considérées comme disponibles.</p>'
+      section.innerHTML='<div class="section-head"><h2 id="prix-offres-title">Prix par enseigne</h2><span class="section-note">Relevé du 14 novembre 2026</span></div>'
+        +'<p class="offres-explain">Cinq enseignes recherchées pour cette référence : les remises sont calculées par rapport au prix barré du même vendeur. Les relevés tiers Amazon sont anciens et les offres sans prix ne sont pas considérées comme disponibles.</p>'
         +'<div class="merchants-grid">'+markup+'</div>'
         +'<p class="offres-explain"><a href="./#prix-'+esc(p.id)+'">Voir également le tableau des 9 modèles ↗</a> · Les prix peuvent évoluer et ne sont pas actualisés en continu.</p>';
       costSection.before(section);
