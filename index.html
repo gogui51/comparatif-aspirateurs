@@ -203,6 +203,7 @@ function renderCards(){
   $("#count").textContent=selected.length+" / 4 modèle"+(selected.length>1?"s":"")+" sélectionné"+(selected.length>1?"s":"");
   $("#compare").disabled=selected.length<2;
   renderComparison();
+  renderOrientation();
 }
 function formatModes(p){
   return p.autonomy.modes.map(m=>m[0]+" : "+m[1]+" ("+m[2]+" ; "+m[3]+")").join(" · ");
@@ -245,7 +246,7 @@ function renderOrientation(){
     return '<article class="orientation-item"><span class="orientation-label">'+escapeText(item.title)+'</span><h3>'+escapeText(p.brand+" "+p.model)+'</h3>'
       +'<p>'+escapeText(item.reason)+'</p><p class="orientation-watch"><strong>À surveiller :</strong> '+escapeText(item.watch)+'</p>'
       +'<p class="orientation-price">'+escapeText(euro(p.price.amount))+' · prix daté'+escapeText(status)+'</p>'
-      +'<a class="fichelink" href="'+escapeText(p.page)+'">Voir les preuves et les limites →</a></article>';
+      +'<a class="fichelink" href="'+escapeText(p.page+(selected.length?"?selection="+encodeURIComponent(selected.join(",")):""))+'">Voir les preuves et les limites →</a></article>';
   }).join("");
 }
 function toggle(id){
@@ -282,7 +283,6 @@ async function init(){
     selected=initialSelection();
     renderFilters();
     renderCards();
-    renderOrientation();
   }catch(error){
     $("#cards").innerHTML='<p class="empty" role="alert">Impossible de charger les données du comparatif. Actualise la page ; si le problème persiste, vérifie la publication du fichier aspirateurs.json.</p>';
     $("#comparison-content").innerHTML='<div class="notice">Données temporairement indisponibles.</div>';
