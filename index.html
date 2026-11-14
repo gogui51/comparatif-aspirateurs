@@ -155,6 +155,20 @@ footer{color:#4c6468}
 .product-photo.photo-unavailable{background:#f6f8f7;color:#657a7b;font-size:12px}
 .product-photo.photo-unavailable::after{content:"Photo indisponible";}
 @media(max-width:570px){.product-photo{height:218px;margin:12px 0 15px}.product-photo img{padding:6px}}
+
+/* Cartes d'accueil épurées : indicateurs seuls, détails sur les fiches */
+.product{min-height:0}
+.product .quick-specs{gap:9px;margin:16px 0 16px}
+.product .quick-specs>div{padding:13px 12px;min-height:81px;display:flex;flex-direction:column;justify-content:center}
+.product .quick-specs small{font-size:12px;line-height:1.25;color:#637a7d;margin-bottom:6px}
+.product .quick-specs strong{font-size:21px;line-height:1.17;letter-spacing:-.045em;color:#153f43}
+.product .variant{min-height:0;margin-top:4px;color:#71868a;font-size:11px}
+.product .foot{padding-top:14px}
+.product .product-photo{margin-bottom:14px}
+@media(max-width:570px){
+  .product .quick-specs>div{min-height:80px;padding:12px}
+  .product .quick-specs strong{font-size:22px}
+}
 </style>
 </head>
 <body>
@@ -224,17 +238,19 @@ function renderCards(){
     const checked=selected.includes(p.id);
     const url=encodeURI(p.page)+(selected.length?"?selection="+encodeURIComponent(selected.join(",")):"");
     const detail='<a class="product-title-link" href="'+escapeText(url)+'">'+escapeText(p.model)+'</a>';
-    const stats='<div class="quick-specs" aria-label="Quatre données essentielles">'
-      +quickSpec(p.id==="tineco-a90s"?"Prix affiché (rupture)":"Meilleur prix direct",euro(p.price.amount),p.price.merchant+" · "+p.price.status)
-      +quickSpec("Poids avec brosse",p.weight.floor.value,p.weight.floor.kind+" · "+p.weight.floor.note)
-      +quickSpec("Aspiration",p.suction.max+" AW max.",p.suction.modes+" · "+p.suction.performance)
-      +quickSpec("Autonomie "+p.autonomy.mode,p.autonomy.display,p.autonomy.kind+" · "+p.autonomy.note)
+    const weight=p.homeWeight?.value||p.weight.floor.value;
+    const autonomy=p.autonomy.display==="Non chiffrée"?"—":p.autonomy.display;
+    const stats='<div class="quick-specs" aria-label="Caractéristiques principales">'
+      +quickSpec("Prix",euro(p.price.amount),"")
+      +quickSpec("Poids",weight,"")
+      +quickSpec("Aspiration max.",p.suction.max+" AW","")
+      +quickSpec("Autonomie",autonomy,"")
       +'</div>';
-    const note='<p class="card-note"><a href="#prix-'+escapeText(p.id)+'">Comparer les 5 enseignes et remises →</a> · Prix non actualisés automatiquement · <strong>'+escapeText(p.proof.level)+'</strong> niveau de preuve. <a href="'+escapeText(url)+'">Voir conditions et sources</a>.</p>';
+    const reference=p.reference&&p.reference!==p.model?'<p class="variant">'+escapeText(p.reference)+'</p>':"";
     return '<article class="product '+(checked?'selected':'')+'"><div class="cardtop"><span class="brand">'+escapeText(p.brand)+'</span>'+(checked?'<span class="badge">Sélectionné</span>':'')+'</div>'
       +'<a class="product-photo" href="'+escapeText(url)+'" aria-label="Voir la fiche '+escapeText(p.brand+' '+p.model)+'"><img src="'+escapeText(p.image.src)+'" alt="Photo du '+escapeText(p.brand+' '+p.model)+'" width="360" height="240" loading="lazy" decoding="async" onerror="this.parentElement.classList.add(\'photo-unavailable\');this.remove()"></a>'
-      +'<h3>'+detail+'</h3><p class="variant">'+escapeText(p.detail||p.reference)+'</p>'+stats+note+proscons(p)
-      +'<div class="foot"><a class="fichelink" href="'+escapeText(url)+'">Fiche détaillée →</a><button type="button" class="choose" data-id="'+escapeText(p.id)+'" aria-pressed="'+checked+'" '+(!checked&&selected.length>=4?'disabled':'')+'>'+(checked?'✓ Retirer':'+ Comparer')+'</button></div></article>';
+      +'<h3>'+detail+'</h3>'+reference+stats
+      +'<div class="foot"><a class="fichelink" href="'+escapeText(url)+'">Détails →</a><button type="button" class="choose" data-id="'+escapeText(p.id)+'" aria-pressed="'+checked+'" '+(!checked&&selected.length>=4?'disabled':'')+'>'+(checked?'✓ Retirer':'+ Comparer')+'</button></div></article>';
   }).join("");
   if(!list.length)$("#cards").innerHTML='<p class="empty">Aucun modèle ne correspond à cette recherche.</p>';
   $("#count").textContent=selected.length+" / 4 modèle"+(selected.length>1?"s":"")+" sélectionné"+(selected.length>1?"s":"");
