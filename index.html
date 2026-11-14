@@ -35,8 +35,6 @@
     .product.selected{border-color:#5b9c92;box-shadow:0 0 0 1px #5b9c92 inset,0 10px 30px #1d4b4c12}
     .cardtop{display:flex;justify-content:space-between;align-items:center;min-height:24px}.brand{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:750;color:#577178}
     .badge{font-size:10px;color:#24796f;background:#e7f4ee;border-radius:20px;padding:5px 9px;font-weight:700}
-    .illustration{height:150px;display:grid;place-items:center;margin:0 -6px 4px;overflow:hidden}
-    .illustration svg{width:140px;height:140px;filter:drop-shadow(4px 7px 4px #06252710)}
     .product h3{margin:0;letter-spacing:-.035em;font-size:18px;line-height:1.3;min-height:47px;font-weight:720}
     .variant{min-height:23px;color:#8a9899;font-size:11px;margin:4px 0 0}.product .foot{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:auto;padding-top:17px;border-top:1px solid #eef1f0}
     .status{font-size:12px;color:#7b8d90}.choose{border:1px solid #c7d6d4;background:white;border-radius:10px;padding:9px 12px;color:#174e52;font-size:12px;font-weight:700;min-height:38px}
@@ -55,11 +53,9 @@
     footer{margin-top:58px;font-size:12px;line-height:1.7;color:#859799;text-align:center}
     #toast{position:fixed;bottom:101px;left:50%;transform:translateX(-50%);background:#fff;color:#24515a;border:1px solid #bfd4d1;border-radius:12px;padding:10px 18px;box-shadow:0 12px 30px #123a4030;font-size:13px;z-index:40;display:none;max-width:90vw;text-align:center}
     @media(max-width:850px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:52px 0 41px}}
-    @media(max-width:570px){.wrap{width:min(100% - 28px,1120px)}header .wrap{min-height:62px}.stamp{display:none}.hero{padding:40px 0 35px}.lede{font-size:15px;margin:17px 0 24px}.searchbar{grid-template-columns:1fr}.section-head{display:block}.section-head .sub{margin-top:4px}.cards{gap:10px}.product{padding:12px;min-height:303px}.illustration{height:112px}.illustration svg{width:118px;height:118px}.product h3{font-size:15px;min-height:59px}.foot{align-items:stretch!important;flex-direction:column;gap:7px!important}.product .foot{padding-top:10px}.choose{width:100%}.compare-panel{padding:17px}.dock{bottom:9px;border-radius:15px;padding:12px}.dock strong{font-size:12px}.dock button{font-size:11px;padding:10px 11px}.dock .secondary{display:none}.status{font-size:11px}.top-status{font-size:11px}}
+    @media(max-width:570px){.wrap{width:min(100% - 28px,1120px)}header .wrap{min-height:62px}.stamp{display:none}.hero{padding:40px 0 35px}.lede{font-size:15px;margin:17px 0 24px}.searchbar{grid-template-columns:1fr}.section-head{display:block}.section-head .sub{margin-top:4px}.cards{gap:10px}.product{padding:12px;min-height:303px}.product h3{font-size:15px;min-height:59px}.foot{align-items:stretch!important;flex-direction:column;gap:7px!important}.product .foot{padding-top:10px}.choose{width:100%}.compare-panel{padding:17px}.dock{bottom:9px;border-radius:15px;padding:12px}.dock strong{font-size:12px}.dock button{font-size:11px;padding:10px 11px}.dock .secondary{display:none}.status{font-size:11px}.top-status{font-size:11px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.product{transition:none}}
 
-    .illustration-link{display:grid;place-items:center;width:100%;height:100%}
-    .illustration-link:hover svg{transform:translateY(-3px)}.illustration-link svg{transition:transform .18s}
     .product-title-link{text-decoration:none;color:inherit}.product-title-link:hover{text-decoration:underline;text-decoration-color:#4e968f}
     .fichelink{color:#176e70;text-decoration:none;font-weight:750}.fichelink:hover{text-decoration:underline}
     .quick-specs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0 0}
@@ -69,6 +65,15 @@
     .quick-specs span{display:block;font-size:10px;line-height:1.45;margin-top:4px;color:#5f7377}
     .card-note{font-size:10px;line-height:1.45;color:#6a8183;margin:8px 0 0}
     .card-note a{color:#186d70}
+
+    .proscons{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:13px 0 0}
+    .proscons>div{background:#f5f8f7;border:1px solid #e5ecea;border-radius:11px;padding:11px 10px;min-width:0}
+    .proscons .hlabel{display:block;font-size:12px;font-weight:800;margin-bottom:6px}
+    .proscons .plus{color:#24786c}.proscons .minus{color:#a4554d}
+    .proscons ul{margin:0;padding:0 0 0 14px;color:#475f62;font-size:11px;line-height:1.5}
+    .proscons li+li{margin-top:5px}
+    .proscons p{font-size:11px;color:#7c8c8d;margin:0;line-height:1.4}
+    @media(max-width:570px){.proscons{grid-template-columns:1fr;gap:6px}.proscons>div{padding:9px}.proscons .hlabel{font-size:11px;margin-bottom:4px}}
   </style>
 </head>
 <body>
@@ -98,7 +103,6 @@
     {id:'rowenta-2080',brand:'Rowenta',model:'X-Force Silence 20.80',detail:''},
     {id:'tineco-a90s',brand:'Tineco',model:'A90S',detail:''}
   ];
-  const palette={Dreame:'#bccbca',Dyson:'#a5bcba',Samsung:'#9eabb8',Roborock:'#c2c9c7',Rowenta:'#a6bac1',Tineco:'#b1b7a8'};
   const $=(selector)=>document.querySelector(selector);
   const validIds=new Set(products.map(p=>p.id));
   function initialSelection(){
@@ -107,7 +111,6 @@
   }
   let selected=initialSelection();let filter='Toutes';let search='';let sort='selection';
   const escapeText=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  function vacuumSVG(color){return `<svg viewBox="0 0 170 175" aria-hidden="true"><ellipse cx="85" cy="156" rx="55" ry="8" fill="#d5e1df" opacity=".48"/><g transform="rotate(14 85 85)"><path d="M88 28 L81 121" stroke="#667b80" stroke-width="7" stroke-linecap="round"/><path d="M93 33 L85 115" stroke="#f7fbfa" stroke-width="2" opacity=".8"/><path d="M79 21 Q77 11 92 11 L109 13 Q115 16 111 25 L105 43 Q97 47 87 40 Z" fill="${color}" stroke="#708b8e" stroke-width="1.4"/><path d="M99 13 Q106 6 114 12 L125 20 Q127 25 120 28 L108 28" fill="#4f6d74"/><path d="M97 42 L109 43 L105 69 L88 64 Z" fill="#e8eeed" stroke="#849d9e" stroke-width="1.2"/><path d="M81 117 L77 135" stroke="#58747a" stroke-width="6"/><rect x="47" y="135" width="72" height="17" rx="8" fill="${color}" stroke="#7a9798" stroke-width="1.5"/><rect x="58" y="141" width="51" height="4" rx="2" fill="#f8fafa" opacity=".75"/></g></svg>`}
   function renderFilters(){
     const brands=['Toutes',...new Set(products.map(p=>p.brand))];
     $('#filters').innerHTML=brands.map(b=>`<button class="pill" type="button" data-brand="${escapeText(b)}" aria-pressed="${filter===b}">${escapeText(b)}</button>`).join('');
@@ -125,12 +128,13 @@
       const checked=selected.includes(p.id);
       const hasFiche=p.id==='dreame-v30';
       const ficheUrl='dreame-v30.html'+(selected.length?'?selection='+encodeURIComponent(selected.join(',')):'');
-      const img=vacuumSVG(palette[p.brand]);
-      const visual=hasFiche?`<a class='illustration-link' href='${ficheUrl}' aria-label='Ouvrir la fiche détaillée du Dreame V30'>${img}</a>`:img;
+      const highlights=hasFiche
+        ? '<div class="proscons" aria-label="Points forts et faibles"><div><span class="hlabel plus">+ Les +</span><ul><li>Sols durs et plinthes : efficace</li><li>Bonne autonomie en Éco</li></ul></div><div><span class="hlabel minus">− Les −</span><ul><li>Tapis : résultats mitigés</li><li>Poids sensible à l’usage</li></ul></div></div>'
+        : '<div class="proscons" aria-label="Points à documenter"><div><span class="hlabel plus">+ Les +</span><p>À documenter</p></div><div><span class="hlabel minus">− Les −</span><p>À documenter</p></div></div>';
       const model=hasFiche?`<a class='product-title-link' href='${ficheUrl}'>${escapeText(p.model)}</a>`:escapeText(p.model);
       const data=hasFiche?`<div class='quick-specs' aria-label='Données essentielles Dreame V30'><div><small>Prix repéré</small><strong>429 €*</strong></div><div><small>Poids machine</small><strong>2,3 kg</strong></div><div><small>Aspiration</small><strong>330 AW max.</strong><span>Éco / Auto : AW non publiés<br>Sols durs : très bon · Tapis : mitigé</span></div><div><small>Autonomie avec brosse</small><strong>Éco : 77 min*</strong><span>Standard : 40 min**<br>Turbo : 11 min 40*</span></div></div><p class='card-note'>* Prix indicatif ; autonomie Éco/Turbo extrapolée par Lavelab. ** Standard : Frandroid. <a href='${ficheUrl}'>Voir les sources</a>.</p>`:'';
       const status=hasFiche?`<a class='fichelink' href='${ficheUrl}'>Fiche détaillée →</a>`:'Fiche à compléter';
-      return `<article class='product ${checked?'selected':''}'><div class='cardtop'><span class='brand'>${escapeText(p.brand)}</span>${checked?'<span class="badge">Sélectionné</span>':''}</div><div class='illustration'>${visual}</div><h3>${model}</h3><p class='variant'>${escapeText(p.detail)||'&nbsp;'}</p>${data}<div class='foot'><span class='status'>${status}</span><button type='button' class='choose' data-id='${p.id}' aria-pressed='${checked}' ${!checked&&selected.length>=4?'disabled':''}>${checked?'✓ Retirer':'+ Comparer'}</button></div></article>`;
+      return `<article class='product ${checked?'selected':''}'><div class='cardtop'><span class='brand'>${escapeText(p.brand)}</span>${checked?'<span class="badge">Sélectionné</span>':''}</div><h3>${model}</h3><p class='variant'>${escapeText(p.detail)||'&nbsp;'}</p>${data}${highlights}<div class='foot'><span class='status'>${status}</span><button type='button' class='choose' data-id='${p.id}' aria-pressed='${checked}' ${!checked&&selected.length>=4?'disabled':''}>${checked?'✓ Retirer':'+ Comparer'}</button></div></article>`;
     }).join('');
     if(!list.length)$('#cards').innerHTML='<p class="empty">Aucun modèle ne correspond à cette recherche.</p>';
     $('#count').textContent=`${selected.length} / 4 modèle${selected.length>1?'s':''} sélectionné${selected.length>1?'s':''}`;
@@ -141,8 +145,8 @@
     $('#comparison-sub').textContent=selected.length<2?'Choisis au moins deux modèles ci-dessus.':`${selected.length} modèles sélectionnés · tableau provisoire`;
     if(selected.length<2){$('#comparison-content').innerHTML='<div class="notice">Le tableau technique sera enrichi lors de notre prochaine étape : prix relevés, autonomie réelle, tests indépendants, accessoires et réparabilité.</div>';return;}
     const records=selected.map(id=>products.find(p=>p.id===id));
-    const rows=['Prix vérifié','Aspiration / tests indépendants','Autonomie réelle','Poids et confort','Accessoires utiles','Entretien / réparabilité'];
-    $('#comparison-content').innerHTML='<div class="notice">Comparaison en cours de construction : ces critères seront renseignés à partir de sources vérifiées. Aucune note n’est attribuée pour l’instant.</div><div class="table-scroll"><table><thead><tr><th scope="col">Critère</th>'+records.map(p=>`<th scope="col">${escapeText(p.brand)}<br>${escapeText(p.model)}</th>`).join('')+'</tr></thead><tbody>'+rows.map(label=>`<tr><th scope="row">${escapeText(label)}</th>`+records.map(()=>'<td>À documenter</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
+    const rows=['Prix vérifié','Aspiration / tests indépendants','Autonomie réelle','Poids et confort','Accessoires utiles','Entretien / réparabilité','Les +','Les −'];
+    $('#comparison-content').innerHTML='<div class="notice">Comparaison en cours de construction : ces critères seront renseignés à partir de sources vérifiées. Aucune note n’est attribuée pour l’instant.</div><div class="table-scroll"><table><thead><tr><th scope="col">Critère</th>'+records.map(p=>`<th scope="col">${escapeText(p.brand)}<br>${escapeText(p.model)}</th>`).join('')+'</tr></thead><tbody>'+rows.map(label=>`<tr><th scope="row">${escapeText(label)}</th>`+records.map(p=>{const v=p.id==='dreame-v30'?(label==='Les +'?'Sols durs et plinthes efficaces ; bonne autonomie Éco':label==='Les −'?'Tapis mitigés ; poids sensible à l’usage':null):null;return '<td>'+(v?escapeText(v):'À documenter')+'</td>'}).join('')+'</tr>').join('')+'</tbody></table></div>';
   }
   function toggle(id){if(selected.includes(id)){selected=selected.filter(s=>s!==id)}else if(selected.length<4){selected.push(id)}renderCards()}
   function showToast(s){const t=$('#toast');t.textContent=s;t.style.display='block';clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.style.display='none',3600)}
