@@ -126,11 +126,11 @@
           "store": "darty",
           "price": 429.99,
           "was": 479.99,
-          "url": "https://www.darty.com/nav/q/entretien-dreame-t30.html",
+          "url": "https://www.darty.com/nav/achat/petit_electromenager/autres_aspirateurs_nettoyeurs-balai_main/aspirateur_balai/dreame_v30.html",
           "status": "Livraison annoncée à partir du 24/11",
           "source": "direct",
           "date": "2026-11-14",
-          "note": "Lien vers les résultats Darty portant le produit",
+          "note": "Page produit Darty",
           "seller": "Darty"
         }
       ]
@@ -224,11 +224,11 @@
           "store": "amazon",
           "price": null,
           "was": null,
-          "url": null,
+          "url": "https://www.amazon.fr/s?k=Dyson%20V15%20Detect%20Absolute%204%20accessoires",
           "status": "Non vérifié",
           "source": "unverified",
           "date": "2026-11-14",
-          "note": "Produit exact non vérifié en direct ; éviter de confondre les packs",
+          "note": "Produit exact non vérifié en direct ; éviter de confondre les packs · Lien vers recherche Amazon, pas une offre vérifiée",
           "seller": "Non vérifié"
         },
         {
@@ -355,11 +355,11 @@
           "store": "amazon",
           "price": null,
           "was": null,
-          "url": null,
+          "url": "https://www.amazon.fr/s?k=Dyson%20V16%20Piston%20Animal%20sans%20submarine",
           "status": "Non vérifié",
           "source": "unverified",
           "date": "2026-11-14",
-          "note": "Listing Amazon de la bonne variante non vérifiable aujourd'hui",
+          "note": "Listing Amazon de la bonne variante non vérifiable aujourd'hui · Lien vers recherche Amazon, pas une offre vérifiée",
           "seller": "Non vérifié"
         },
         {
@@ -377,11 +377,11 @@
           "store": "fnac",
           "price": 649,
           "was": 849,
-          "url": "https://www.fnac.com/Maison-Electromenager/shi181432/w-4",
+          "url": "https://www.fnac.com/Aspirateur-balai-Dyson-V16-Piston-Animal-900W-Noir-Or/a21880531/w-4",
           "status": "Disponible au relevé",
           "source": "direct",
           "date": "2026-11-14",
-          "note": "Produit neuf, sans Submarine ; lien vers listing Fnac",
+          "note": "Produit neuf, sans Submarine ; fiche produit Fnac",
           "seller": "Fnac"
         },
         {
@@ -486,11 +486,11 @@
           "store": "amazon",
           "price": null,
           "was": null,
-          "url": null,
+          "url": "https://www.amazon.fr/s?k=Samsung%20VS80F28EFP",
           "status": "Non vérifié",
           "source": "unverified",
           "date": "2026-11-14",
-          "note": "Aucune offre de la référence française exacte VS80F28EFP vérifiée",
+          "note": "Aucune offre de la référence française exacte VS80F28EFP vérifiée · Lien vers recherche Amazon, pas une offre vérifiée",
           "seller": "Non vérifié"
         },
         {
@@ -623,11 +623,11 @@
           "store": "amazon",
           "price": null,
           "was": null,
-          "url": "https://www.idealo.fr/prix/208504125/roborock-h60-ultra.html",
+          "url": "https://www.amazon.fr/s?k=Roborock%20H60%20Ultra%20sans%20Hub",
           "status": "Non vérifié",
           "source": "unverified",
           "date": "2026-11-14",
-          "note": "Ancien relevé Idealo à 179 € non daté assez précisément : non retenu",
+          "note": "Ancien relevé Idealo à 179 € non daté assez précisément : non retenu · Lien vers recherche Amazon, pas une offre vérifiée",
           "seller": "Non vérifié"
         },
         {
@@ -885,11 +885,11 @@
           "store": "amazon",
           "price": null,
           "was": null,
-          "url": null,
+          "url": "https://www.amazon.fr/s?k=Rowenta%20RH9C71E0",
           "status": "Non vérifié",
           "source": "unverified",
           "date": "2026-11-14",
-          "note": "RH9C71E0 exact non vérifié chez Amazon",
+          "note": "RH9C71E0 exact non vérifié chez Amazon · Lien vers recherche Amazon, pas une offre vérifiée",
           "seller": "Non vérifié"
         },
         {
@@ -918,7 +918,7 @@
           "store": "darty",
           "price": 469.99,
           "was": 599.99,
-          "url": "https://www.darty.com/nav/q/entretien-rowenta-air-force-flex-560.html",
+          "url": "https://www.darty.com/nav/achat/petit_electromenager/aspirateur-balai_main/aspirateur_balai/rowenta_rh9c71.html",
           "status": "Livraison annoncée à partir du 28/11",
           "source": "direct",
           "date": "2026-11-14",
@@ -1016,11 +1016,11 @@
           "store": "amazon",
           "price": null,
           "was": null,
-          "url": null,
+          "url": "https://www.amazon.fr/s?k=Rowenta%20RH9E74E0",
           "status": "Non vérifié",
           "source": "unverified",
           "date": "2026-11-14",
-          "note": "RH9E74E0 non vérifié chez Amazon",
+          "note": "RH9E74E0 non vérifié chez Amazon · Lien vers recherche Amazon, pas une offre vérifiée",
           "seller": "Non vérifié"
         },
         {
@@ -1153,11 +1153,11 @@
           "store": "amazon",
           "price": null,
           "was": null,
-          "url": "https://www.lesnumeriques.com/aspirateur-balai/tineco-pure-one-a90s-p77347.html",
+          "url": "https://www.amazon.fr/s?k=Tineco%20Pure%20One%20A90S",
           "status": "Non vérifié",
           "source": "unverified",
           "date": "2026-11-14",
-          "note": "Ancien relevé 559,99 € sur Les Numériques, sans date de fraîcheur suffisante pour l'afficher comme prix Amazon actuel",
+          "note": "Ancien relevé 559,99 € sur Les Numériques, sans date de fraîcheur suffisante pour l'afficher comme prix Amazon actuel · Lien vers recherche Amazon, pas une offre vérifiée",
           "seller": "Non vérifié"
         },
         {
