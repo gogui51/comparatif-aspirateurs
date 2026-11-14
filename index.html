@@ -166,6 +166,9 @@ function visibleProducts(){
   if(sort==="price")list.sort((a,b)=>a.price.amount-b.price.amount);
   return list;
 }
+function readableStatus(status){
+  return /^(Disponible au relevé|En stock au relevé)$/i.test(String(status||"").trim())?"":String(status||"").trim();
+}
 function quickSpec(label,value,note){
   return '<div><small>'+escapeText(label)+'</small><strong>'+escapeText(value)+'</strong><span>'+escapeText(note)+'</span></div>';
 }
@@ -180,7 +183,7 @@ function renderCards(){
     const url=encodeURI(p.page)+(selected.length?"?selection="+encodeURIComponent(selected.join(",")):"");
     const detail='<a class="product-title-link" href="'+escapeText(url)+'">'+escapeText(p.model)+'</a>';
     const stats='<div class="quick-specs" aria-label="Quatre données essentielles">'
-      +quickSpec(p.id==="tineco-a90s"?"Prix affiché (rupture)":"Meilleur prix direct",euro(p.price.amount),p.price.merchant+" · "+p.price.status)
+      +quickSpec(p.id==="tineco-a90s"?"Prix affiché (rupture)":"Meilleur prix direct",euro(p.price.amount),p.price.merchant+(readableStatus(p.price.status)?" · "+readableStatus(p.price.status):""))
       +quickSpec("Poids",p.homeWeight?.value||p.weight.floor.value,"")
       +quickSpec("Aspiration",p.suction.max+" AW max.",p.suction.modes+" · "+p.suction.performance)
       +quickSpec("Autonomie "+p.autonomy.mode,p.autonomy.display,p.autonomy.kind+" · "+p.autonomy.note)
@@ -200,7 +203,7 @@ function formatModes(p){
   return p.autonomy.modes.map(m=>m[0]+" : "+m[1]+" ("+m[2]+" ; "+m[3]+")").join(" · ");
 }
 const rows=[
- {label:"Prix et disponibilité",get:p=>euro(p.price.amount)+" · "+p.price.merchant+" · "+p.price.status+" · relevé "+p.price.date},
+ {label:"Prix et disponibilité",get:p=>euro(p.price.amount)+" · "+p.price.merchant+(readableStatus(p.price.status)?" · "+readableStatus(p.price.status):"")+" · relevé "+p.price.date},
  {label:"Poids prêt à aspirer",get:p=>p.weight.floor.value+" ("+p.weight.floor.kind+" ; "+p.weight.floor.note+")"},
  {label:"Poids du bloc à main",get:p=>p.weight.hand.value+" ("+p.weight.hand.kind+" ; "+p.weight.hand.note+")"},
  {label:"Aspiration et conditions",get:p=>p.suction.max+" AW max. "+p.suction.note+". "+p.suction.modes},
