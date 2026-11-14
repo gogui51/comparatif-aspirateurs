@@ -188,10 +188,9 @@ function renderCards(){
       +quickSpec("Aspiration",p.suction.max+" AW max.",p.suction.modes+" · "+p.suction.performance)
       +quickSpec("Autonomie "+p.autonomy.mode,p.autonomy.display,p.autonomy.kind+" · "+p.autonomy.note)
       +'</div>';
-    const note='<p class="card-note"><a href="'+escapeText(url)+'">Voir les prix par vendeur →</a> · Prix non actualisés automatiquement · <strong>'+escapeText(p.proof.level)+'</strong> niveau de preuve. <a href="'+escapeText(url)+'">Voir conditions et sources</a>.</p>';
     return '<article class="product '+(checked?'selected':'')+'"><div class="cardtop"><span class="brand">'+escapeText(p.brand)+'</span>'+(checked?'<span class="badge">Sélectionné</span>':'')+'</div>'
       +'<a class="product-photo" href="'+escapeText(url)+'" aria-label="Voir la fiche '+escapeText(p.brand+' '+p.model)+'"><img src="'+escapeText(p.image.src)+'" alt="Photo du '+escapeText(p.brand+' '+p.model)+'" width="360" height="240" loading="lazy" decoding="async" onerror="this.parentElement.classList.add(\'photo-unavailable\');this.remove()"></a>'
-      +'<h3>'+detail+'</h3><p class="variant">'+escapeText(p.detail||p.reference)+'</p>'+stats+note+proscons(p)
+      +'<h3>'+detail+'</h3><p class="variant">'+escapeText(p.detail||p.reference)+'</p>'+stats+proscons(p)
       +'<div class="foot"><a class="fichelink" href="'+escapeText(url)+'">Fiche détaillée →</a><button type="button" class="choose" data-id="'+escapeText(p.id)+'" aria-pressed="'+checked+'" '+(!checked&&selected.length>=4?'disabled':'')+'>'+(checked?'✓ Retirer':'+ Comparer')+'</button></div></article>';
   }).join("");
   if(!list.length)$("#cards").innerHTML='<p class="empty">Aucun modèle ne correspond à cette recherche.</p>';
