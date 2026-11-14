@@ -114,18 +114,6 @@ footer{color:#4c6468}
 }
 @media(max-width:380px){.proscons{grid-template-columns:1fr}}
   
-.orientation{margin-top:38px}
-.orientation-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
-.orientation-item{border:1px solid #dce6e2;border-radius:15px;background:#fff;padding:20px}
-.orientation-item h3{font-size:18px;line-height:1.25;letter-spacing:-.025em;margin:6px 0 12px}
-.orientation-label{color:#285d59;font-size:12px;font-weight:750}
-.orientation-item p{font-size:13px;color:#3c575b;line-height:1.6;margin:0 0 10px}
-.orientation-item .orientation-watch{color:#4b6669}
-.orientation-item .orientation-price{font-weight:750;color:#1d5052}
-.orientation-note{font-size:13px;color:#4b6569;line-height:1.55;margin-top:12px}
-@media(max-width:850px){.orientation-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.orientation-item:last-child{grid-column:span 2}}
-@media(max-width:570px){.orientation-cards{grid-template-columns:1fr}.orientation-item:last-child{grid-column:auto}.orientation-item{padding:17px}}
-
 /* Photographies des modèles dans les cartes */
 .product-photo{display:flex;align-items:center;justify-content:center;width:100%;height:185px;margin:10px 0 14px;background:#fff;border:1px solid #edf1ef;border-radius:12px;overflow:hidden;text-decoration:none}
 .product-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;padding:7px}
@@ -145,11 +133,6 @@ footer{color:#4c6468}
 
     <section class="compare-panel" id="comparaison" aria-labelledby="comparison-title"><div class="panel-head"><div><h2 id="comparison-title">Comparer côte à côte</h2><p class="sub" id="comparison-sub">Choisis au moins deux modèles ci-dessus.</p></div></div><div id="comparison-content"><div class="notice">Sélectionne deux à quatre aspirateurs pour afficher leurs données comparables et le niveau de preuve de chaque information.</div></div></section>
 
-    <section class="orientation" aria-labelledby="orientation-title">
-      <div class="section-head"><div><h2 id="orientation-title">Trois pistes pour choisir</h2><p class="sub">Repères d'usage, pas un classement chiffré : les conditions d'essai restent différentes.</p></div></div>
-      <div id="orientation-cards" class="orientation-cards"></div>
-      <p class="orientation-note">Pour l'autonomie et la réparabilité, regarde aussi le Rowenta 14.80 ; pour le silence, le Rowenta 20.80. Leurs limites sont détaillées dans les fiches.</p>
-    </section>
     <div class="guidance"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>Les neuf fiches sont sourcées. Prix relevés le 14 novembre 2026, non mis à jour automatiquement. Les autonomies peuvent être mesurées, estimées ou annoncées : leurs conditions sont indiquées. Aucun classement artificiel fondé sur des tests incompatibles. Le lien partagé conserve la sélection, sans synchronisation en direct.</span></div>
     <footer>Notre comparatif d’aspirateurs · Sources et limites documentées · Novembre 2026</footer>
   </main>
@@ -212,7 +195,6 @@ function renderCards(){
   $("#count").textContent=selected.length+" / 4 modèle"+(selected.length>1?"s":"")+" sélectionné"+(selected.length>1?"s":"");
   $("#compare").disabled=selected.length<2;
   renderComparison();
-  renderOrientation();
 }
 function formatModes(p){
   return p.autonomy.modes.map(m=>m[0]+" : "+m[1]+" ("+m[2]+" ; "+m[3]+")").join(" · ");
@@ -243,22 +225,6 @@ function renderComparison(){
     +'<div class="table-scroll" role="region" aria-label="Tableau comparatif des aspirateurs, défilement horizontal" tabindex="0"><table style="min-width:'+minWidth+'px"><caption class="sr-only">Comparaison de '+chosen.length+' aspirateurs balais</caption>'+head+body+'</table></div>';
 }
 
-function renderOrientation(){
-  const suggestions=[
-    {id:"roborock-h60",title:"Budget maîtrisé",reason:"Prix promotionnel très bas, bons résultats sur tapis et meubles.",watch:"Prix à revalider ; batterie de remplacement coûteuse."},
-    {id:"dyson-v15",title:"Polyvalence éprouvée",reason:"Essais convergents sur sols durs, tapis et poils.",watch:"Poids, gâchette et autonomie Boost à tester en main."},
-    {id:"samsung-lite",title:"Vidage sans poussière",reason:"Station automatique et plusieurs brosses dans le pack.",watch:"Autonomie courte en utilisation soutenue ; sacs."}
-  ];
-  $("#orientation-cards").innerHTML=suggestions.map(item=>{
-    const p=products.find(m=>m.id===item.id);
-    if(!p)return "";
-    const status=p.price.status.toLocaleLowerCase("fr").includes("rupture")?" · Indisponible au relevé":"";
-    return '<article class="orientation-item"><span class="orientation-label">'+escapeText(item.title)+'</span><h3>'+escapeText(p.brand+" "+p.model)+'</h3>'
-      +'<p>'+escapeText(item.reason)+'</p><p class="orientation-watch"><strong>À surveiller :</strong> '+escapeText(item.watch)+'</p>'
-      +'<p class="orientation-price">'+escapeText(euro(p.price.amount))+' · prix daté'+escapeText(status)+'</p>'
-      +'<a class="fichelink" href="'+escapeText(p.page+(selected.length?"?selection="+encodeURIComponent(selected.join(",")):""))+'">Voir les preuves et les limites →</a></article>';
-  }).join("");
-}
 function toggle(id){
   if(!products.some(p=>p.id===id))return;
   if(selected.includes(id))selected=selected.filter(s=>s!==id);
