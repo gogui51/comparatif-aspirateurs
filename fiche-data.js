@@ -37,7 +37,7 @@
         const priced=o.price!==null?'<strong class="merchant-value">'+esc(money(o.price))+'</strong>':'<strong class="merchant-unknown">Non vérifié</strong>';
         const discount=percent===null?"":'<span class="merchant-discount"><s>'+esc(money(o.was))+'</s> −'+percent+' % · économie '+esc(money(o.was-o.price))+'</span>';
         const state=o.source==="third_party"?"Relevé indirect du "+o.date.split("-").reverse().join("/"):o.status;
-        const href=o.url?'<a href="'+esc(o.url)+'" target="_blank" rel="noopener noreferrer">'+(o.source==="third_party"?"Voir le relevé tiers ↗":"Voir l'offre ↗")+'</a>':"";
+        const href=o.url?'<a href="'+esc(o.url)+'" target="_blank" rel="noopener noreferrer">'+(o.source==="third_party"?"Voir le relevé tiers ↗":o.store==="amazon"&&o.source==="unverified"?"Rechercher sur Amazon ↗":"Voir l'offre ↗")+'</a>':"";
         return '<article class="merchant-card"><h3>'+esc(labels[o.store])+'</h3>'+priced+discount
           +'<span class="merchant-state">'+esc(state)+'</span>'
           +(o.note?'<p>'+esc(o.note)+'</p>':"")+href+'</article>';
