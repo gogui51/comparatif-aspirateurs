@@ -143,6 +143,10 @@ footer{color:#4c6468}
 .product .quick-specs strong{font-size:21px;line-height:1.17;letter-spacing:-.045em;color:#153f43}
 .product .variant{min-height:0;margin-top:4px;color:#71868a;font-size:11px}
 .product .foot{padding-top:14px}
+.product .proscons{margin:0 0 10px}
+.product .card-note{font-size:12px;line-height:1.45;margin:7px 0 13px}
+.product .card-note a{color:#186d70;font-weight:650;text-decoration:none}
+.product .card-note a:hover{text-decoration:underline}
 .product .product-photo{margin-bottom:14px}
 @media(max-width:570px){
   .product .quick-specs>div{min-height:80px;padding:12px}
@@ -221,9 +225,10 @@ function renderCards(){
       +quickSpec("Autonomie",autonomy,"")
       +'</div>';
     const reference=p.reference&&p.reference!==p.model?'<p class="variant">'+escapeText(p.reference)+'</p>':"";
+    const note='<p class="card-note"><a href="'+escapeText(url)+'">Voir les essais, les conditions et les sources →</a></p>';
     return '<article class="product '+(checked?'selected':'')+'"><div class="cardtop"><span class="brand">'+escapeText(p.brand)+'</span>'+(checked?'<span class="badge">Sélectionné</span>':'')+'</div>'
       +'<a class="product-photo" href="'+escapeText(url)+'" aria-label="Voir la fiche '+escapeText(p.brand+' '+p.model)+'"><img src="'+escapeText(p.image.src)+'" alt="Photo du '+escapeText(p.brand+' '+p.model)+'" width="360" height="240" loading="lazy" decoding="async" onerror="this.parentElement.classList.add(\'photo-unavailable\');this.remove()"></a>'
-      +'<h3>'+detail+'</h3>'+reference+stats
+      +'<h3>'+detail+'</h3>'+reference+stats+proscons(p)+note
       +'<div class="foot"><a class="fichelink" href="'+escapeText(url)+'">Détails →</a><button type="button" class="choose" data-id="'+escapeText(p.id)+'" aria-pressed="'+checked+'" '+(!checked&&selected.length>=4?'disabled':'')+'>'+(checked?'✓ Retirer':'+ Comparer')+'</button></div></article>';
   }).join("");
   if(!list.length)$("#cards").innerHTML='<p class="empty">Aucun modèle ne correspond à cette recherche.</p>';
