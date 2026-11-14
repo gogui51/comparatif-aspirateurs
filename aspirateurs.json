@@ -133,7 +133,11 @@
           "note": "Page produit Darty",
           "seller": "Darty"
         }
-      ]
+      ],
+      "image": {
+        "src": "https://dreamestore.co.uk/cdn/shop/files/Left-Upright-V30_1024x1024_07004cf4-228c-488c-8c17-bb285206a94e.webp?v=1760298968&width=1024",
+        "credit": "Dreame – boutique officielle"
+      }
     },
     {
       "id": "dyson-v15",
@@ -264,7 +268,11 @@
           "note": "Version gris anthracite",
           "seller": "Darty"
         }
-      ]
+      ],
+      "image": {
+        "src": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/products/hero-locale/fr_FR/446986-01.png?cropPathE=mobile&fit=stretch%2C1&wid=640",
+        "credit": "Dyson – site officiel"
+      }
     },
     {
       "id": "dyson-v16",
@@ -395,7 +403,11 @@
           "note": "Version sèche sans Submarine ; lien vers catalogue Darty",
           "seller": "Darty"
         }
-      ]
+      ],
+      "image": {
+        "src": "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/images/specifications/home/floorcare/cordless/Web-692B-PDP-Specification-Image-Module5.png?%24responsive%24=&fmt=png-alpha",
+        "credit": "Dyson – site officiel"
+      }
     },
     {
       "id": "samsung-lite",
@@ -526,7 +538,11 @@
           "note": "Complete gris VS80F28EFP",
           "seller": "Darty"
         }
-      ]
+      ],
+      "image": {
+        "src": "https://cdn.lesnumeriques.com/optim/product/77/77556/4773cb89-bespoke-ai-jet-lite-complete-vs80f28efp__1200_900__overflow.jpg",
+        "credit": "Les Numériques – Samsung VS80F28EFP"
+      }
     },
     {
       "id": "roborock-h60",
@@ -663,7 +679,11 @@
           "note": "Attention : le H60 HUB trouvé à Darty est une autre variante",
           "seller": "Non vérifié"
         }
-      ]
+      ],
+      "image": {
+        "src": "https://th.roborock.com/cdn/shop/files/h60_series_section9-Ultra.png?v=14849592930707285065",
+        "credit": "Roborock – site officiel"
+      }
     },
     {
       "id": "rowenta-1480",
@@ -794,7 +814,11 @@
           "note": "Lien vers résultats Darty RH9B74WO",
           "seller": "Darty"
         }
-      ]
+      ],
+      "image": {
+        "src": "https://www.dagimarket.com/2000583-home_default/rowenta-x-force-flex-1480-rh9b74wo-stick-vacuum-electric-broom-2-in-1-stick-vacuum-battery-dry-bagless-06-l-black-gold.jpg",
+        "credit": "Dagimarket – Rowenta RH9B74WO"
+      }
     },
     {
       "id": "rowenta-1660",
@@ -925,7 +949,11 @@
           "note": "RH9C71E0, listing Darty",
           "seller": "Darty"
         }
-      ]
+      ],
+      "image": {
+        "src": "https://cdn.laredoute.com/cdn-cgi/image/width%3D900%2Cheight%3D900%2Cfit%3Dpad%2Cdpr%3D1/products/d/8/a/d8a0ec6285657a37ea0f863a072bfe64.jpg",
+        "credit": "La Redoute – Rowenta RH9C71E0"
+      }
     },
     {
       "id": "rowenta-2080",
@@ -1056,7 +1084,11 @@
           "note": "",
           "seller": "Darty"
         }
-      ]
+      ],
+      "image": {
+        "src": "https://cdn.lesnumeriques.com/optim/news/26/262109/ad8d71fe-rowenta-x-force-silence-20-80__1200_678__0-0-1260-710.jpg",
+        "credit": "Les Numériques / Rowenta – RH9E74E0"
+      }
     },
     {
       "id": "tineco-a90s",
@@ -1193,7 +1225,11 @@
           "note": "Référence Tineco Pure One A90S non retrouvée sur Darty",
           "seller": "Non vérifié"
         }
-      ]
+      ],
+      "image": {
+        "src": "https://store.tineco.com/cdn/shop/files/tineco-pure-one-a90s-cordless-stick-vacuum-cleaner-3704818.jpg?v=1762832506&width=1214",
+        "credit": "Tineco – boutique officielle"
+      }
     }
   ]
 }
