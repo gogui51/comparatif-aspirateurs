@@ -21,9 +21,22 @@ section{margin-top:40px}.section-head{display:flex;align-items:baseline;justify-
 @media(max-width:850px){.grid4{grid-template-columns:repeat(2,1fr)}.cols3{grid-template-columns:1fr 1fr}.cols3 .assessment:last-child{grid-column:span 2}.device{flex-basis:140px;height:170px}}
 @media(max-width:620px){main{padding-top:24px}.headline{align-items:flex-start}.device{display:none}.intro{font-size:14px}.stat{padding:15px;min-height:130px}.stat strong{font-size:23px}.section-head{display:block}.cols3,.procon,.specs,.sources{grid-template-columns:1fr}.cols3 .assessment:last-child{grid-column:auto}.spec:nth-last-child(2){border-bottom:1px solid #e8efed}.panel,.pros,.cons{padding:17px}header .stamp{display:none}.headline h1{font-size:43px}section{margin-top:33px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Audit accessibilité : meilleur contraste et légendes lisibles */
+.stat small{font-size:12px;color:#475f64;line-height:1.5}
+.stat strong{overflow-wrap:anywhere}
+.remark{font-size:13px;color:#4b6469;line-height:1.6}
+.micro{color:#50666c}
+.grade,.source-tag{font-size:11px}
+.grade.qualified{color:#86523b}
+.source span{font-size:13px;color:#4c666b}
+.spec span{color:#4d6468}
+.releve-factuel{background:#f0f7f3;border:1px solid #d8e8df;border-radius:12px;padding:13px 15px;margin-bottom:18px;line-height:1.6}
+.releve-factuel a{font-weight:700}
+@media(max-width:375px){.grid4{grid-template-columns:1fr}.stat{min-height:0}}
 </style>
 </head>
-<body>
+<body data-model="dreame-v30">
 <header><div class="wrap"><a class="brand" id="home-brand" href="./">bien choisir <span class="stamp">/ édition 2026</span></a><a class="back" id="back-top" href="./">← Les 9 aspirateurs</a></div></header>
 <main class="wrap">
   <div class="headline">
@@ -116,5 +129,6 @@ section{margin-top:40px}.section-head{display:flex;align-items:baseline;justify-
   ["back-top","back-bottom","home-brand"].forEach(function(id){document.getElementById(id).href=back;});
 })();
 </script>
+<script src="./fiche-data.js" defer></script>
 </body>
 </html>
