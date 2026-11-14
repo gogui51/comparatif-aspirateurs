@@ -126,32 +126,35 @@ footer{color:#4c6468}
 @media(max-width:850px){.orientation-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.orientation-item:last-child{grid-column:span 2}}
 @media(max-width:570px){.orientation-cards{grid-template-columns:1fr}.orientation-item:last-child{grid-column:auto}.orientation-item{padding:17px}}
 
+/* Prix multi-enseignes : tableaux réellement sourcés */
+.prices-section{margin-top:44px;scroll-margin-top:16px}
+.price-intro{font-size:13px;color:#425f63;line-height:1.6;margin:0 0 15px;max-width:940px}
+.prices-scroll{margin-top:12px}
+.price-matrix{min-width:1430px!important;table-layout:fixed}
+.price-matrix th,.price-matrix td{min-width:235px;vertical-align:top;padding:15px 13px}
+.price-matrix th:first-child{min-width:215px!important;width:215px!important}
+.price-matrix th:first-child,.price-matrix td:first-child{background:#eff5f2!important}
+.price-matrix tr:target th,.price-matrix tr:target td{background:#e9f6ee!important}
+.offer-cell{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+.offer-value{font-size:17px;font-weight:800;letter-spacing:-.02em;color:#173e43}
+.offer-discount{font-size:12px;line-height:1.4;color:#2d665d;font-weight:650}
+.offer-discount s{font-weight:450;color:#5f7074}
+.offer-status{font-size:12px;color:#475f64}
+.offer-note{font-size:11px;line-height:1.45;color:#566d72}
+.offer-link{font-weight:750;font-size:12px;line-height:1.5;color:#146c69;text-underline-offset:3px}
+.offer-missing{font-size:13px;color:#587075}
+.model-price-link{color:#234c50;font-weight:750;text-decoration:none}
+.model-price-link:hover{text-decoration:underline}
+.price-ref{display:block;color:#587176;font-size:11px;margin-top:5px;white-space:normal;overflow-wrap:anywhere}
+.price-bottom-note{font-size:12px;line-height:1.6;color:#51696e;margin-top:10px}
+@media(max-width:570px){.price-matrix th:first-child{min-width:155px!important;width:155px!important}.price-matrix th:not(:first-child),.price-matrix td{min-width:230px}}
+
 /* Photographies des modèles dans les cartes */
 .product-photo{display:flex;align-items:center;justify-content:center;width:100%;height:185px;margin:10px 0 14px;background:#fff;border:1px solid #edf1ef;border-radius:12px;overflow:hidden;text-decoration:none}
 .product-photo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;padding:7px}
 .product-photo.photo-unavailable{background:#f6f8f7;color:#657a7b;font-size:12px}
 .product-photo.photo-unavailable::after{content:"Photo indisponible";}
 @media(max-width:570px){.product-photo{height:218px;margin:12px 0 15px}.product-photo img{padding:6px}}
-
-
-.product .quick-specs span{font-size:12px;color:#42666a;line-height:1.25;margin-top:5px;font-weight:600}
-/* Cartes d'accueil épurées : indicateurs seuls, détails sur les fiches */
-.product{min-height:0}
-.product .quick-specs{gap:9px;margin:16px 0 16px}
-.product .quick-specs>div{padding:13px 12px;min-height:81px;display:flex;flex-direction:column;justify-content:center}
-.product .quick-specs small{font-size:12px;line-height:1.25;color:#637a7d;margin-bottom:6px}
-.product .quick-specs strong{font-size:21px;line-height:1.17;letter-spacing:-.045em;color:#153f43}
-.product .variant{min-height:0;margin-top:4px;color:#71868a;font-size:11px}
-.product .foot{padding-top:14px}
-.product .proscons{margin:0 0 10px}
-.product .card-note{font-size:12px;line-height:1.45;margin:7px 0 13px}
-.product .card-note a{color:#186d70;font-weight:650;text-decoration:none}
-.product .card-note a:hover{text-decoration:underline}
-.product .product-photo{margin-bottom:14px}
-@media(max-width:570px){
-  .product .quick-specs>div{min-height:80px;padding:12px}
-  .product .quick-specs strong{font-size:22px}
-}
 </style>
 </head>
 <body>
@@ -159,10 +162,15 @@ footer{color:#4c6468}
   <section class="hero" id="haut"><div class="wrap"><div class="eyebrow">Notre sélection · 2026</div><h1>9 aspirateurs.<br><em>Un seul bon choix.</em></h1><p class="lede">Une sélection de modèles haut de gamme pour trouver le meilleur rapport qualité-prix. On compare ensemble, sans se précipiter.</p><div class="metrics"><span class="metric"><strong>9</strong> aspirateurs</span><span class="metric"><strong>6</strong> marques</span><span class="metric">Aspiration à sec</span><span class="metric">9 fiches sourcées disponibles</span></div></div></section>
   <main class="wrap">
     <div class="section-head"><div><h2>Les modèles retenus</h2><p class="sub">Sélectionne jusqu’à quatre appareils pour les mettre côte à côte.</p></div><button id="reset" class="toplink" type="button">Effacer ma sélection</button></div>
-    <div class="searchbar"><div class="search-wrap"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16.3 16.3 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une marque ou un modèle…" aria-label="Rechercher un aspirateur"></div><select id="sort" aria-label="Trier les aspirateurs"><option value="selection">Ordre de notre sélection</option><option value="brand">Trier par marque</option><option value="model">Trier par modèle</option><option value="price">Prix croissant</option></select></div>
+    <div class="searchbar"><div class="search-wrap"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16.3 16.3 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une marque ou un modèle…" aria-label="Rechercher un aspirateur"></div><select id="sort" aria-label="Trier les aspirateurs"><option value="selection">Ordre de notre sélection</option><option value="brand">Trier par marque</option><option value="model">Trier par modèle</option><option value="price">Prix relevé croissant (indicatif)</option></select></div>
     <div id="filters" class="filters" aria-label="Filtrer par marque"></div>
     <div class="cards" id="cards" aria-live="polite"></div>
 
+    <section class="prices-section" id="prix" aria-labelledby="prices-title">
+      <div class="section-head"><div><h2 id="prices-title">Les prix par enseigne</h2><p class="sub">Neuf modèles · cinq canaux · prix TTC relevés le 14 novembre 2026</p></div></div>
+      <p class="price-intro">Les remises sont calculées uniquement sur le <strong>prix barré affiché par la même enseigne</strong>. Les prix Amazon issus d'un comparateur sont signalés comme anciens et non vérifiés directement. Stock, frais de livraison et codes promotionnels peuvent évoluer.</p>
+      <div id="prices-content"><div class="notice">Chargement du tableau des prix…</div></div>
+    </section>
     <section class="compare-panel" id="comparaison" aria-labelledby="comparison-title"><div class="panel-head"><div><h2 id="comparison-title">Comparer côte à côte</h2><p class="sub" id="comparison-sub">Choisis au moins deux modèles ci-dessus.</p></div></div><div id="comparison-content"><div class="notice">Sélectionne deux à quatre aspirateurs pour afficher leurs données comparables et le niveau de preuve de chaque information.</div></div></section>
 
     <section class="orientation" aria-labelledby="orientation-title">
@@ -204,7 +212,7 @@ function visibleProducts(){
   return list;
 }
 function quickSpec(label,value,note){
-  return '<div><small>'+escapeText(label)+'</small><strong>'+escapeText(value)+'</strong>'+(note?'<span>'+escapeText(note)+'</span>':'')+'</div>';
+  return '<div><small>'+escapeText(label)+'</small><strong>'+escapeText(value)+'</strong><span>'+escapeText(note)+'</span></div>';
 }
 function proscons(p){
   const group=(label,items,css)=>'<div><span class="hlabel '+css+'">'+label+'</span><ul>'+items.map(s=>'<li>'+escapeText(s)+'</li>').join("")+'</ul></div>';
@@ -216,20 +224,17 @@ function renderCards(){
     const checked=selected.includes(p.id);
     const url=encodeURI(p.page)+(selected.length?"?selection="+encodeURIComponent(selected.join(",")):"");
     const detail='<a class="product-title-link" href="'+escapeText(url)+'">'+escapeText(p.model)+'</a>';
-    const weight=p.homeWeight?.value||p.weight.floor.value;
-    const autonomy=p.autonomy.display==="Non chiffrée"?"—":p.autonomy.display;
-    const stats='<div class="quick-specs" aria-label="Caractéristiques principales">'
-      +quickSpec("Prix",euro(p.price.amount),p.price.merchant.replace(/\s*\([^)]*\)/g,"").trim())
-      +quickSpec("Poids",weight,"")
-      +quickSpec("Aspiration max.",p.suction.max+" AW","")
-      +quickSpec("Autonomie",autonomy,"")
+    const stats='<div class="quick-specs" aria-label="Quatre données essentielles">'
+      +quickSpec(p.id==="tineco-a90s"?"Prix affiché (rupture)":"Meilleur prix direct",euro(p.price.amount),p.price.merchant+" · "+p.price.status)
+      +quickSpec("Poids avec brosse",p.weight.floor.value,p.weight.floor.kind+" · "+p.weight.floor.note)
+      +quickSpec("Aspiration",p.suction.max+" AW max.",p.suction.modes+" · "+p.suction.performance)
+      +quickSpec("Autonomie "+p.autonomy.mode,p.autonomy.display,p.autonomy.kind+" · "+p.autonomy.note)
       +'</div>';
-    const reference=p.reference&&p.reference!==p.model?'<p class="variant">'+escapeText(p.reference)+'</p>':"";
-    const note='<p class="card-note"><a href="'+escapeText(url)+'">Voir les essais, les conditions et les sources →</a></p>';
+    const note='<p class="card-note"><a href="#prix-'+escapeText(p.id)+'">Comparer les 5 enseignes et remises →</a> · Prix non actualisés automatiquement · <strong>'+escapeText(p.proof.level)+'</strong> niveau de preuve. <a href="'+escapeText(url)+'">Voir conditions et sources</a>.</p>';
     return '<article class="product '+(checked?'selected':'')+'"><div class="cardtop"><span class="brand">'+escapeText(p.brand)+'</span>'+(checked?'<span class="badge">Sélectionné</span>':'')+'</div>'
       +'<a class="product-photo" href="'+escapeText(url)+'" aria-label="Voir la fiche '+escapeText(p.brand+' '+p.model)+'"><img src="'+escapeText(p.image.src)+'" alt="Photo du '+escapeText(p.brand+' '+p.model)+'" width="360" height="240" loading="lazy" decoding="async" onerror="this.parentElement.classList.add(\'photo-unavailable\');this.remove()"></a>'
-      +'<h3>'+detail+'</h3>'+reference+stats+proscons(p)+note
-      +'<div class="foot"><a class="fichelink" href="'+escapeText(url)+'">Détails →</a><button type="button" class="choose" data-id="'+escapeText(p.id)+'" aria-pressed="'+checked+'" '+(!checked&&selected.length>=4?'disabled':'')+'>'+(checked?'✓ Retirer':'+ Comparer')+'</button></div></article>';
+      +'<h3>'+detail+'</h3><p class="variant">'+escapeText(p.detail||p.reference)+'</p>'+stats+note+proscons(p)
+      +'<div class="foot"><a class="fichelink" href="'+escapeText(url)+'">Fiche détaillée →</a><button type="button" class="choose" data-id="'+escapeText(p.id)+'" aria-pressed="'+checked+'" '+(!checked&&selected.length>=4?'disabled':'')+'>'+(checked?'✓ Retirer':'+ Comparer')+'</button></div></article>';
   }).join("");
   if(!list.length)$("#cards").innerHTML='<p class="empty">Aucun modèle ne correspond à cette recherche.</p>';
   $("#count").textContent=selected.length+" / 4 modèle"+(selected.length>1?"s":"")+" sélectionné"+(selected.length>1?"s":"");
@@ -253,6 +258,31 @@ const rows=[
  {label:"Les −",get:p=>p.cons.join(" ; ")},
  {label:"Fiabilité des preuves",get:p=>p.proof.level+" : "+p.proof.note}
 ];
+
+const storeLabels={fabricant:"Fabricant",amazon:"Amazon",boulanger:"Boulanger",fnac:"Fnac",darty:"Darty"};
+function offerPrice(offer){
+  const percent=offer.was!==null&&offer.price!==null&&offer.was>offer.price
+    ?Math.round((1-offer.price/offer.was)*100):null;
+  const price=offer.price===null?'<span class="offer-missing">Non vérifié</span>'
+    :'<strong class="offer-value">'+escapeText(euro(offer.price))+'</strong>';
+  const discount=percent!==null?'<span class="offer-discount"><s>'+escapeText(euro(offer.was))+'</s> −'+percent+' % ('+escapeText(euro(offer.was-offer.price))+')</span>':'';
+  const label=offer.source==="third_party"?"Relevé tiers "+offer.date.split("-").reverse().join("/"):offer.status;
+  const state='<span class="offer-status">'+escapeText(label)+'</span>';
+  const note=offer.note?'<span class="offer-note">'+escapeText(offer.note)+'</span>':'';
+  const link=offer.url?'<a class="offer-link" href="'+escapeText(offer.url)+'" target="_blank" rel="noopener noreferrer">'+(offer.source==="third_party"?"Voir le relevé tiers ↗":offer.store==="amazon"&&offer.source==="unverified"?"Rechercher sur Amazon ↗":"Voir chez le vendeur ↗")+'</a>':'';
+  return '<div class="offer-cell">'+price+discount+state+note+link+'</div>';
+}
+function renderPrices(){
+  const keys=["fabricant","amazon","boulanger","fnac","darty"];
+  const head='<thead><tr><th scope="col">Aspirateur</th>'+keys.map(key=>'<th scope="col">'+storeLabels[key]+'</th>').join("")+'</tr></thead>';
+  const body='<tbody>'+products.map(p=>{
+    const offers=Object.fromEntries(p.offers.map(o=>[o.store,o]));
+    const label='<a class="model-price-link" href="'+escapeText(p.page)+'">'+escapeText(p.brand+" "+p.model)+'</a><span class="price-ref">'+escapeText(p.reference)+'</span>';
+    return '<tr id="prix-'+escapeText(p.id)+'"><th scope="row">'+label+'</th>'+keys.map(key=>'<td>'+offerPrice(offers[key])+'</td>').join("")+'</tr>';
+  }).join("")+'</tbody>';
+  $("#prices-content").innerHTML='<div class="table-scroll prices-scroll" role="region" aria-label="Prix des neuf aspirateurs dans cinq enseignes" tabindex="0"><table class="price-matrix"><caption class="sr-only">Prix et remises chez les fabricants, Amazon, Boulanger, Fnac et Darty</caption>'+head+body+'</table></div>'
+    +'<p class="price-bottom-note">— : prix introuvable ou référence non vérifiée, pas nécessairement une absence de vente. Remises hors codes de réduction conditionnels. Amazon : prix de comparateurs tiers datés lorsqu\'ils existent.</p>';
+}
 
 function renderComparison(){
   const n=selected.length;
@@ -316,6 +346,7 @@ async function init(){
     selected=initialSelection();
     renderFilters();
     renderCards();
+    renderPrices();
   }catch(error){
     $("#cards").innerHTML='<p class="empty" role="alert">Impossible de charger les données du comparatif. Actualise la page ; si le problème persiste, vérifie la publication du fichier aspirateurs.json.</p>';
     $("#comparison-content").innerHTML='<div class="notice">Données temporairement indisponibles.</div>';
