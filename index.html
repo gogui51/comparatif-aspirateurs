@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#102936" />
+  <meta name="description" content="Notre sélection de neuf aspirateurs balais. Un comparatif simple à explorer à deux." />
+  <title>Notre comparatif d’aspirateurs — 2026</title>
+  <style>
+    :root {color-scheme:light;--ink:#142931;--muted:#62727a;--teal:#166c70;--pale:#ebf3f2;--page:#f6f8f7;--line:#e1e7e6;--white:#fff;--r:18px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--ink);background:var(--page);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+    button,input,select{font:inherit} button{cursor:pointer} button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #83bab2;outline-offset:3px}
+    .wrap{width:min(1120px,calc(100% - 36px));margin:auto} header{background:#fff;border-bottom:1px solid var(--line)}
+    header .wrap{min-height:75px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-weight:750;letter-spacing:-.03em;font-size:17px}
+    .logo-mark{width:32px;height:32px;border-radius:11px;background:#15343e;display:grid;place-items:center;color:#fff}
+    .logo-mark svg{width:19px;height:19px} .stamp{font-size:11px;letter-spacing:.13em;font-weight:750;color:#607379;text-transform:uppercase}
+    .top-status{display:flex;align-items:center;gap:7px;color:#536b70;font-size:12px}.dot{width:7px;height:7px;background:#5ea68c;border-radius:50%}
+    .hero{padding:63px 0 48px;border-bottom:1px solid var(--line);background:linear-gradient(125deg,#f9fbf9 5%,#eff6f4 100%)}
+    .eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:750;margin-bottom:18px}
+    .eyebrow:before{content:"";width:19px;height:2px;background:var(--teal)}
+    h1{font-size:clamp(38px,5.5vw,68px);line-height:1.07;letter-spacing:-.065em;margin:0;max-width:780px;font-weight:750}
+    h1 em{font-style:normal;color:#287b78} .lede{max-width:615px;font-size:17px;color:#5b7075;line-height:1.65;margin:22px 0 29px}
+    .metrics{display:flex;flex-wrap:wrap;gap:9px}.metric{padding:10px 14px;border:1px solid #d6e4df;border-radius:100px;color:#36585d;background:#fff9;font-size:13px}.metric strong{color:#173d43}
+    main{padding-top:38px;padding-bottom:125px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:19px}
+    h2{letter-spacing:-.04em;font-size:25px;margin:0 0 5px;font-weight:730}.sub{color:var(--muted);margin:0;font-size:13px;line-height:1.5}
+    .searchbar{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:17px}
+    .search-wrap{position:relative}.search-wrap svg{position:absolute;left:14px;top:15px;color:#718488}
+    input[type=search]{width:100%;border:1px solid var(--line);background:white;border-radius:13px;padding:14px 14px 14px 43px;min-height:48px;color:var(--ink)}
+    select{border:1px solid var(--line);background:#fff;padding:0 38px 0 16px;border-radius:13px;color:#3f5b60;min-height:48px;max-width:100%}
+    .filters{display:flex;gap:8px;overflow-x:auto;padding:0 0 14px;margin-bottom:8px;scrollbar-width:thin}.pill{white-space:nowrap;border:1px solid #dfe8e7;background:white;padding:9px 15px;border-radius:100px;color:#496268;font-size:13px;font-weight:600}
+    .pill[aria-pressed=true]{color:white;border-color:#174e52;background:#174e52}
+    .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+    .product{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:17px;display:flex;flex-direction:column;min-height:339px;box-shadow:0 5px 18px #1d4b4c05;transition:border-color .15s,box-shadow .15s}
+    .product.selected{border-color:#5b9c92;box-shadow:0 0 0 1px #5b9c92 inset,0 10px 30px #1d4b4c12}
+    .cardtop{display:flex;justify-content:space-between;align-items:center;min-height:24px}.brand{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:750;color:#577178}
+    .badge{font-size:10px;color:#24796f;background:#e7f4ee;border-radius:20px;padding:5px 9px;font-weight:700}
+    .illustration{height:150px;display:grid;place-items:center;margin:0 -6px 4px;overflow:hidden}
+    .illustration svg{width:140px;height:140px;filter:drop-shadow(4px 7px 4px #06252710)}
+    .product h3{margin:0;letter-spacing:-.035em;font-size:18px;line-height:1.3;min-height:47px;font-weight:720}
+    .variant{min-height:23px;color:#8a9899;font-size:11px;margin:4px 0 0}.product .foot{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:auto;padding-top:17px;border-top:1px solid #eef1f0}
+    .status{font-size:12px;color:#7b8d90}.choose{border:1px solid #c7d6d4;background:white;border-radius:10px;padding:9px 12px;color:#174e52;font-size:12px;font-weight:700;min-height:38px}
+    .selected .choose{background:#174e52;color:#fff;border-color:#174e52}.choose:disabled{opacity:.45;cursor:not-allowed}
+    .empty{padding:35px 20px;text-align:center;background:white;border:1px solid var(--line);border-radius:14px;color:var(--muted)}
+    .compare-panel{margin-top:50px;background:white;border:1px solid var(--line);padding:25px;border-radius:19px}
+    .panel-head{display:flex;align-items:start;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .notice{border:1px solid #dceae5;background:#f2f8f4;border-radius:12px;padding:14px 16px;color:#42645e;font-size:13px;line-height:1.5}
+    .table-scroll{overflow-x:auto;margin-top:18px} table{border-collapse:collapse;width:100%;min-width:460px;font-size:13px} th,td{border-bottom:1px solid #e7eceb;padding:15px 12px;text-align:left;vertical-align:top}
+    th{color:#234c50;font-weight:700} th:first-child,td:first-child{width:178px;color:#63767a;font-weight:650} td:not(:first-child){color:#849093}
+    .guidance{margin:27px 0 0;display:flex;align-items:start;gap:12px;font-size:13px;line-height:1.5;color:#61767a}.guidance svg{flex:none;margin-top:1px}
+    .dock{position:fixed;bottom:15px;left:50%;transform:translateX(-50%);z-index:20;width:min(780px,calc(100% - 26px));background:#122f38;color:white;border:1px solid #34565a;border-radius:19px;box-shadow:0 14px 45px #103a3c40;display:flex;justify-content:space-between;align-items:center;padding:12px 14px 12px 20px;gap:10px}
+    .dock p{font-size:12px;color:#b4cdd0;margin:4px 0 0}.dock strong{font-size:14px}.dock button{border:0;background:#e5f4ed;color:#164f4b;font-weight:750;border-radius:10px;padding:12px 16px;white-space:nowrap}.dock button:disabled{opacity:.5;cursor:not-allowed}
+    .actions{display:flex;gap:8px}.dock .secondary{background:#294750;color:#e4eff0}
+    .toplink{border:none;background:transparent;color:var(--teal);font-size:12px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+    footer{margin-top:58px;font-size:12px;line-height:1.7;color:#859799;text-align:center}
+    #toast{position:fixed;bottom:101px;left:50%;transform:translateX(-50%);background:#fff;color:#24515a;border:1px solid #bfd4d1;border-radius:12px;padding:10px 18px;box-shadow:0 12px 30px #123a4030;font-size:13px;z-index:40;display:none;max-width:90vw;text-align:center}
+    @media(max-width:850px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:52px 0 41px}}
+    @media(max-width:570px){.wrap{width:min(100% - 28px,1120px)}header .wrap{min-height:62px}.stamp{display:none}.hero{padding:40px 0 35px}.lede{font-size:15px;margin:17px 0 24px}.searchbar{grid-template-columns:1fr}.section-head{display:block}.section-head .sub{margin-top:4px}.cards{gap:10px}.product{padding:12px;min-height:303px}.illustration{height:112px}.illustration svg{width:118px;height:118px}.product h3{font-size:15px;min-height:59px}.foot{align-items:stretch!important;flex-direction:column;gap:7px!important}.product .foot{padding-top:10px}.choose{width:100%}.compare-panel{padding:17px}.dock{bottom:9px;border-radius:15px;padding:12px}.dock strong{font-size:12px}.dock button{font-size:11px;padding:10px 11px}.dock .secondary{display:none}.status{font-size:11px}.top-status{font-size:11px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.product{transition:none}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><a href="#haut" class="logo"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 20h14M9 20l2-15M15 20l-4-15M10 5h5"/></svg></span>bien choisir<span class="stamp">/ édition 2026</span></a><span class="top-status"><span class="dot"></span> Comparatif en préparation</span></div></header>
+  <section class="hero" id="haut"><div class="wrap"><div class="eyebrow">Notre sélection · 2026</div><h1>9 aspirateurs.<br><em>Un seul bon choix.</em></h1><p class="lede">Une sélection de modèles haut de gamme pour trouver le meilleur rapport qualité-prix. On compare ensemble, sans se précipiter.</p><div class="metrics"><span class="metric"><strong>9</strong> aspirateurs</span><span class="metric"><strong>6</strong> marques</span><span class="metric">Aspiration à sec</span><span class="metric">Tests indépendants à venir</span></div></div></section>
+  <main class="wrap">
+    <div class="section-head"><div><h2>Les modèles retenus</h2><p class="sub">Sélectionne jusqu’à quatre appareils pour les mettre côte à côte.</p></div><button id="reset" class="toplink" type="button">Effacer ma sélection</button></div>
+    <div class="searchbar"><div class="search-wrap"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16.3 16.3 5 5"/></svg><input id="search" type="search" placeholder="Rechercher une marque ou un modèle…" aria-label="Rechercher un aspirateur"></div><select id="sort" aria-label="Trier les aspirateurs"><option value="selection">Ordre de notre sélection</option><option value="brand">Trier par marque</option><option value="model">Trier par modèle</option></select></div>
+    <div id="filters" class="filters" aria-label="Filtrer par marque"></div>
+    <div class="cards" id="cards" aria-live="polite"></div>
+    <section class="compare-panel" id="comparaison" aria-labelledby="comparison-title"><div class="panel-head"><div><h2 id="comparison-title">Comparer côte à côte</h2><p class="sub" id="comparison-sub">Choisis au moins deux modèles ci-dessus.</p></div></div><div id="comparison-content"><div class="notice">Le tableau technique sera enrichi lors de notre prochaine étape : prix relevés, autonomie réelle, tests indépendants, accessoires et réparabilité.</div></div></section>
+    <div class="guidance"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>Cette version sert à valider l’hébergement et l’ergonomie. Elle ne présente ni prix non vérifiés ni classement prématuré. Une sélection partagée par lien n’est pas une synchronisation en direct entre deux appareils.</span></div>
+    <footer>Notre comparatif d’aspirateurs · Version de démonstration · Novembre 2026</footer>
+  </main>
+  <div class="dock" id="dock" aria-live="polite"><div><strong id="count">0 / 4 modèle sélectionné</strong><p>À comparer ensemble</p></div><div class="actions"><button id="share" class="secondary" type="button">Partager</button><button id="compare" type="button" disabled>Comparer</button></div></div>
+  <div role="status" id="toast"></div>
+  <script>
+  "use strict";
+  const products = [
+    {id:'dreame-v30', brand:'Dreame',model:'V30',detail:''},
+    {id:'dyson-v15',brand:'Dyson',model:'V15 Detect Absolute',detail:''},
+    {id:'dyson-v16',brand:'Dyson',model:'V16 Piston Animal',detail:''},
+    {id:'samsung-lite',brand:'Samsung',model:'Bespoke AI Jet Lite Complete',detail:'Gris · VS80F28EFP'},
+    {id:'roborock-h60',brand:'Roborock',model:'H60 Ultra',detail:'Version sans station Hub'},
+    {id:'rowenta-1480',brand:'Rowenta',model:'X-Force Flex 14.80',detail:''},
+    {id:'rowenta-1660',brand:'Rowenta',model:'X-Force Flex 16.60',detail:''},
+    {id:'rowenta-2080',brand:'Rowenta',model:'X-Force Silence 20.80',detail:''},
+    {id:'tineco-a90s',brand:'Tineco',model:'A90S',detail:''}
+  ];
+  const palette={Dreame:'#bccbca',Dyson:'#a5bcba',Samsung:'#9eabb8',Roborock:'#c2c9c7',Rowenta:'#a6bac1',Tineco:'#b1b7a8'};
+  const $=(selector)=>document.querySelector(selector);
+  const validIds=new Set(products.map(p=>p.id));
+  function initialSelection(){
+    const ids=new URLSearchParams(location.hash.slice(1)).get('selection');
+    return ids?ids.split(',').filter(x=>validIds.has(x)).slice(0,4):[];
+  }
+  let selected=initialSelection();let filter='Toutes';let search='';let sort='selection';
+  const escapeText=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function vacuumSVG(color){return `<svg viewBox="0 0 170 175" aria-hidden="true"><ellipse cx="85" cy="156" rx="55" ry="8" fill="#d5e1df" opacity=".48"/><g transform="rotate(14 85 85)"><path d="M88 28 L81 121" stroke="#667b80" stroke-width="7" stroke-linecap="round"/><path d="M93 33 L85 115" stroke="#f7fbfa" stroke-width="2" opacity=".8"/><path d="M79 21 Q77 11 92 11 L109 13 Q115 16 111 25 L105 43 Q97 47 87 40 Z" fill="${color}" stroke="#708b8e" stroke-width="1.4"/><path d="M99 13 Q106 6 114 12 L125 20 Q127 25 120 28 L108 28" fill="#4f6d74"/><path d="M97 42 L109 43 L105 69 L88 64 Z" fill="#e8eeed" stroke="#849d9e" stroke-width="1.2"/><path d="M81 117 L77 135" stroke="#58747a" stroke-width="6"/><rect x="47" y="135" width="72" height="17" rx="8" fill="${color}" stroke="#7a9798" stroke-width="1.5"/><rect x="58" y="141" width="51" height="4" rx="2" fill="#f8fafa" opacity=".75"/></g></svg>`}
+  function renderFilters(){
+    const brands=['Toutes',...new Set(products.map(p=>p.brand))];
+    $('#filters').innerHTML=brands.map(b=>`<button class="pill" type="button" data-brand="${escapeText(b)}" aria-pressed="${filter===b}">${escapeText(b)}</button>`).join('');
+  }
+  function visibleProducts(){
+    const q=search.toLocaleLowerCase('fr').trim();
+    const list=products.filter(p=>(filter==='Toutes'||filter===p.brand)&&(`${p.brand} ${p.model} ${p.detail}`).toLocaleLowerCase('fr').includes(q));
+    if(sort==='brand')list.sort((a,b)=>a.brand.localeCompare(b.brand,'fr')||a.model.localeCompare(b.model,'fr'));
+    if(sort==='model')list.sort((a,b)=>a.model.localeCompare(b.model,'fr'));
+    return list;
+  }
+  function renderCards(){
+    const list=visibleProducts();
+    $('#cards').innerHTML=list.map(p=>{
+      const checked=selected.includes(p.id);
+      return `<article class="product ${checked?'selected':''}"><div class="cardtop"><span class="brand">${escapeText(p.brand)}</span>${checked?'<span class="badge">Sélectionné</span>':''}</div><div class="illustration">${vacuumSVG(palette[p.brand])}</div><h3>${escapeText(p.model)}</h3><p class="variant">${escapeText(p.detail)||'&nbsp;'}</p><div class="foot"><span class="status">Fiche à compléter</span><button type="button" class="choose" data-id="${p.id}" aria-pressed="${checked}" ${!checked&&selected.length>=4?'disabled':''}>${checked?'✓ Retirer':'+ Comparer'}</button></div></article>`;
+    }).join('');
+    if(!list.length)$('#cards').innerHTML='<p class="empty">Aucun modèle ne correspond à cette recherche.</p>';
+    $('#count').textContent=`${selected.length} / 4 modèle${selected.length>1?'s':''} sélectionné${selected.length>1?'s':''}`;
+    $('#compare').disabled=selected.length<2;
+    renderComparison();
+  }
+  function renderComparison(){
+    $('#comparison-sub').textContent=selected.length<2?'Choisis au moins deux modèles ci-dessus.':`${selected.length} modèles sélectionnés · tableau provisoire`;
+    if(selected.length<2){$('#comparison-content').innerHTML='<div class="notice">Le tableau technique sera enrichi lors de notre prochaine étape : prix relevés, autonomie réelle, tests indépendants, accessoires et réparabilité.</div>';return;}
+    const records=selected.map(id=>products.find(p=>p.id===id));
+    const rows=['Prix vérifié','Aspiration / tests indépendants','Autonomie réelle','Poids et confort','Accessoires utiles','Entretien / réparabilité'];
+    $('#comparison-content').innerHTML='<div class="notice">Comparaison en cours de construction : ces critères seront renseignés à partir de sources vérifiées. Aucune note n’est attribuée pour l’instant.</div><div class="table-scroll"><table><thead><tr><th scope="col">Critère</th>'+records.map(p=>`<th scope="col">${escapeText(p.brand)}<br>${escapeText(p.model)}</th>`).join('')+'</tr></thead><tbody>'+rows.map(label=>`<tr><th scope="row">${escapeText(label)}</th>`+records.map(()=>'<td>À documenter</td>').join('')+'</tr>').join('')+'</tbody></table></div>';
+  }
+  function toggle(id){if(selected.includes(id)){selected=selected.filter(s=>s!==id)}else if(selected.length<4){selected.push(id)}renderCards()}
+  function showToast(s){const t=$('#toast');t.textContent=s;t.style.display='block';clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.style.display='none',3600)}
+  function share(){
+    const u=new URL(location.href);u.hash=selected.length?'selection='+selected.join(','):'';
+    const link=u.toString();
+    if(navigator.clipboard?.writeText){navigator.clipboard.writeText(link).then(()=>showToast('Lien de sélection copié.')).catch(()=>fallback(link));}
+    else fallback(link);
+  }
+  function fallback(link){const text=prompt('Copie ce lien pour le partager :',link);if(text!==null)showToast('Le lien contient la sélection actuelle.')}
+  $('#cards').addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(b)toggle(b.dataset.id)});
+  $('#filters').addEventListener('click',e=>{const b=e.target.closest('button[data-brand]');if(b){filter=b.dataset.brand;renderFilters();renderCards()}});
+  $('#search').addEventListener('input',e=>{search=e.target.value;renderCards()});
+  $('#sort').addEventListener('change',e=>{sort=e.target.value;renderCards()});
+  $('#reset').addEventListener('click',()=>{selected=[];history.replaceState(null,'',location.pathname+location.search);renderCards()});
+  $('#compare').addEventListener('click',()=>$('#comparaison').scrollIntoView({behavior:'smooth'}));
+  $('#share').addEventListener('click',share);
+  window.addEventListener('hashchange',()=>{selected=initialSelection();renderCards()});
+  renderFilters();renderCards();
+  </script>
+</body>
+</html>
