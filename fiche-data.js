@@ -25,6 +25,51 @@
       if(value)value.textContent=f.value;
       if(note)note.textContent=f.note;
     });
+
+    // Les prix et remises sont relus depuis le même JSON que le tableau d'accueil.
+    const costSection=document.querySelector("#cout");
+    if(costSection && p.offers && p.offers.length===5 && !document.getElementById("prix-offres")){
+      const esc=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+      const money=n=>new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",minimumFractionDigits:0,maximumFractionDigits:2}).format(n);
+      const labels={fabricant:"Fabricant",amazon:"Amazon",boulanger:"Boulanger",fnac:"Fnac",darty:"Darty"};
+      const markup=p.offers.map(o=>{
+        const percent=o.price!==null&&o.was!==null&&o.was>o.price?Math.round(100*(1-o.price/o.was)):null;
+        const priced=o.price!==null?'<strong class="merchant-value">'+esc(money(o.price))+'</strong>':'<strong class="merchant-unknown">Non vérifié</strong>';
+        const discount=percent===null?"":'<span class="merchant-discount"><s>'+esc(money(o.was))+'</s> −'+percent+' % · économie '+esc(money(o.was-o.price))+'</span>';
+        const state=o.source==="third_party"?"Relevé indirect du "+o.date.split("-").reverse().join("/"):o.status;
+        const href=o.url?'<a href="'+esc(o.url)+'" target="_blank" rel="noopener noreferrer">'+(o.source==="third_party"?"Voir le relevé tiers ↗":"Voir l'offre ↗")+'</a>':"";
+        return '<article class="merchant-card"><h3>'+esc(labels[o.store])+'</h3>'+priced+discount
+          +'<span class="merchant-state">'+esc(state)+'</span>'
+          +(o.note?'<p>'+esc(o.note)+'</p>':"")+href+'</article>';
+      }).join("");
+      const section=document.createElement("section");
+      section.id="prix-offres";
+      section.setAttribute("aria-labelledby","prix-offres-title");
+      section.innerHTML='<div class="section-head"><h2 id="prix-offres-title">06 · Prix par enseigne</h2><span class="section-note">Relevé du 14 novembre 2026</span></div>'
+        +'<p class="offres-explain">Neuf références vérifiées dans cinq canaux de vente : les remises sont calculées par rapport au prix barré du même vendeur. Les relevés tiers Amazon sont anciens et les offres sans prix ne sont pas considérées comme disponibles.</p>'
+        +'<div class="merchants-grid">'+markup+'</div>'
+        +'<p class="offres-explain"><a href="./#prix-'+esc(p.id)+'">Voir également le tableau des 9 modèles ↗</a> · Les prix peuvent évoluer et ne sont pas actualisés en continu.</p>';
+      costSection.before(section);
+      if(!document.getElementById("style-prix-offres")){
+        const style=document.createElement("style");
+        style.id="style-prix-offres";
+        style.textContent='.offres-explain{color:#475f64;font-size:13px;line-height:1.65;margin:8px 0 14px}'
+          +'.merchants-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}'
+          +'.merchant-card{background:#fff;border:1px solid #dce7e2;border-radius:14px;padding:16px;display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-width:0}'
+          +'.merchant-card h3{font-size:14px;color:#234d51;margin:0 0 2px}'
+          +'.merchant-card .merchant-value{font-size:23px;color:#163e42;letter-spacing:-.04em}'
+          +'.merchant-unknown{font-size:14px;color:#556e70}'
+          +'.merchant-discount{font-size:12px;font-weight:700;color:#28675d;line-height:1.5}'
+          +'.merchant-discount s{color:#63787a;font-weight:400}'
+          +'.merchant-state{font-size:12px;color:#4b6669}'
+          +'.merchant-card p{font-size:12px;color:#51696d;line-height:1.5;margin:0}'
+          +'.merchant-card a{font-size:12px;font-weight:750;text-decoration:underline;text-underline-offset:3px;margin-top:auto}'
+          +'@media(max-width:850px){.merchants-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}'
+          +'@media(max-width:520px){.merchants-grid{grid-template-columns:1fr}}';
+        document.head.appendChild(style);
+      }
+    }
+
     const priceSection=document.querySelector("#cout .panel");
     if(priceSection && !priceSection.querySelector(".releve-factuel")){
       const note=document.createElement("p");
