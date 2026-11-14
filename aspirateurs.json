@@ -1,0 +1,686 @@
+{
+  "version": "2026-11-14-audit",
+  "purpose": "Comparatif personnel des 9 aspirateurs balais secs ; prix ponctuels et protocoles non uniformes",
+  "priceDisclaimer": "Prix relevés le 14/11/2026, non synchronisés ; disponibilité à vérifier. Un prix de rupture n'est pas une offre immédiatement achetable.",
+  "evidenceDisclaimer": "Ne pas comparer directement annonces constructeur, extrapolations et mesures indépendantes ou des poids incomplets.",
+  "models": [
+    {
+      "id": "dreame-v30",
+      "brand": "Dreame",
+      "model": "V30",
+      "detail": "",
+      "page": "dreame-v30.html",
+      "reference": "V30",
+      "price": {
+        "amount": 429,
+        "merchant": "Prix repéré par Frandroid",
+        "status": "Offre à vérifier",
+        "date": "2026-11-14",
+        "url": "https://www.frandroid.com/marques/dreame/2828203_test-dreame-v30"
+      },
+      "weight": {
+        "floor": {
+          "value": "Non vérifié",
+          "kind": "inconnu",
+          "note": "2,3 kg annoncés pour la machine ; pas de pesée complète avec brosse vérifiée"
+        },
+        "hand": {
+          "value": "2,3 kg",
+          "kind": "annoncé",
+          "note": "Machine seule selon fabricant"
+        }
+      },
+      "suction": {
+        "max": 330,
+        "modes": "Éco/Auto : AW non communiqués",
+        "performance": "Très bon sols durs ; plus mitigé sur tapis",
+        "note": "Maximum constructeur"
+      },
+      "autonomy": {
+        "display": "40 min",
+        "mode": "Standard",
+        "kind": "observé",
+        "note": "Frandroid, configuration non normalisée",
+        "modes": [
+          [
+            "Éco",
+            "77 min",
+            "extrapolé",
+            "Lavelab · brosse motorisée, estimation depuis 10 % de batterie"
+          ],
+          [
+            "Standard",
+            "40 min",
+            "observé",
+            "Frandroid · usage courant"
+          ],
+          [
+            "Turbo",
+            "11 min 40 s",
+            "extrapolé",
+            "Lavelab · avec brosse motorisée"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Bon",
+        "note": "Essais Lavelab, Frandroid et comparatif Le Monde ; divergence sur tapis"
+      },
+      "efficacy": "Excellent sols durs ; résultats plus partagés sur tapis",
+      "accessories": "Brosse GapFree, mini-électrobrosse, batterie amovible",
+      "repair": "Batterie officielle ≈ 149,90 € ; indice exact non vérifié",
+      "pros": [
+        "Efficace près des bords et sur sols durs",
+        "Bonne autonomie en Éco"
+      ],
+      "cons": [
+        "Résultats mitigés sur tapis",
+        "Poids à l'usage sensible ; batterie chère"
+      ]
+    },
+    {
+      "id": "dyson-v15",
+      "brand": "Dyson",
+      "model": "V15 Detect Absolute",
+      "detail": "",
+      "page": "dyson-v15.html",
+      "reference": "V15 Detect Absolute",
+      "price": {
+        "amount": 549,
+        "merchant": "Dyson France, pack 4 accessoires",
+        "status": "Disponibilité à vérifier",
+        "date": "2026-11-14",
+        "url": "https://www.dyson.fr/aspirateurs/sans-fil/v15/detect-absolute-jaune-nickel"
+      },
+      "weight": {
+        "floor": {
+          "value": "3,1 kg",
+          "kind": "annoncé",
+          "note": "Avec tube et brosse ; fabricant"
+        },
+        "hand": {
+          "value": "≈ 2,05 kg",
+          "kind": "mesuré",
+          "note": "Labo Maison"
+        }
+      },
+      "suction": {
+        "max": 240,
+        "modes": "Éco/Auto : AW non communiqués",
+        "performance": "Très bon sols durs et tapis ; poils excellents",
+        "note": "Maximum Dyson France"
+      },
+      "autonomy": {
+        "display": "30 min",
+        "mode": "Auto",
+        "kind": "mesuré",
+        "note": "Lavelab · brosse Digital Motorbar",
+        "modes": [
+          [
+            "Éco",
+            "55 min 45 s",
+            "mesuré",
+            "Lavelab · Digital Motorbar"
+          ],
+          [
+            "Auto",
+            "30 min",
+            "mesuré",
+            "Lavelab · Digital Motorbar"
+          ],
+          [
+            "Boost",
+            "8 min 48 s",
+            "mesuré",
+            "Lavelab · Digital Motorbar"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Très bon",
+        "note": "Les Numériques, Lavelab, RTINGS (version US) : plusieurs tests"
+      },
+      "efficacy": "Très bon sur sols durs, tapis et poils ; différentes mesures convergentes",
+      "accessories": "Fluffy Optic, Digital Motorbar selon pack, mini-électrobrosse",
+      "repair": "Indice 8/10 ; batterie Dyson 80 €",
+      "pros": [
+        "Nettoyage très efficace et brosse éclairée",
+        "Bonne performance sur tapis et poils"
+      ],
+      "cons": [
+        "Gâchette à maintenir ; poids de 3,1 kg",
+        "Autonomie Boost courte (≈ 9 min)"
+      ]
+    },
+    {
+      "id": "dyson-v16",
+      "brand": "Dyson",
+      "model": "V16 Piston Animal",
+      "detail": "",
+      "page": "dyson-v16.html",
+      "reference": "V16 Piston Animal sans Submarine",
+      "price": {
+        "amount": 649,
+        "merchant": "Dyson France, offre promotionnelle",
+        "status": "Disponibilité à vérifier",
+        "date": "2026-11-14",
+        "url": "https://www.dyson.fr/aspirateurs/sans-fil/v16-piston-animal/noir-mat-cuivre"
+      },
+      "weight": {
+        "floor": {
+          "value": "3,4 kg",
+          "kind": "annoncé",
+          "note": "Avec tube et brosse, fabricant"
+        },
+        "hand": {
+          "value": "≈ 2,1 kg",
+          "kind": "mesuré",
+          "note": "Labo Maison"
+        }
+      },
+      "suction": {
+        "max": 315,
+        "modes": "Éco/Auto : AW non communiqués",
+        "performance": "Très bon sur sols durs ; plus variable sur tapis épais",
+        "note": "Maximum constructeur"
+      },
+      "autonomy": {
+        "display": "≈ 45 min",
+        "mode": "Auto",
+        "kind": "mesuré",
+        "note": "Labo Maison · tête de brosse non spécifiée",
+        "modes": [
+          [
+            "Éco",
+            "76 min 30 s",
+            "mesuré",
+            "Labo Maison, brosse non spécifiée"
+          ],
+          [
+            "Auto",
+            "≈ 45 min",
+            "mesuré",
+            "Labo Maison, brosse non spécifiée"
+          ],
+          [
+            "Boost",
+            "16 min",
+            "mesuré",
+            "Labo Maison, brosse non spécifiée"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Très bon",
+        "note": "Les Numériques, Le Monde, Frandroid, Labo Maison ; variantes distinguées"
+      },
+      "efficacy": "Très bon sols durs, moins convaincant sur tapis épais et gros débris",
+      "accessories": "Brosse double cône, mini-électrobrosse, bac à compression",
+      "repair": "Indice 8,3/10 ; batterie Dyson 135 €",
+      "pros": [
+        "Bonne endurance et compactage des poussières",
+        "Anti-emmêlement efficace ; sans gâchette maintenue"
+      ],
+      "cons": [
+        "Tapis épais moins convaincants",
+        "3,4 kg et tête volumineuse"
+      ]
+    },
+    {
+      "id": "samsung-lite",
+      "brand": "Samsung",
+      "model": "Bespoke AI Jet Lite Complete",
+      "detail": "Gris · VS80F28EFP (sans Ultra)",
+      "page": "samsung-lite.html",
+      "reference": "VS80F28EFP/WD",
+      "price": {
+        "amount": 499,
+        "merchant": "Boulanger, référence VS80F28EFP",
+        "status": "Disponibilité à vérifier",
+        "date": "2026-11-14",
+        "url": "https://www.boulanger.com/ref/1219860"
+      },
+      "weight": {
+        "floor": {
+          "value": "2,49 kg",
+          "kind": "annoncé",
+          "note": "Avec Slim Action LED+ ; 2,70 kg avec Jet Dual+ (notice)"
+        },
+        "hand": {
+          "value": "Non vérifié",
+          "kind": "inconnu",
+          "note": "Mesure isolée du corps non confirmée"
+        }
+      },
+      "suction": {
+        "max": 280,
+        "modes": "Min 18 · Mid 44 · Max 130 · Jet 280 AW (constructeur)",
+        "performance": "Bon sur sols durs ; dépend de la brosse sur tapis",
+        "note": "AW par mode publiés par Samsung"
+      },
+      "autonomy": {
+        "display": "< 23 min",
+        "mode": "Mid",
+        "kind": "mesuré",
+        "note": "Les Numériques · brosse du protocole non précisée",
+        "modes": [
+          [
+            "Min",
+            "44 min",
+            "mesuré",
+            "CHIP · configuration non précisée"
+          ],
+          [
+            "Mid",
+            "< 23 min",
+            "mesuré",
+            "Les Numériques"
+          ],
+          [
+            "Jet",
+            "< 9 min",
+            "mesuré",
+            "Les Numériques"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Très bon",
+        "note": "Les Numériques et CHIP sur la référence exacte ; notice constructeur détaillée"
+      },
+      "efficacy": "Bon sols durs ; tapis dépendant de la tête, poils parfois emmêlés",
+      "accessories": "Clean Station 2 L et 3 brosses dont Pet Tool+",
+      "repair": "Indice 9,3/10 ; consommables pour la station ; batterie amovible",
+      "pros": [
+        "Station de vidage automatique incluse",
+        "Trois brosses et bonne réparabilité"
+      ],
+      "cons": [
+        "Autonomie faible à puissance soutenue",
+        "Sacs consommables ; cheveux sur rouleau"
+      ]
+    },
+    {
+      "id": "roborock-h60",
+      "brand": "Roborock",
+      "model": "H60 Ultra",
+      "detail": "Sans station Hub",
+      "page": "roborock-h60.html",
+      "reference": "H60 Ultra (non Hub)",
+      "price": {
+        "amount": 158,
+        "merchant": "Boutique officielle Roborock France",
+        "status": "Offre promotionnelle, stock à vérifier",
+        "date": "2026-11-14",
+        "url": "https://fr.roborock.com/products/roborock-h60-ultra"
+      },
+      "weight": {
+        "floor": {
+          "value": "Non vérifié",
+          "kind": "inconnu",
+          "note": "≈ 1,7 kg : bloc sans tube ni brosse, non comparable aux poids complets"
+        },
+        "hand": {
+          "value": "≈ 1,7 kg",
+          "kind": "annoncé",
+          "note": "Bloc principal sans accessoires, fabricant"
+        }
+      },
+      "suction": {
+        "max": 210,
+        "modes": "Éco/Médium : AW non communiqués",
+        "performance": "Bon sur tapis ; projection de gros débris sur sols durs",
+        "note": "Maximum constructeur, sans accessoire"
+      },
+      "autonomy": {
+        "display": "≈ 35 min",
+        "mode": "Médium",
+        "kind": "observé",
+        "note": "Frandroid, usage courant ; Lavelab 29 min extrapolées avec brosse",
+        "modes": [
+          [
+            "Éco",
+            "71 min",
+            "extrapolé",
+            "Lavelab · 5 % de batterie, avec brosse"
+          ],
+          [
+            "Médium",
+            "29 min",
+            "extrapolé",
+            "Lavelab · 5 % de batterie, avec brosse"
+          ],
+          [
+            "Médium",
+            "≈ 35 min",
+            "observé",
+            "Frandroid · usage courant"
+          ],
+          [
+            "Max",
+            "7–10 min",
+            "mixte",
+            "Lavelab extrapolé / Frandroid observé"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Partiel",
+        "note": "Deux essais pratiques ; autonomie Lavelab extrapolée et poids complet manquant"
+      },
+      "efficacy": "Bon tapis et poils ; gros débris projetés sur sols durs",
+      "accessories": "Tube Flex 90°, mini-électrobrosse, suceur 2-en-1",
+      "repair": "Batterie officielle 149 € ; indice de réparabilité non confirmé",
+      "pros": [
+        "Prix promotionnel très compétitif",
+        "Tapis, tube pliable et anti-emmêlement"
+      ],
+      "cons": [
+        "Gros débris parfois projetés",
+        "Bruit aigu et poids du bloc en hauteur"
+      ]
+    },
+    {
+      "id": "rowenta-1480",
+      "brand": "Rowenta",
+      "model": "X-Force Flex 14.80",
+      "detail": "Animal · RH9B74WO",
+      "page": "rowenta-1480.html",
+      "reference": "RH9B74WO",
+      "price": {
+        "amount": 499.99,
+        "merchant": "Rowenta France, produit neuf",
+        "status": "En stock sur Rowenta au relevé",
+        "date": "2026-11-14",
+        "url": "https://www.rowenta.fr/p/x-force-flex-1480-aspirateur-balai-sans-fil-240-aw-90-min-animal/2211401333"
+      },
+      "weight": {
+        "floor": {
+          "value": "3,1 kg",
+          "kind": "mesuré",
+          "note": "Que Choisir et Les Numériques, prêt à aspirer"
+        },
+        "hand": {
+          "value": "1,7 kg",
+          "kind": "mesuré",
+          "note": "Que Choisir ; Rowenta annonce 1,8 kg"
+        }
+      },
+      "suction": {
+        "max": 240,
+        "modes": "Éco/Normal/Auto : AW non communiqués",
+        "performance": "Sols durs et moquette fine corrects ; tapis épais limités",
+        "note": "Maximum constructeur en Boost"
+      },
+      "autonomy": {
+        "display": "52 min",
+        "mode": "Normal",
+        "kind": "mesuré",
+        "note": "Les Numériques · configuration brosse non explicitée",
+        "modes": [
+          [
+            "Normal",
+            "52 min",
+            "mesuré",
+            "Les Numériques"
+          ],
+          [
+            "Boost",
+            "21 min 30 s",
+            "mesuré",
+            "Les Numériques"
+          ],
+          [
+            "Éco à main",
+            "90 min max.",
+            "annoncé",
+            "Rowenta, sans brosse motorisée"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Bon",
+        "note": "Les Numériques, Labo Maison, Que Choisir : bonnes mesures"
+      },
+      "efficacy": "Sols durs 87 % Normal / 92 % Boost ; tapis longs 67–70 % (Les Numériques, 3 passages)",
+      "accessories": "Tube Flex, mini-électrobrosse LED, suceurs et socle mural",
+      "repair": "Indice 9,3/10 ; batterie ZR009709 139,99 € ; pièces 15 ans annoncées",
+      "pros": [
+        "Autonomie mesurée élevée",
+        "Tube Flex ; bonne réparabilité"
+      ],
+      "cons": [
+        "Projections de débris et tapis épais",
+        "Filtre et clapet à surveiller"
+      ]
+    },
+    {
+      "id": "rowenta-1660",
+      "brand": "Rowenta",
+      "model": "X-Force Flex 16.60",
+      "detail": "Animal · RH9C71E0",
+      "page": "rowenta-1660.html",
+      "reference": "RH9C71E0",
+      "price": {
+        "amount": 469.99,
+        "merchant": "Fnac, promotion Black Friday",
+        "status": "Livraison différée annoncée au 27/11/2026",
+        "date": "2026-11-14",
+        "url": "https://www.fnac.com/Aspirateur-balai-sans-fil-Rowenta-X-Force-Flex-16-60-RH9C71E0/a21940271/w-4"
+      },
+      "weight": {
+        "floor": {
+          "value": "3,1 kg",
+          "kind": "annoncé",
+          "note": "Fnac, non pesé indépendamment pour la référence exacte"
+        },
+        "hand": {
+          "value": "1,8 kg",
+          "kind": "annoncé",
+          "note": "Rowenta"
+        }
+      },
+      "suction": {
+        "max": 315,
+        "modes": "Éco/Auto/Max : AW non communiqués",
+        "performance": "Non chiffré indépendamment pour RH9C71E0",
+        "note": "Maximum fabricant"
+      },
+      "autonomy": {
+        "display": "55 min",
+        "mode": "Éco + brosse",
+        "kind": "annoncé",
+        "note": "Notice Rowenta, non mesuré par testeur indépendant",
+        "modes": [
+          [
+            "Éco + brosse",
+            "55 min",
+            "annoncé",
+            "Notice Rowenta"
+          ],
+          [
+            "Max + brosse",
+            "46 min",
+            "annoncé",
+            "Notice Rowenta"
+          ],
+          [
+            "Boost",
+            "Non fiable",
+            "incohérent",
+            "Notice : 5 min à main, 20 min avec brosse ; contradiction"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Insuffisant",
+        "note": "Labo Fnac 4/5 sans mesures par surface accessibles ; variante allemande différente"
+      },
+      "efficacy": "Aucune mesure chiffrée indépendante exploitable pour RH9C71E0",
+      "accessories": "Tube Flex, socle autonome, mini-électrobrosse LED",
+      "repair": "Indice 9,4/10 ; batterie ZR009709 139,99 € ; pièces 15 ans annoncées",
+      "pros": [
+        "Tube Flex et socle autonome",
+        "Réparabilité 9,4/10 ; batterie amovible"
+      ],
+      "cons": [
+        "Efficacité et autonomie non mesurées indépendamment",
+        "Charge 6 h, notice Boost contradictoire"
+      ]
+    },
+    {
+      "id": "rowenta-2080",
+      "brand": "Rowenta",
+      "model": "X-Force Silence 20.80",
+      "detail": "RH9E74E0",
+      "page": "rowenta-2080.html",
+      "reference": "RH9E74E0",
+      "price": {
+        "amount": 699.99,
+        "merchant": "Rowenta France",
+        "status": "Disponibilité à vérifier",
+        "date": "2026-11-14",
+        "url": "https://www.rowenta.fr/p/x-force-silence-2080-aspirateur-balai-sans-fil-nettoyage-intensif-410-aw/2211401519"
+      },
+      "weight": {
+        "floor": {
+          "value": "Non vérifié",
+          "kind": "inconnu",
+          "note": "2 kg = corps à main, pas l'appareil avec tube et brosse"
+        },
+        "hand": {
+          "value": "2 kg",
+          "kind": "annoncé",
+          "note": "Fabricant"
+        }
+      },
+      "suction": {
+        "max": 410,
+        "modes": "Éco/Auto/Max : AW non communiqués",
+        "performance": "Très bon en essai comparatif ; Dyson V16 légèrement devant",
+        "note": "Maximum constructeur en bloc à main"
+      },
+      "autonomy": {
+        "display": "Non chiffrée",
+        "mode": "Avec brosse",
+        "kind": "inconnu",
+        "note": "Le Monde confirme une forte endurance en Max sans chiffre réutilisable ; Éco à main 120 min annoncées",
+        "modes": [
+          [
+            "Éco à main",
+            "120 min max.",
+            "annoncé",
+            "Rowenta, sans électrobrosse"
+          ],
+          [
+            "Max avec brosse",
+            "Non chiffré",
+            "observé qualitativement",
+            "Le Monde : forte endurance"
+          ],
+          [
+            "Auto/Boost",
+            "Non vérifié",
+            "inconnu",
+            "Pas de valeur fiable par mode"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Bon, incomplet",
+        "note": "Le Monde a testé le produit ; valeurs exactes des graphiques non disponibles"
+      },
+      "efficacy": "Bonne efficacité d'ensemble, inférieur au Dyson V16 dans l'essai Le Monde",
+      "accessories": "Tube Flex, mini-brosse LED, Vision Detect, bac 1 L",
+      "repair": "Indice 9,6/10 ; pièces annoncées 15 ans ; batterie non chiffrée",
+      "pros": [
+        "Silence et endurance confirmés par essai",
+        "Réparabilité 9,6/10, bac 1 L"
+      ],
+      "cons": [
+        "Prix très élevé, charge annoncée 6 h",
+        "Brosse et commande peu ergonomiques"
+      ]
+    },
+    {
+      "id": "tineco-a90s",
+      "brand": "Tineco",
+      "model": "Pure One A90S",
+      "detail": "",
+      "page": "tineco-a90s.html",
+      "reference": "Pure One A90S",
+      "price": {
+        "amount": 439.99,
+        "merchant": "Tineco France, prix Black Friday",
+        "status": "Rupture de stock sur Tineco au relevé",
+        "date": "2026-11-14",
+        "url": "https://fr-store.tineco.com/products/tineco-pure-one-a90s-aspirateur-balai-sans-fil"
+      },
+      "weight": {
+        "floor": {
+          "value": "3,76 kg",
+          "kind": "mesuré",
+          "note": "Les Numériques, avec brosse"
+        },
+        "hand": {
+          "value": "2,22 kg",
+          "kind": "mesuré",
+          "note": "Les Numériques"
+        }
+      },
+      "suction": {
+        "max": 270,
+        "modes": "Éco/Auto : AW non communiqués",
+        "performance": "Bon sols durs / tapis ; rainures profondes faibles",
+        "note": "Maximum constructeur"
+      },
+      "autonomy": {
+        "display": "32 min 50 s",
+        "mode": "Auto",
+        "kind": "mesuré",
+        "note": "Les Numériques · brosse motorisée",
+        "modes": [
+          [
+            "Éco + brosse",
+            "≈ 75 min",
+            "observé",
+            "01net, protocole non détaillé"
+          ],
+          [
+            "Auto",
+            "32 min 50 s",
+            "mesuré",
+            "Les Numériques"
+          ],
+          [
+            "Max",
+            "23 min 40 s",
+            "mesuré",
+            "Les Numériques"
+          ],
+          [
+            "Éco sans brosse",
+            "105 min max.",
+            "annoncé",
+            "Tineco"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Très bon",
+        "note": "Les Numériques, Frandroid, 01net, Clubic et Labo Maison"
+      },
+      "efficacy": "Sols durs 90–92 % en un passage ; rainures 7–14 % en 3 passages (Les Numériques)",
+      "accessories": "Tube pliable, LED, mini-électrobrosse et socle sans vidage automatique",
+      "repair": "Indice 8,8/10 ; batterie de rechange au prix non vérifié",
+      "pros": [
+        "Bon nettoyage général, LED et silence",
+        "Recharge rapide et tube pliable"
+      ],
+      "cons": [
+        "Lourd pour les escaliers (3,76 kg)",
+        "Faible dans les rainures ; offre en rupture"
+      ]
+    }
+  ]
+}
