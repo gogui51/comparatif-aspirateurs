@@ -226,7 +226,7 @@ function visibleProducts(){
   return list;
 }
 function quickSpec(label,value,note){
-  return '<div><small>'+escapeText(label)+'</small><strong>'+escapeText(value)+'</strong><span>'+escapeText(note)+'</span></div>';
+  return '<div><small>'+escapeText(label)+'</small><strong>'+escapeText(value)+'</strong>'+(note?'<span>'+escapeText(note)+'</span>':'')+'</div>';
 }
 function proscons(p){
   const group=(label,items,css)=>'<div><span class="hlabel '+css+'">'+label+'</span><ul>'+items.map(s=>'<li>'+escapeText(s)+'</li>').join("")+'</ul></div>';
