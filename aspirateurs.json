@@ -1,7 +1,7 @@
 {
-  "version": "2026-11-14-audit",
+  "version": "2026-11-14-prix-enseignes",
   "purpose": "Comparatif personnel des 9 aspirateurs balais secs ; prix ponctuels et protocoles non uniformes",
-  "priceDisclaimer": "Prix relevés le 14/11/2026, non synchronisés ; disponibilité à vérifier. Un prix de rupture n'est pas une offre immédiatement achetable.",
+  "priceDisclaimer": "Relevé ponctuel du 14/11/2026 : prix TTC des références exactes, pouvant varier sans préavis. Prix barrés propres au vendeur. Amazon indirect/ancien identifié, jamais présenté comme achat actuel. Rupture et livraison différée explicitées.",
   "evidenceDisclaimer": "Ne pas comparer directement annonces constructeur, extrapolations et mesures indépendantes ou des poids incomplets.",
   "models": [
     {
@@ -13,10 +13,10 @@
       "reference": "V30",
       "price": {
         "amount": 429,
-        "merchant": "Prix repéré par Frandroid",
-        "status": "Offre à vérifier",
+        "merchant": "Dreame",
+        "status": "Disponible au relevé",
         "date": "2026-11-14",
-        "url": "https://www.frandroid.com/marques/dreame/2828203_test-dreame-v30"
+        "url": "https://fr.dreametech.com/products/aspirateur-sans-fil-v30"
       },
       "weight": {
         "floor": {
@@ -76,6 +76,63 @@
       "cons": [
         "Résultats mitigés sur tapis",
         "Poids à l'usage sensible ; batterie chère"
+      ],
+      "offers": [
+        {
+          "store": "fabricant",
+          "price": 429,
+          "was": 599,
+          "url": "https://fr.dreametech.com/products/aspirateur-sans-fil-v30",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "",
+          "seller": "Dreame"
+        },
+        {
+          "store": "amazon",
+          "price": 405.46,
+          "was": null,
+          "url": "https://jsemcompare.fr/produit/dreame-v30/",
+          "status": "Relevé tiers ancien",
+          "source": "third_party",
+          "date": "2026-11-13",
+          "note": "Prix signalé par Jsemcompare au 13/11, pas vérifié directement chez Amazon",
+          "seller": "Amazon (via comparateur)"
+        },
+        {
+          "store": "boulanger",
+          "price": 429,
+          "was": 529,
+          "url": "https://www.boulanger.com/ref/1229886",
+          "status": "Stock limité",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "",
+          "seller": "Boulanger"
+        },
+        {
+          "store": "fnac",
+          "price": 429.99,
+          "was": 479.99,
+          "url": "https://www.fnac.com/Marques-d-aspirateur/Aspirateur-Dreame/sh568818/w-4?PageIndex=2",
+          "status": "Expédition annoncée à partir du 19/11",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Lien vers la sélection Fnac portant le produit",
+          "seller": "Fnac"
+        },
+        {
+          "store": "darty",
+          "price": 429.99,
+          "was": 479.99,
+          "url": "https://www.darty.com/nav/q/entretien-dreame-t30.html",
+          "status": "Livraison annoncée à partir du 24/11",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Lien vers les résultats Darty portant le produit",
+          "seller": "Darty"
+        }
       ]
     },
     {
@@ -87,8 +144,8 @@
       "reference": "V15 Detect Absolute",
       "price": {
         "amount": 549,
-        "merchant": "Dyson France, pack 4 accessoires",
-        "status": "Disponibilité à vérifier",
+        "merchant": "Dyson",
+        "status": "Disponible au relevé",
         "date": "2026-11-14",
         "url": "https://www.dyson.fr/aspirateurs/sans-fil/v15/detect-absolute-jaune-nickel"
       },
@@ -150,6 +207,63 @@
       "cons": [
         "Gâchette à maintenir ; poids de 3,1 kg",
         "Autonomie Boost courte (≈ 9 min)"
+      ],
+      "offers": [
+        {
+          "store": "fabricant",
+          "price": 549,
+          "was": 799,
+          "url": "https://www.dyson.fr/aspirateurs/sans-fil/v15/detect-absolute-jaune-nickel",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Pack 4 accessoires, attention au pack 7 accessoires à 849 €",
+          "seller": "Dyson"
+        },
+        {
+          "store": "amazon",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Produit exact non vérifié en direct ; éviter de confondre les packs",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "boulanger",
+          "price": 549,
+          "was": 799,
+          "url": "https://www.boulanger.com/ref/1241521",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Offre neuve vendue par Boulanger ; ne pas confondre les annonces reconditionnées",
+          "seller": "Boulanger"
+        },
+        {
+          "store": "fnac",
+          "price": 549,
+          "was": 799,
+          "url": "https://www.fnac.com/Selection-de-marques/Selection-aspirateurs-Dyson/n567330",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Version gris anthracite, vérifier le contenu du pack",
+          "seller": "Fnac"
+        },
+        {
+          "store": "darty",
+          "price": 549,
+          "was": 799,
+          "url": "https://www.darty.com/nav/achat/petit_electromenager/autres_aspirateurs_nettoyeurs-balai_main/aspirateur_balai/dyson_v15_dt_abs_26.html",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Version gris anthracite",
+          "seller": "Darty"
+        }
       ]
     },
     {
@@ -161,8 +275,8 @@
       "reference": "V16 Piston Animal sans Submarine",
       "price": {
         "amount": 649,
-        "merchant": "Dyson France, offre promotionnelle",
-        "status": "Disponibilité à vérifier",
+        "merchant": "Dyson",
+        "status": "Disponible au relevé",
         "date": "2026-11-14",
         "url": "https://www.dyson.fr/aspirateurs/sans-fil/v16-piston-animal/noir-mat-cuivre"
       },
@@ -224,6 +338,63 @@
       "cons": [
         "Tapis épais moins convaincants",
         "3,4 kg et tête volumineuse"
+      ],
+      "offers": [
+        {
+          "store": "fabricant",
+          "price": 649,
+          "was": 849,
+          "url": "https://www.dyson.fr/aspirateurs/sans-fil/v16-piston-animal/noir-mat-cuivre",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "V16 Piston Animal à sec, sans Submarine",
+          "seller": "Dyson"
+        },
+        {
+          "store": "amazon",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Listing Amazon de la bonne variante non vérifiable aujourd'hui",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "boulanger",
+          "price": 649,
+          "was": 849,
+          "url": "https://www.boulanger.com/ref/1226621",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "",
+          "seller": "Boulanger"
+        },
+        {
+          "store": "fnac",
+          "price": 649,
+          "was": 849,
+          "url": "https://www.fnac.com/Maison-Electromenager/shi181432/w-4",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Produit neuf, sans Submarine ; lien vers listing Fnac",
+          "seller": "Fnac"
+        },
+        {
+          "store": "darty",
+          "price": 649,
+          "was": 849,
+          "url": "https://www.darty.com/nav/achat/petit_electromenager/aspirateur_avec_sac_sans_sac/index.html",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Version sèche sans Submarine ; lien vers catalogue Darty",
+          "seller": "Darty"
+        }
       ]
     },
     {
@@ -235,8 +406,8 @@
       "reference": "VS80F28EFP/WD",
       "price": {
         "amount": 499,
-        "merchant": "Boulanger, référence VS80F28EFP",
-        "status": "Disponibilité à vérifier",
+        "merchant": "Boulanger",
+        "status": "Disponible au relevé",
         "date": "2026-11-14",
         "url": "https://www.boulanger.com/ref/1219860"
       },
@@ -298,6 +469,63 @@
       "cons": [
         "Autonomie faible à puissance soutenue",
         "Sacs consommables ; cheveux sur rouleau"
+      ],
+      "offers": [
+        {
+          "store": "fabricant",
+          "price": null,
+          "was": null,
+          "url": "https://www.samsung.com/fr/vacuum-cleaners/stick/stick-vc-with-light-powerful-jet-ailite-280w-bespoke-jet-ai-lite-280w-vs9500al-gray-vs80f28efp-wd/",
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Page Samsung VS80F28EFP/WD consultée, prix rendu dynamiquement et non accessible",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "amazon",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Aucune offre de la référence française exacte VS80F28EFP vérifiée",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "boulanger",
+          "price": 499,
+          "was": 699,
+          "url": "https://www.boulanger.com/ref/1219860",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Complete gris VS80F28EFP, vendu par Boulanger",
+          "seller": "Boulanger"
+        },
+        {
+          "store": "fnac",
+          "price": 499.99,
+          "was": 699.99,
+          "url": "https://www.fnac.com/Aspirateur-balai-Samsung-Bespoke-AI-Jet-Lite-Complete-VS80F28EFP-Gris/a21705966/w-4",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Complete gris VS80F28EFP",
+          "seller": "Fnac"
+        },
+        {
+          "store": "darty",
+          "price": 499.99,
+          "was": 699.99,
+          "url": "https://www.darty.com/nav/achat/petit_electromenager/aspirateur-balai_main/aspirateur_balai/samsung_vs80f28efp.html",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Complete gris VS80F28EFP",
+          "seller": "Darty"
+        }
       ]
     },
     {
@@ -309,8 +537,8 @@
       "reference": "H60 Ultra (non Hub)",
       "price": {
         "amount": 158,
-        "merchant": "Boutique officielle Roborock France",
-        "status": "Offre promotionnelle, stock à vérifier",
+        "merchant": "Roborock",
+        "status": "Disponible au relevé",
         "date": "2026-11-14",
         "url": "https://fr.roborock.com/products/roborock-h60-ultra"
       },
@@ -378,6 +606,63 @@
       "cons": [
         "Gros débris parfois projetés",
         "Bruit aigu et poids du bloc en hauteur"
+      ],
+      "offers": [
+        {
+          "store": "fabricant",
+          "price": 158,
+          "was": 349.99,
+          "url": "https://fr.roborock.com/products/roborock-h60-ultra",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "H60 Ultra sans station Hub, vendeur officiel",
+          "seller": "Roborock"
+        },
+        {
+          "store": "amazon",
+          "price": null,
+          "was": null,
+          "url": "https://www.idealo.fr/prix/208504125/roborock-h60-ultra.html",
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Ancien relevé Idealo à 179 € non daté assez précisément : non retenu",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "boulanger",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Aucune fiche Boulanger vérifiée pour H60 Ultra sans Hub",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "fnac",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Aucune fiche Fnac vérifiée pour H60 Ultra sans Hub",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "darty",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Attention : le H60 HUB trouvé à Darty est une autre variante",
+          "seller": "Non vérifié"
+        }
       ]
     },
     {
@@ -388,11 +673,11 @@
       "page": "rowenta-1480.html",
       "reference": "RH9B74WO",
       "price": {
-        "amount": 499.99,
-        "merchant": "Rowenta France, produit neuf",
-        "status": "En stock sur Rowenta au relevé",
+        "amount": 499,
+        "merchant": "Boulanger",
+        "status": "Disponible au relevé",
         "date": "2026-11-14",
-        "url": "https://www.rowenta.fr/p/x-force-flex-1480-aspirateur-balai-sans-fil-240-aw-90-min-animal/2211401333"
+        "url": "https://www.boulanger.com/ref/1218560"
       },
       "weight": {
         "floor": {
@@ -452,6 +737,63 @@
       "cons": [
         "Projections de débris et tapis épais",
         "Filtre et clapet à surveiller"
+      ],
+      "offers": [
+        {
+          "store": "fabricant",
+          "price": 499.99,
+          "was": null,
+          "url": "https://www.rowenta.fr/p/x-force-flex-1480-aspirateur-balai-sans-fil-240-aw-90-min-animal/2211401333",
+          "status": "En stock au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "",
+          "seller": "Rowenta"
+        },
+        {
+          "store": "amazon",
+          "price": 442,
+          "was": null,
+          "url": "https://noodeals.com/p/22078563-rowenta-x-force-flex-14-80-aspirateur-balai-sans-fil-240-aw-90-min",
+          "status": "Relevé tiers ancien",
+          "source": "third_party",
+          "date": "2026-11-10",
+          "note": "Prix daté du 10/11 par Noodeals, vendeur GRANDIN GROUP ; non revérifié sur Amazon",
+          "seller": "Amazon Marketplace (via comparateur)"
+        },
+        {
+          "store": "boulanger",
+          "price": 499,
+          "was": null,
+          "url": "https://www.boulanger.com/ref/1218560",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "",
+          "seller": "Boulanger"
+        },
+        {
+          "store": "fnac",
+          "price": 499.99,
+          "was": null,
+          "url": "https://www.fnac.com/Aspirateur-balai-Rowenta-X-Force-Flex-14-80-RH9B74WO-670-W-Noir-Or/a21368926/w-4",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Pack RH9B74WO sans Aqua",
+          "seller": "Fnac"
+        },
+        {
+          "store": "darty",
+          "price": 499.99,
+          "was": null,
+          "url": "https://www.darty.com/nav/q/entretien-rowenta-air-force-flex-560.html",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Lien vers résultats Darty RH9B74WO",
+          "seller": "Darty"
+        }
       ]
     },
     {
@@ -462,11 +804,11 @@
       "page": "rowenta-1660.html",
       "reference": "RH9C71E0",
       "price": {
-        "amount": 469.99,
-        "merchant": "Fnac, promotion Black Friday",
-        "status": "Livraison différée annoncée au 27/11/2026",
+        "amount": 469,
+        "merchant": "Boulanger",
+        "status": "Disponible au relevé",
         "date": "2026-11-14",
-        "url": "https://www.fnac.com/Aspirateur-balai-sans-fil-Rowenta-X-Force-Flex-16-60-RH9C71E0/a21940271/w-4"
+        "url": "https://www.boulanger.com/ref/1234552"
       },
       "weight": {
         "floor": {
@@ -526,6 +868,63 @@
       "cons": [
         "Efficacité et autonomie non mesurées indépendamment",
         "Charge 6 h, notice Boost contradictoire"
+      ],
+      "offers": [
+        {
+          "store": "fabricant",
+          "price": null,
+          "was": null,
+          "url": "https://www.rowenta.fr/boutique-accessoires/entretien-des-sols/aspirateur-balai-sans-fil/x-force-flex-1660-aspirateur-balai-sans-fil-315-aw-120-min-animal/csp/2211401421",
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "La page Rowenta accessible concerne surtout les accessoires, sans prix neuf fiable",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "amazon",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "RH9C71E0 exact non vérifié chez Amazon",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "boulanger",
+          "price": 469,
+          "was": 599,
+          "url": "https://www.boulanger.com/ref/1234552",
+          "status": "Disponible au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "RH9C71E0, nouvelle remise Black Friday",
+          "seller": "Boulanger"
+        },
+        {
+          "store": "fnac",
+          "price": 469.99,
+          "was": 599.99,
+          "url": "https://www.fnac.com/Aspirateur-balai-sans-fil-Rowenta-X-Force-Flex-16-60-RH9C71E0/a21940271/w-4",
+          "status": "Expédition annoncée à partir du 27/11",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "RH9C71E0",
+          "seller": "Fnac"
+        },
+        {
+          "store": "darty",
+          "price": 469.99,
+          "was": 599.99,
+          "url": "https://www.darty.com/nav/q/entretien-rowenta-air-force-flex-560.html",
+          "status": "Livraison annoncée à partir du 28/11",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "RH9C71E0, listing Darty",
+          "seller": "Darty"
+        }
       ]
     },
     {
@@ -537,8 +936,8 @@
       "reference": "RH9E74E0",
       "price": {
         "amount": 699.99,
-        "merchant": "Rowenta France",
-        "status": "Disponibilité à vérifier",
+        "merchant": "Rowenta",
+        "status": "En stock au relevé",
         "date": "2026-11-14",
         "url": "https://www.rowenta.fr/p/x-force-silence-2080-aspirateur-balai-sans-fil-nettoyage-intensif-410-aw/2211401519"
       },
@@ -600,6 +999,63 @@
       "cons": [
         "Prix très élevé, charge annoncée 6 h",
         "Brosse et commande peu ergonomiques"
+      ],
+      "offers": [
+        {
+          "store": "fabricant",
+          "price": 699.99,
+          "was": null,
+          "url": "https://www.rowenta.fr/p/x-force-silence-2080-aspirateur-balai-sans-fil-nettoyage-intensif-410-aw/2211401519",
+          "status": "En stock au relevé",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "",
+          "seller": "Rowenta"
+        },
+        {
+          "store": "amazon",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "RH9E74E0 non vérifié chez Amazon",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "boulanger",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Fiche de la variante RH9E74E0 non trouvée chez Boulanger",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "fnac",
+          "price": 699.99,
+          "was": null,
+          "url": "https://www.fnac.com/Aspirateur-balai-Rowenta-RH9E74E0-Noir/a23486398/w-4",
+          "status": "Expédition annoncée à partir du 18/11",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "",
+          "seller": "Fnac"
+        },
+        {
+          "store": "darty",
+          "price": 699.99,
+          "was": null,
+          "url": "https://www.darty.com/nav/achat/petit_electromenager/autres_aspirateurs_nettoyeurs-balai_main/aspirateur_balai/rowenta_rh9e74.html",
+          "status": "Livraison différée affichée",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "",
+          "seller": "Darty"
+        }
       ]
     },
     {
@@ -611,8 +1067,8 @@
       "reference": "Pure One A90S",
       "price": {
         "amount": 439.99,
-        "merchant": "Tineco France, prix Black Friday",
-        "status": "Rupture de stock sur Tineco au relevé",
+        "merchant": "Tineco (indisponible)",
+        "status": "Rupture de stock — aucun vendeur confirmé disponible",
         "date": "2026-11-14",
         "url": "https://fr-store.tineco.com/products/tineco-pure-one-a90s-aspirateur-balai-sans-fil"
       },
@@ -680,6 +1136,63 @@
       "cons": [
         "Lourd pour les escaliers (3,76 kg)",
         "Faible dans les rainures ; offre en rupture"
+      ],
+      "offers": [
+        {
+          "store": "fabricant",
+          "price": 439.99,
+          "was": 699,
+          "url": "https://fr-store.tineco.com/products/tineco-pure-one-a90s-aspirateur-balai-sans-fil",
+          "status": "Rupture de stock",
+          "source": "direct",
+          "date": "2026-11-14",
+          "note": "Black Friday affiché mais Indisponible sur Tineco",
+          "seller": "Tineco"
+        },
+        {
+          "store": "amazon",
+          "price": null,
+          "was": null,
+          "url": "https://www.lesnumeriques.com/aspirateur-balai/tineco-pure-one-a90s-p77347.html",
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Ancien relevé 559,99 € sur Les Numériques, sans date de fraîcheur suffisante pour l'afficher comme prix Amazon actuel",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "boulanger",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Référence Tineco Pure One A90S non retrouvée sur Boulanger",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "fnac",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Référence Tineco Pure One A90S non retrouvée sur Fnac",
+          "seller": "Non vérifié"
+        },
+        {
+          "store": "darty",
+          "price": null,
+          "was": null,
+          "url": null,
+          "status": "Non vérifié",
+          "source": "unverified",
+          "date": "2026-11-14",
+          "note": "Référence Tineco Pure One A90S non retrouvée sur Darty",
+          "seller": "Non vérifié"
+        }
       ]
     }
   ]
