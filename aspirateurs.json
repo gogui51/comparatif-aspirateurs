@@ -1,7 +1,7 @@
 {
-  "version": "2026-11-14-prix-enseignes",
-  "purpose": "Comparatif personnel des 9 aspirateurs balais secs ; prix ponctuels et protocoles non uniformes",
-  "priceDisclaimer": "Relevé ponctuel du 14/11/2026 : prix TTC des références exactes, pouvant varier sans préavis. Prix barrés propres au vendeur. Amazon indirect/ancien identifié, jamais présenté comme achat actuel. Rupture et livraison différée explicitées.",
+  "version": "2026-11-15-ajout-karcher",
+  "purpose": "Comparatif personnel de 10 aspirateurs balais secs ; prix ponctuels et protocoles non uniformes",
+  "priceDisclaimer": "Prix TTC ponctuels relevés les 14 et 15/11/2026, variables selon vendeur, livraison et disponibilité ; aucun prix n'est actualisé automatiquement. Les offres marketplace sont signalées et doivent être revérifiées.",
   "evidenceDisclaimer": "Ne pas comparer directement annonces constructeur, extrapolations et mesures indépendantes ou des poids incomplets.",
   "models": [
     {
@@ -1283,6 +1283,159 @@
         "kind": "mesuré",
         "source": "https://www.lesnumeriques.com/aspirateur-balai.html",
         "note": "Poids avec brosse"
+      }
+    },
+    {
+      "id": "karcher-vcs-7-28",
+      "brand": "Kärcher",
+      "model": "VCS 7-28 Infinity",
+      "detail": "Signature Line · réf. 1.349-270.0",
+      "page": "karcher-vcs-7-28.html",
+      "reference": "1.349-270.0 · EAN 4066529169655",
+      "price": {
+        "amount": 368.58,
+        "merchant": "Darty · vendeur Electro Store",
+        "status": "Offre marketplace repérée, prix et disponibilité à revérifier",
+        "date": "2026-11-15",
+        "url": "https://www.darty.com/nav/achat/ref/MC355534679.html"
+      },
+      "weight": {
+        "floor": {
+          "value": "Non vérifié",
+          "kind": "inconnu",
+          "note": "Kärcher annonce 3,2 kg « sans accessoires » ; poids complet avec brosse non isolé"
+        },
+        "hand": {
+          "value": "1,9 kg",
+          "kind": "notice constructeur",
+          "note": "Avec batterie, sans accessoires ; notice du VCS 7-28 Infinity"
+        }
+      },
+      "suction": {
+        "max": null,
+        "modes": "Air Watts non publiés ; 400 W = puissance nominale du moteur, pas puissance d'aspiration",
+        "performance": "Excellent sur sols durs et tapis lors de l'essai indépendant du Monde",
+        "note": "Aucune mesure Air Watts directement comparable ; Le Monde relève de très bonnes performances réelles"
+      },
+      "autonomy": {
+        "display": "54 min",
+        "mode": "Smart",
+        "kind": "mesuré",
+        "note": "Le Monde, essai publié le 09/11/2026 ; protocole détaillé non fourni dans le texte",
+        "modes": [
+          [
+            "Éco",
+            "58 min",
+            "mesuré",
+            "Le Monde · essai 09/11/2026"
+          ],
+          [
+            "Smart",
+            "54 min",
+            "mesuré",
+            "Le Monde · essai 09/11/2026"
+          ],
+          [
+            "Standard",
+            "30 min env.",
+            "annoncé",
+            "Kärcher · fiche constructeur"
+          ],
+          [
+            "Boost",
+            "10 min env.",
+            "annoncé",
+            "Kärcher · fiche constructeur"
+          ],
+          [
+            "Éco sans électrobrosse",
+            "70 min max.",
+            "annoncé",
+            "Kärcher · valeur maximale en configuration spécifique"
+          ]
+        ]
+      },
+      "proof": {
+        "level": "Très bon",
+        "note": "Essai indépendant Le Monde du 09/11/2026 et données Kärcher ; pas de mesure d'Air Watts ni de pesée complète vérifiable"
+      },
+      "efficacy": "Le Monde : aspiration excellente sur sols durs et tapis, efficacité sur les bordures, mode Smart convaincant ; réserve sur le poids et l'entretien du filtre.",
+      "accessories": "Tube flexible, mini turbo-brosse, suceur long, brosse meuble, éclairage LED, station de charge au sol, batterie amovible.",
+      "repair": "Indice de réparabilité 8,3/10 indiqué chez Boulanger ; filtre fin à brosser régulièrement, remplacement conseillé par Le Monde vers six mois ; pièces annoncées 5 ans par Kärcher.",
+      "pros": [
+        "Excellente aspiration en test indépendant, y compris tapis",
+        "54 min mesurées en mode Smart ; station sans perçage"
+      ],
+      "cons": [
+        "Plutôt lourd et entretien du filtre contraignant",
+        "Air Watts non publiés ; poids complet non vérifié"
+      ],
+      "offers": [
+        {
+          "store": "darty",
+          "price": 368.58,
+          "was": 499.99,
+          "url": "https://www.darty.com/nav/achat/ref/MC355534679.html",
+          "status": "Offre marketplace · à revérifier",
+          "source": "direct",
+          "date": "2026-11-15",
+          "note": "Annonce observée dans l'index marchand ; vente par Electro Store, tarif susceptible de varier.",
+          "seller": "Electro Store"
+        },
+        {
+          "store": "fabricant",
+          "price": 499.99,
+          "was": null,
+          "url": "https://www.kaercher.com/fr/home-garden/aspirateurs/vcs-7-28-infinity-signature-line-13492700.html",
+          "status": "Prix public de référence ; promotion éventuelle à revérifier",
+          "source": "direct",
+          "date": "2026-11-15",
+          "note": "499,99 € dans le relevé produit ; certains relevés plus anciens montrent des promotions.",
+          "seller": "Kärcher"
+        },
+        {
+          "store": "leclerc",
+          "price": 384.62,
+          "was": 499.99,
+          "url": "https://www.e.leclerc/fp/aspirateur-balai-sans-fil-karcher-vcs-7-28-infinity-signature-line-autonomie-70-min-4066529169655",
+          "status": "Marketplace · prix à revérifier",
+          "source": "direct",
+          "date": "2026-11-15",
+          "note": "Annonce marketplace Stock e-commerce ; relevé ponctuel, vendeur tiers.",
+          "seller": "Stock e-commerce"
+        },
+        {
+          "store": "boulanger",
+          "price": null,
+          "was": null,
+          "url": "https://www.boulanger.com/ref/9001065101",
+          "status": "Prix actuel non confirmé",
+          "source": "unverified",
+          "date": "2026-11-15",
+          "note": "Page identifiée ; prix affiché lors d'un relevé ancien, non repris comme prix actuel.",
+          "seller": "Boulanger / vendeur tiers"
+        },
+        {
+          "store": "amazon",
+          "price": null,
+          "was": null,
+          "url": "https://www.amazon.fr/s?k=K%C3%A4rcher+VCS+7-28+Infinity",
+          "status": "Référence exacte non vérifiée",
+          "source": "unverified",
+          "date": "2026-11-15",
+          "note": "Lien de recherche, pas une offre vérifiée.",
+          "seller": "Non vérifié"
+        }
+      ],
+      "image": {
+        "src": "https://d1y4tv7o00gnfq.cloudfront.net/mam/13492700/mainproduct/01a00ee2-08fc-77eb-99fe-c421ee897d87/d0.jpg",
+        "credit": "Kärcher · photographie officielle de la référence 1.349-270.0"
+      },
+      "homeWeight": {
+        "value": "3,2 kg",
+        "kind": "fabricant",
+        "source": "https://www.kaercher.com/fr/home-garden/aspirateurs/vcs-7-28-infinity-signature-line-13492700.html",
+        "note": "Annonce « sans accessoires » ; ne constitue pas une pesée prête à aspirer"
       }
     }
   ]

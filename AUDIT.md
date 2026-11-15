@@ -1,13 +1,13 @@
 # Audit et maintenance du comparatif
 
-Mise à jour : 14 novembre 2026. Comparatif personnel de neuf aspirateurs balais à sec.
+Mise à jour : 15 novembre 2026. Comparatif personnel de dix aspirateurs balais à sec.
 
 ## Architecture
 
 - `aspirateurs.json` : **source de référence** pour les quatre données essentielles, prix, statut commercial, poids (corps seul / prêt à aspirer), Air Watts et conditions, autonomies par mode, preuves et avantages/inconvénients.
-- `index.html` : charge ce JSON et affiche neuf cartes, les filtres, le tri, les repères par usage et le comparateur. Aucun prix n'est codé en dur dans le rendu des cartes ou des tableaux.
-- `fiche-data.js` : relit le même JSON pour synchroniser les quatre indicateurs principaux des neuf fiches détaillées et ajouter un lien marchand daté.
-- Neuf fichiers `.html` : analyses rédactionnelles et sources originales. **Le corps de ces analyses demeure éditorial et daté** ; toute actualisation substantielle doit donc aussi vérifier les paragraphes narratifs.
+- `index.html` : charge ce JSON et affiche dix cartes, les filtres, le tri, les repères par usage et le comparateur. Aucun prix n'est codé en dur dans le rendu des cartes ou des tableaux.
+- `fiche-data.js` : relit le même JSON pour synchroniser les quatre indicateurs principaux des dix fiches détaillées et ajouter un lien marchand daté.
+- Dix fichiers `.html` : analyses rédactionnelles et sources originales. **Le corps de ces analyses demeure éditorial et daté** ; toute actualisation substantielle doit donc aussi vérifier les paragraphes narratifs.
 
 ## Règles de fiabilité
 
@@ -63,3 +63,9 @@ Aucun score numérique global n'est établi, en raison des différents protocole
 - Un prix barré n’est pas nécessairement un prix récemment pratiqué : ne pas interpréter les réductions comme une économie garantie. Les codes promotionnels et frais de livraison ne sont pas inclus.
 - Le prix principal de la carte est celui d’une offre directement constatée hors rupture lorsqu’il en existe ; exception : Tineco A90S, dont le prix fabricant en rupture est affiché avec un avertissement explicite.
 - Le site n’effectue pas de suivi en temps réel des tarifs. Réactualiser les données et les pages détaillées avant l’achat.
+
+## Ajout du 15 novembre 2026
+
+- **Kärcher VCS 7-28 Infinity Signature Line** (1.349-270.0) : dixième modèle et fiche détaillée ; essai du Monde du 9 novembre 2026 (54 min en Smart, 58 min en Éco), données constructeur distinctes (jusqu'à 70 min sans électrobrosse). Pas d'AW publiés : affichage « AW non publiés », sans confondre avec les 400 W du moteur.
+- Poids complet avec brosse non isolé : 3,2 kg constructeur « sans accessoires » signalés, et 1,9 kg corps avec batterie dans la notice.
+- Prix ponctuels via vendeurs ou marketplaces, à revérifier ; aucune prétention d'actualisation automatique. Filtres et nombre de fiches portés à 10.

@@ -45,7 +45,7 @@
     const facts=[
       {label:"Prix et disponibilité",value:euro,note:p.price.merchant+(readableStatus(p.price.status)?" · "+readableStatus(p.price.status):"")+" · relevé du "+p.price.date.split("-").reverse().join("/")},
       {label:"Poids prêt à aspirer",value:p.weight.floor.value,note:p.weight.floor.kind+" · "+p.weight.floor.note},
-      {label:"Aspiration maximale",value:p.suction.max+" AW",note:p.suction.note+" · "+p.suction.modes},
+      {label:"Aspiration maximale",value:Number.isFinite(p.suction.max)?p.suction.max+" AW":"AW non publiés",note:p.suction.note+" · "+p.suction.modes},
       {label:"Autonomie · "+p.autonomy.mode,value:p.autonomy.display,note:p.autonomy.kind+" · "+p.autonomy.note}
     ];
     const cards=[...document.querySelectorAll(".grid4 .stat")].slice(0,4);
@@ -59,10 +59,10 @@
 
     // Les prix et remises sont relus depuis le même JSON que le tableau d'accueil.
     const costSection=document.querySelector("#cout");
-    if(costSection && p.offers && p.offers.length===5 && !document.getElementById("prix-offres")){
+    if(costSection && p.offers && p.offers.length>=1 && !document.getElementById("prix-offres")){
       const esc=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
       const money=n=>new Intl.NumberFormat("fr-FR",{style:"currency",currency:"EUR",minimumFractionDigits:0,maximumFractionDigits:2}).format(n);
-      const labels={fabricant:"Fabricant",amazon:"Amazon",boulanger:"Boulanger",fnac:"Fnac",darty:"Darty"};
+      const labels={fabricant:"Fabricant",amazon:"Amazon",boulanger:"Boulanger",fnac:"Fnac",darty:"Darty",leclerc:"E.Leclerc"};
       const markup=p.offers.map(o=>{
         const percent=o.price!==null&&o.was!==null&&o.was>o.price?Math.round(100*(1-o.price/o.was)):null;
         const priced=o.price!==null?'<strong class="merchant-value">'+esc(money(o.price))+'</strong>':'<strong class="merchant-unknown">Non vérifié</strong>';
@@ -76,10 +76,10 @@
       const section=document.createElement("section");
       section.id="prix-offres";
       section.setAttribute("aria-labelledby","prix-offres-title");
-      section.innerHTML='<div class="section-head"><h2 id="prix-offres-title">Prix par enseigne</h2><span class="section-note">Relevé du 14 novembre 2026</span></div>'
-        +'<p class="offres-explain">Cinq enseignes recherchées pour cette référence : les remises sont calculées par rapport au prix barré du même vendeur. Les relevés tiers Amazon sont anciens et les offres sans prix ne sont pas considérées comme disponibles.</p>'
+      section.innerHTML='<div class="section-head"><h2 id="prix-offres-title">Prix par enseigne</h2><span class="section-note">Relevés ponctuels datés</span></div>'
+        +'<p class="offres-explain">Offres et recherches pour cette référence : les remises sont calculées par rapport au prix barré du même vendeur. Les relevés tiers Amazon sont anciens et les offres sans prix ne sont pas considérées comme disponibles.</p>'
         +'<div class="merchants-grid">'+markup+'</div>'
-        +'<p class="offres-explain"><a href="./#prix-'+esc(p.id)+'">Voir également le tableau des 9 modèles ↗</a> · Les prix peuvent évoluer et ne sont pas actualisés en continu.</p>';
+        +'<p class="offres-explain"><a href="./#prix-'+esc(p.id)+'">Voir également le tableau des 10 modèles ↗</a> · Les prix peuvent évoluer et ne sont pas actualisés en continu.</p>';
       costSection.before(section);
       if(!document.getElementById("style-prix-offres")){
         const style=document.createElement("style");
